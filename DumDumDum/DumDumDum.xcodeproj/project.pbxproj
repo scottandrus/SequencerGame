@@ -133,6 +133,8 @@
 		1608084816B437AA00039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084716B437AA00039339 /* AppDelegate.m */; };
 		1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084A16B437AA00039339 /* HelloWorldLayer.m */; };
 		1608084E16B437AA00039339 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084D16B437AA00039339 /* IntroLayer.m */; };
+		1608085B16B43C1E00039339 /* ArmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608085816B43C1E00039339 /* ArmController.m */; };
+		1608085C16B43C1E00039339 /* HandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608085A16B43C1E00039339 /* HandController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +400,10 @@
 		1608084A16B437AA00039339 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		1608084C16B437AA00039339 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		1608084D16B437AA00039339 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		1608085716B43C1E00039339 /* ArmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmController.h; sourceTree = "<group>"; };
+		1608085816B43C1E00039339 /* ArmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmController.m; sourceTree = "<group>"; };
+		1608085916B43C1E00039339 /* HandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandController.h; sourceTree = "<group>"; };
+		1608085A16B43C1E00039339 /* HandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +462,7 @@
 		160806CE16B437A700039339 /* DumDumDum */ = {
 			isa = PBXGroup;
 			children = (
+				1608085616B43C1E00039339 /* Controllers */,
 				1608084616B437AA00039339 /* AppDelegate.h */,
 				1608084716B437AA00039339 /* AppDelegate.m */,
 				1608084916B437AA00039339 /* HelloWorldLayer.h */,
@@ -832,6 +839,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1608085616B43C1E00039339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1608085716B43C1E00039339 /* ArmController.h */,
+				1608085816B43C1E00039339 /* ArmController.m */,
+				1608085916B43C1E00039339 /* HandController.h */,
+				1608085A16B43C1E00039339 /* HandController.m */,
+			);
+			path = Controllers;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1009,6 +1027,8 @@
 				1608084816B437AA00039339 /* AppDelegate.m in Sources */,
 				1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */,
 				1608084E16B437AA00039339 /* IntroLayer.m in Sources */,
+				1608085B16B43C1E00039339 /* ArmController.m in Sources */,
+				1608085C16B43C1E00039339 /* HandController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
