@@ -6,7 +6,7 @@
 		<key>pattern</key>
 		<array>
 			<string>robot</string>
-			<string>standard</string>
+			<string>no sound</string>
 			<string>robot</string>
 			<string>meaty</string>
 			<string>robot</string>
@@ -17,9 +17,9 @@
 		<key>size</key>
 		<dict>
 			<key>x</key>
-			<integer>4</integer>
+			<integer>8</integer>
 			<key>y</key>
-			<string>1</string>
+			<string>4</string>
 		</dict>
 	</dict>
 </array>

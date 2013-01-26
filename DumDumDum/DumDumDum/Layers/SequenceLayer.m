@@ -10,12 +10,15 @@
 #import "DataUtils.h"
 #import "GameConstants.h"
 #import "SimpleAudioEngine.h"
+#import "SpriteUtils.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 
 static NSString *const kKeyStandard = @"standard";
 static NSString *const kKeyRobot = @"robot";
 static NSString *const kKeyMeaty = @"meaty";
+static NSString *const kKeyNoSound = @"no sound";
+
 
 static NSString *const kSoundStandard = @"Heart 1.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
@@ -50,11 +53,13 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
         
         // patterns
         _finalPattern = [DataUtils sequencePattern:sequence];
-        
-        NSLog(@"final pattern: %@", _finalPattern);
-        
         _dynamicPattern = [NSMutableArray arrayWithCapacity:8];
         _patternCount = 0;
+        
+        // buttons
+        _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _finalPatternButton.position = CGPointMake(950, 700);
+        [self addChild:_finalPatternButton];
         
     }
     return self;
@@ -105,7 +110,10 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
     NSLog(@"pattern count: %i", self.patternCount);
     
     NSString *key = [self.finalPattern objectAtIndex:self.patternCount];
-    [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+    
+    if ([key isEqualToString:@""] == NO) {
+        [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+    }
     
     self.patternCount += 1;
     if (self.patternCount == kTotalPatternTicks) {
@@ -118,8 +126,16 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"touch began");
-    [self scheduleFinalPattern];
+    
+    CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
+
+    if (CGRectContainsPoint(self.finalPatternButton.boundingBox, touchPosition)) {
+        NSLog(@"final pattern button");
+        [self scheduleFinalPattern];
+        return YES;
+    }
+
+    
     
     return YES;
 }
@@ -137,10 +153,14 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
     else if ([key isEqualToString:kKeyMeaty]) {
         return kSoundMeaty;
     }
+    else if ([key isEqualToString:kKeyNoSound]) {
+        return @"";
+    }
     else {
         NSLog(@"warning: sound not found");
         return @"";
     }
+    
 }
 
 @end

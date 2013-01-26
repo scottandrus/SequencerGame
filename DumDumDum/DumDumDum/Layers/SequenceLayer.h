@@ -19,8 +19,11 @@
 // pattern
 @property (nonatomic, strong) NSArray *finalPattern;
 @property (nonatomic, strong) NSMutableArray *dynamicPattern;
-
 @property (assign) NSUInteger patternCount;
+
+// buttons
+@property (nonatomic, strong) CCSprite *finalPatternButton;
+@property (nonatomic, strong) CCSprite *dynamicPatternButton;
 
 
 + (CCScene *)sceneWithSequence:(int)sequence;
