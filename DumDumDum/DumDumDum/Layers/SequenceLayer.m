@@ -23,7 +23,7 @@ static NSString *const kKeyNoSound = @"no sound";
 
 
 static NSString *const kSoundStandard = @"Heart 4.caf";
-static NSString *const kSoundRobot = @"Heart Robot 3.caf";
+static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
 static NSString *const kSoundAlien = @"Heart Alien 2.caf";
 
@@ -149,7 +149,7 @@ typedef enum
 {
     NSString *key = [pattern objectAtIndex:self.patternCount];
     
-    if ([key isEqualToString:@""] == NO) {
+    if ([key isEqualToString:@"no sound"] == NO) {
         [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
 
     }
@@ -157,6 +157,9 @@ typedef enum
     self.patternCount += 1;
     if (self.patternCount == kTotalPatternTicks) {
         self.patternCount = 0;
+        if ([pattern isEqualToArray:self.dynamicPattern]) {
+            NSLog(@"self did win: %i", [self didWin]);
+        }
     }
 }
 
@@ -259,7 +262,8 @@ typedef enum
         else if (cell.y == kBeatTypeAlien) {
             [self handleCellSelection:cell key:kKeyAlien];
         }
-                
+        
+        NSLog(@"dynamic pattern : %@", self.dynamicPattern);
         return YES;
     }
     
@@ -299,6 +303,20 @@ typedef enum
         return YES;
     }
     return NO;
+}
+
+- (BOOL)didWin
+{
+    int i = 0;
+    for (NSString *key in self.finalPattern) {
+        NSLog(@"key: %@", key);
+        NSLog(@"in dynamic pattern: %@", [self.dynamicPattern objectAtIndex:i]);
+        if ([key isEqualToString:[self.dynamicPattern objectAtIndex:i]] == NO) {
+            return NO;
+        }
+        i++;
+    }
+    return YES;
 }
 
 
