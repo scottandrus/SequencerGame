@@ -133,6 +133,17 @@
 		1608084816B437AA00039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084716B437AA00039339 /* AppDelegate.m */; };
 		1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084A16B437AA00039339 /* HelloWorldLayer.m */; };
 		1608084E16B437AA00039339 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084D16B437AA00039339 /* IntroLayer.m */; };
+		1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608085F16B43CEF00039339 /* PuzzleLayer.m */; };
+		1608086C16B43CEF00039339 /* DataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086216B43CEF00039339 /* DataUtils.m */; };
+		1608086D16B43CEF00039339 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086416B43CEF00039339 /* GameConstants.m */; };
+		1608086E16B43CEF00039339 /* GameTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086616B43CEF00039339 /* GameTypes.m */; };
+		1608086F16B43CEF00039339 /* GridUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086816B43CEF00039339 /* GridUtils.m */; };
+		1608087016B43CEF00039339 /* SpriteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086A16B43CEF00039339 /* SpriteUtils.m */; };
+		1608087616B43D2100039339 /* ArmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087316B43D2100039339 /* ArmController.m */; };
+		1608087716B43D2100039339 /* HandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087516B43D2100039339 /* HandController.m */; };
+		1608087B16B43F1F00039339 /* armUnit.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087816B43F1F00039339 /* armUnit.png */; };
+		1608087C16B43F1F00039339 /* handSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087916B43F1F00039339 /* handSprite.png */; };
+		1608087D16B43F1F00039339 /* Puzzles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608087A16B43F1F00039339 /* Puzzles.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +409,25 @@
 		1608084A16B437AA00039339 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		1608084C16B437AA00039339 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		1608084D16B437AA00039339 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		1608085E16B43CEF00039339 /* PuzzleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleLayer.h; sourceTree = "<group>"; };
+		1608085F16B43CEF00039339 /* PuzzleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleLayer.m; sourceTree = "<group>"; };
+		1608086116B43CEF00039339 /* DataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUtils.h; sourceTree = "<group>"; };
+		1608086216B43CEF00039339 /* DataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataUtils.m; sourceTree = "<group>"; };
+		1608086316B43CEF00039339 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
+		1608086416B43CEF00039339 /* GameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConstants.m; sourceTree = "<group>"; };
+		1608086516B43CEF00039339 /* GameTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTypes.h; sourceTree = "<group>"; };
+		1608086616B43CEF00039339 /* GameTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTypes.m; sourceTree = "<group>"; };
+		1608086716B43CEF00039339 /* GridUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridUtils.h; sourceTree = "<group>"; };
+		1608086816B43CEF00039339 /* GridUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridUtils.m; sourceTree = "<group>"; };
+		1608086916B43CEF00039339 /* SpriteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteUtils.h; sourceTree = "<group>"; };
+		1608086A16B43CEF00039339 /* SpriteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteUtils.m; sourceTree = "<group>"; };
+		1608087216B43D2100039339 /* ArmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmController.h; sourceTree = "<group>"; };
+		1608087316B43D2100039339 /* ArmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmController.m; sourceTree = "<group>"; };
+		1608087416B43D2100039339 /* HandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandController.h; sourceTree = "<group>"; };
+		1608087516B43D2100039339 /* HandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandController.m; sourceTree = "<group>"; };
+		1608087816B43F1F00039339 /* armUnit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = armUnit.png; path = Resources/armUnit.png; sourceTree = "<group>"; };
+		1608087916B43F1F00039339 /* handSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = handSprite.png; path = Resources/handSprite.png; sourceTree = "<group>"; };
+		1608087A16B43F1F00039339 /* Puzzles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Puzzles.plist; path = Resources/Puzzles.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +486,9 @@
 		160806CE16B437A700039339 /* DumDumDum */ = {
 			isa = PBXGroup;
 			children = (
+				1608087116B43D2100039339 /* Controllers */,
+				1608085D16B43CEF00039339 /* Layers */,
+				1608086016B43CEF00039339 /* Utils */,
 				1608084616B437AA00039339 /* AppDelegate.h */,
 				1608084716B437AA00039339 /* AppDelegate.m */,
 				1608084916B437AA00039339 /* HelloWorldLayer.h */,
@@ -472,6 +505,9 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1608087816B43F1F00039339 /* armUnit.png */,
+				1608087916B43F1F00039339 /* handSprite.png */,
+				1608087A16B43F1F00039339 /* Puzzles.plist */,
 				160806D016B437A700039339 /* Default.png */,
 				160806D216B437A700039339 /* Default-Landscape~ipad.png */,
 				160806D416B437A700039339 /* fps_images.png */,
@@ -832,6 +868,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1608085D16B43CEF00039339 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				1608085E16B43CEF00039339 /* PuzzleLayer.h */,
+				1608085F16B43CEF00039339 /* PuzzleLayer.m */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		1608086016B43CEF00039339 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1608086116B43CEF00039339 /* DataUtils.h */,
+				1608086216B43CEF00039339 /* DataUtils.m */,
+				1608086316B43CEF00039339 /* GameConstants.h */,
+				1608086416B43CEF00039339 /* GameConstants.m */,
+				1608086516B43CEF00039339 /* GameTypes.h */,
+				1608086616B43CEF00039339 /* GameTypes.m */,
+				1608086716B43CEF00039339 /* GridUtils.h */,
+				1608086816B43CEF00039339 /* GridUtils.m */,
+				1608086916B43CEF00039339 /* SpriteUtils.h */,
+				1608086A16B43CEF00039339 /* SpriteUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1608087116B43D2100039339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1608087216B43D2100039339 /* ArmController.h */,
+				1608087316B43D2100039339 /* ArmController.m */,
+				1608087416B43D2100039339 /* HandController.h */,
+				1608087516B43D2100039339 /* HandController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +968,9 @@
 				160806E516B437A700039339 /* Icon@2x.png in Resources */,
 				160806E816B437A800039339 /* iTunesArtwork in Resources */,
 				1608082616B437AA00039339 /* ChangeLog in Resources */,
+				1608087B16B43F1F00039339 /* armUnit.png in Resources */,
+				1608087C16B43F1F00039339 /* handSprite.png in Resources */,
+				1608087D16B43F1F00039339 /* Puzzles.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1085,14 @@
 				1608084816B437AA00039339 /* AppDelegate.m in Sources */,
 				1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */,
 				1608084E16B437AA00039339 /* IntroLayer.m in Sources */,
+				1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */,
+				1608086C16B43CEF00039339 /* DataUtils.m in Sources */,
+				1608086D16B43CEF00039339 /* GameConstants.m in Sources */,
+				1608086E16B43CEF00039339 /* GameTypes.m in Sources */,
+				1608086F16B43CEF00039339 /* GridUtils.m in Sources */,
+				1608087016B43CEF00039339 /* SpriteUtils.m in Sources */,
+				1608087616B43D2100039339 /* ArmController.m in Sources */,
+				1608087716B43D2100039339 /* HandController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
