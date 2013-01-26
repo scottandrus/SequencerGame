@@ -144,18 +144,24 @@
 		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
 		1608088316B4416000039339 /* SequenceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608088216B4416000039339 /* SequenceLayer.m */; };
 		1608088516B443E100039339 /* Sequence.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608088416B443E100039339 /* Sequence.plist */; };
-		1608089216B4516F00039339 /* Heart Meaty 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088916B4516F00039339 /* Heart Meaty 2.caf */; };
-		1608089316B4516F00039339 /* Heart Meaty 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088A16B4516F00039339 /* Heart Meaty 1.caf */; };
-		1608089416B4516F00039339 /* Heart Robot 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088B16B4516F00039339 /* Heart Robot 3.caf */; };
-		1608089516B4516F00039339 /* Heart Robot 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088C16B4516F00039339 /* Heart Robot 2.caf */; };
-		1608089616B4516F00039339 /* Heart Robot 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088D16B4516F00039339 /* Heart Robot 1.caf */; };
-		1608089716B4516F00039339 /* Heart bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088E16B4516F00039339 /* Heart bass.caf */; };
-		1608089816B4516F00039339 /* Heart 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088F16B4516F00039339 /* Heart 3.caf */; };
-		1608089916B4516F00039339 /* Heart 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608089016B4516F00039339 /* Heart 2.caf */; };
-		1608089A16B4516F00039339 /* Heart 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608089116B4516F00039339 /* Heart 1.caf */; };
 		160808A416B4765C00039339 /* meatyHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A116B4765B00039339 /* meatyHeart.png */; };
 		160808A516B4765C00039339 /* robotHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A216B4765B00039339 /* robotHeart.png */; };
 		160808A616B4765C00039339 /* standardHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A316B4765C00039339 /* standardHeart.png */; };
+		160808B516B48B7600039339 /* Heart 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808A716B48B7300039339 /* Heart 1.caf */; };
+		160808B616B48B7600039339 /* Heart 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808A816B48B7400039339 /* Heart 2.caf */; };
+		160808B716B48B7600039339 /* Heart 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808A916B48B7400039339 /* Heart 3.caf */; };
+		160808B816B48B7600039339 /* Heart 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AA16B48B7400039339 /* Heart 4.caf */; };
+		160808B916B48B7600039339 /* Heart Alien 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AB16B48B7400039339 /* Heart Alien 1.caf */; };
+		160808BA16B48B7600039339 /* Heart Alien 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AC16B48B7400039339 /* Heart Alien 2.caf */; };
+		160808BB16B48B7600039339 /* Heart bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AD16B48B7400039339 /* Heart bass.caf */; };
+		160808BC16B48B7600039339 /* Heart Meaty 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AE16B48B7400039339 /* Heart Meaty 1.caf */; };
+		160808BD16B48B7600039339 /* Heart Meaty 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808AF16B48B7400039339 /* Heart Meaty 2.caf */; };
+		160808BE16B48B7600039339 /* Heart Monitor long.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B016B48B7500039339 /* Heart Monitor long.caf */; };
+		160808BF16B48B7600039339 /* Heart Monitor short.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B116B48B7500039339 /* Heart Monitor short.caf */; };
+		160808C016B48B7600039339 /* Heart Robot 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B216B48B7500039339 /* Heart Robot 1.caf */; };
+		160808C116B48B7600039339 /* Heart Robot 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B316B48B7500039339 /* Heart Robot 2.caf */; };
+		160808C216B48B7600039339 /* Heart Robot 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B416B48B7600039339 /* Heart Robot 3.caf */; };
+		160808C616B48F5400039339 /* alienHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808C516B48F5400039339 /* alienHeart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -439,18 +445,24 @@
 		1608088116B4415F00039339 /* SequenceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceLayer.h; sourceTree = "<group>"; };
 		1608088216B4416000039339 /* SequenceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceLayer.m; sourceTree = "<group>"; };
 		1608088416B443E100039339 /* Sequence.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sequence.plist; sourceTree = "<group>"; };
-		1608088916B4516F00039339 /* Heart Meaty 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 2.caf"; path = "Resources/Heart Meaty 2.caf"; sourceTree = "<group>"; };
-		1608088A16B4516F00039339 /* Heart Meaty 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 1.caf"; path = "Resources/Heart Meaty 1.caf"; sourceTree = "<group>"; };
-		1608088B16B4516F00039339 /* Heart Robot 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 3.caf"; path = "Resources/Heart Robot 3.caf"; sourceTree = "<group>"; };
-		1608088C16B4516F00039339 /* Heart Robot 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 2.caf"; path = "Resources/Heart Robot 2.caf"; sourceTree = "<group>"; };
-		1608088D16B4516F00039339 /* Heart Robot 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 1.caf"; path = "Resources/Heart Robot 1.caf"; sourceTree = "<group>"; };
-		1608088E16B4516F00039339 /* Heart bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart bass.caf"; path = "Resources/Heart bass.caf"; sourceTree = "<group>"; };
-		1608088F16B4516F00039339 /* Heart 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 3.caf"; path = "Resources/Heart 3.caf"; sourceTree = "<group>"; };
-		1608089016B4516F00039339 /* Heart 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 2.caf"; path = "Resources/Heart 2.caf"; sourceTree = "<group>"; };
-		1608089116B4516F00039339 /* Heart 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 1.caf"; path = "Resources/Heart 1.caf"; sourceTree = "<group>"; };
 		160808A116B4765B00039339 /* meatyHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meatyHeart.png; path = Resources/meatyHeart.png; sourceTree = "<group>"; };
 		160808A216B4765B00039339 /* robotHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robotHeart.png; path = Resources/robotHeart.png; sourceTree = "<group>"; };
 		160808A316B4765C00039339 /* standardHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = standardHeart.png; path = Resources/standardHeart.png; sourceTree = "<group>"; };
+		160808A716B48B7300039339 /* Heart 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 1.caf"; path = "Resources/Heart 1.caf"; sourceTree = "<group>"; };
+		160808A816B48B7400039339 /* Heart 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 2.caf"; path = "Resources/Heart 2.caf"; sourceTree = "<group>"; };
+		160808A916B48B7400039339 /* Heart 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 3.caf"; path = "Resources/Heart 3.caf"; sourceTree = "<group>"; };
+		160808AA16B48B7400039339 /* Heart 4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 4.caf"; path = "Resources/Heart 4.caf"; sourceTree = "<group>"; };
+		160808AB16B48B7400039339 /* Heart Alien 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Alien 1.caf"; path = "Resources/Heart Alien 1.caf"; sourceTree = "<group>"; };
+		160808AC16B48B7400039339 /* Heart Alien 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Alien 2.caf"; path = "Resources/Heart Alien 2.caf"; sourceTree = "<group>"; };
+		160808AD16B48B7400039339 /* Heart bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart bass.caf"; path = "Resources/Heart bass.caf"; sourceTree = "<group>"; };
+		160808AE16B48B7400039339 /* Heart Meaty 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 1.caf"; path = "Resources/Heart Meaty 1.caf"; sourceTree = "<group>"; };
+		160808AF16B48B7400039339 /* Heart Meaty 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 2.caf"; path = "Resources/Heart Meaty 2.caf"; sourceTree = "<group>"; };
+		160808B016B48B7500039339 /* Heart Monitor long.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Monitor long.caf"; path = "Resources/Heart Monitor long.caf"; sourceTree = "<group>"; };
+		160808B116B48B7500039339 /* Heart Monitor short.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Monitor short.caf"; path = "Resources/Heart Monitor short.caf"; sourceTree = "<group>"; };
+		160808B216B48B7500039339 /* Heart Robot 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 1.caf"; path = "Resources/Heart Robot 1.caf"; sourceTree = "<group>"; };
+		160808B316B48B7500039339 /* Heart Robot 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 2.caf"; path = "Resources/Heart Robot 2.caf"; sourceTree = "<group>"; };
+		160808B416B48B7600039339 /* Heart Robot 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 3.caf"; path = "Resources/Heart Robot 3.caf"; sourceTree = "<group>"; };
+		160808C516B48F5400039339 /* alienHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alienHeart.png; path = Resources/alienHeart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,18 +536,24 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808C516B48F5400039339 /* alienHeart.png */,
+				160808A716B48B7300039339 /* Heart 1.caf */,
+				160808A816B48B7400039339 /* Heart 2.caf */,
+				160808A916B48B7400039339 /* Heart 3.caf */,
+				160808AA16B48B7400039339 /* Heart 4.caf */,
+				160808AB16B48B7400039339 /* Heart Alien 1.caf */,
+				160808AC16B48B7400039339 /* Heart Alien 2.caf */,
+				160808AD16B48B7400039339 /* Heart bass.caf */,
+				160808AE16B48B7400039339 /* Heart Meaty 1.caf */,
+				160808AF16B48B7400039339 /* Heart Meaty 2.caf */,
+				160808B016B48B7500039339 /* Heart Monitor long.caf */,
+				160808B116B48B7500039339 /* Heart Monitor short.caf */,
+				160808B216B48B7500039339 /* Heart Robot 1.caf */,
+				160808B316B48B7500039339 /* Heart Robot 2.caf */,
+				160808B416B48B7600039339 /* Heart Robot 3.caf */,
 				160808A116B4765B00039339 /* meatyHeart.png */,
 				160808A216B4765B00039339 /* robotHeart.png */,
 				160808A316B4765C00039339 /* standardHeart.png */,
-				1608088916B4516F00039339 /* Heart Meaty 2.caf */,
-				1608088A16B4516F00039339 /* Heart Meaty 1.caf */,
-				1608088B16B4516F00039339 /* Heart Robot 3.caf */,
-				1608088C16B4516F00039339 /* Heart Robot 2.caf */,
-				1608088D16B4516F00039339 /* Heart Robot 1.caf */,
-				1608088E16B4516F00039339 /* Heart bass.caf */,
-				1608088F16B4516F00039339 /* Heart 3.caf */,
-				1608089016B4516F00039339 /* Heart 2.caf */,
-				1608089116B4516F00039339 /* Heart 1.caf */,
 				1608087816B43F1F00039339 /* armUnit.png */,
 				1608087916B43F1F00039339 /* handSprite.png */,
 				1608087A16B43F1F00039339 /* Puzzles.plist */,
@@ -1006,18 +1024,24 @@
 				1608087C16B43F1F00039339 /* handSprite.png in Resources */,
 				1608087D16B43F1F00039339 /* Puzzles.plist in Resources */,
 				1608088516B443E100039339 /* Sequence.plist in Resources */,
-				1608089216B4516F00039339 /* Heart Meaty 2.caf in Resources */,
-				1608089316B4516F00039339 /* Heart Meaty 1.caf in Resources */,
-				1608089416B4516F00039339 /* Heart Robot 3.caf in Resources */,
-				1608089516B4516F00039339 /* Heart Robot 2.caf in Resources */,
-				1608089616B4516F00039339 /* Heart Robot 1.caf in Resources */,
-				1608089716B4516F00039339 /* Heart bass.caf in Resources */,
-				1608089816B4516F00039339 /* Heart 3.caf in Resources */,
-				1608089916B4516F00039339 /* Heart 2.caf in Resources */,
-				1608089A16B4516F00039339 /* Heart 1.caf in Resources */,
 				160808A416B4765C00039339 /* meatyHeart.png in Resources */,
 				160808A516B4765C00039339 /* robotHeart.png in Resources */,
 				160808A616B4765C00039339 /* standardHeart.png in Resources */,
+				160808B516B48B7600039339 /* Heart 1.caf in Resources */,
+				160808B616B48B7600039339 /* Heart 2.caf in Resources */,
+				160808B716B48B7600039339 /* Heart 3.caf in Resources */,
+				160808B816B48B7600039339 /* Heart 4.caf in Resources */,
+				160808B916B48B7600039339 /* Heart Alien 1.caf in Resources */,
+				160808BA16B48B7600039339 /* Heart Alien 2.caf in Resources */,
+				160808BB16B48B7600039339 /* Heart bass.caf in Resources */,
+				160808BC16B48B7600039339 /* Heart Meaty 1.caf in Resources */,
+				160808BD16B48B7600039339 /* Heart Meaty 2.caf in Resources */,
+				160808BE16B48B7600039339 /* Heart Monitor long.caf in Resources */,
+				160808BF16B48B7600039339 /* Heart Monitor short.caf in Resources */,
+				160808C016B48B7600039339 /* Heart Robot 1.caf in Resources */,
+				160808C116B48B7600039339 /* Heart Robot 2.caf in Resources */,
+				160808C216B48B7600039339 /* Heart Robot 3.caf in Resources */,
+				160808C616B48F5400039339 /* alienHeart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

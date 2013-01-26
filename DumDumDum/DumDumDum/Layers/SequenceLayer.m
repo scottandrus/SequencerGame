@@ -22,10 +22,10 @@ static NSString *const kKeyAlien = @"alien";
 static NSString *const kKeyNoSound = @"no sound";
 
 
-static NSString *const kSoundStandard = @"Heart 1.caf";
-static NSString *const kSoundRobot = @"Heart Robot 1.caf";
-static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
-static NSString *const kSoundAlien = @"NEEDS FILE";
+static NSString *const kSoundStandard = @"Heart 4.caf";
+static NSString *const kSoundRobot = @"Heart Robot 3.caf";
+static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
+static NSString *const kSoundAlien = @"Heart Alien 2.caf";
 
 typedef enum
 {
@@ -151,6 +151,7 @@ typedef enum
     
     if ([key isEqualToString:@""] == NO) {
         [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+
     }
     
     self.patternCount += 1;
@@ -211,6 +212,9 @@ typedef enum
     }
     else if (beatType == kBeatTypeMeaty) {
         return [CCSprite spriteWithFile:@"meatyHeart.png"];
+    }
+    else if (beatType == kBeatTypeAlien) {
+        return [CCSprite spriteWithFile:@"alienHeart.png"];
     }
     else {
         return nil;
@@ -275,6 +279,9 @@ typedef enum
     else if ([key isEqualToString:kKeyMeaty]) {
         return kSoundMeaty;
     }
+    else if ([key isEqualToString:kKeyAlien]) {
+        return kSoundAlien;
+    }
     else if ([key isEqualToString:kKeyNoSound]) {
         return @"";
     }
@@ -282,7 +289,6 @@ typedef enum
         NSLog(@"warning: sound not found");
         return @"";
     }
-    
 }
 
 #pragma mark - custom cell helpers
