@@ -130,9 +130,6 @@
 		1608083E16B437AA00039339 /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1608083D16B437AA00039339 /* vec3.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1608084016B437AA00039339 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 1608083F16B437AA00039339 /* vec4.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1608084516B437AA00039339 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084416B437AA00039339 /* main.m */; };
-		1608084816B437AA00039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084716B437AA00039339 /* AppDelegate.m */; };
-		1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084A16B437AA00039339 /* HelloWorldLayer.m */; };
-		1608084E16B437AA00039339 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084D16B437AA00039339 /* IntroLayer.m */; };
 		1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608085F16B43CEF00039339 /* PuzzleLayer.m */; };
 		1608086C16B43CEF00039339 /* DataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086216B43CEF00039339 /* DataUtils.m */; };
 		1608086D16B43CEF00039339 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086416B43CEF00039339 /* GameConstants.m */; };
@@ -144,6 +141,7 @@
 		1608087B16B43F1F00039339 /* armUnit.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087816B43F1F00039339 /* armUnit.png */; };
 		1608087C16B43F1F00039339 /* handSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087916B43F1F00039339 /* handSprite.png */; };
 		1608087D16B43F1F00039339 /* Puzzles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608087A16B43F1F00039339 /* Puzzles.plist */; };
+		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -403,12 +401,6 @@
 		1608084116B437AA00039339 /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Kazmath.txt; path = libs/LICENSE_Kazmath.txt; sourceTree = "<group>"; };
 		1608084316B437AA00039339 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		1608084416B437AA00039339 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1608084616B437AA00039339 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1608084716B437AA00039339 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1608084916B437AA00039339 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		1608084A16B437AA00039339 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		1608084C16B437AA00039339 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		1608084D16B437AA00039339 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		1608085E16B43CEF00039339 /* PuzzleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleLayer.h; sourceTree = "<group>"; };
 		1608085F16B43CEF00039339 /* PuzzleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleLayer.m; sourceTree = "<group>"; };
 		1608086116B43CEF00039339 /* DataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUtils.h; sourceTree = "<group>"; };
@@ -428,6 +420,8 @@
 		1608087816B43F1F00039339 /* armUnit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = armUnit.png; path = Resources/armUnit.png; sourceTree = "<group>"; };
 		1608087916B43F1F00039339 /* handSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = handSprite.png; path = Resources/handSprite.png; sourceTree = "<group>"; };
 		1608087A16B43F1F00039339 /* Puzzles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Puzzles.plist; path = Resources/Puzzles.plist; sourceTree = "<group>"; };
+		1608087E16B43FE500039339 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1608087F16B43FE500039339 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,12 +483,8 @@
 				1608087116B43D2100039339 /* Controllers */,
 				1608085D16B43CEF00039339 /* Layers */,
 				1608086016B43CEF00039339 /* Utils */,
-				1608084616B437AA00039339 /* AppDelegate.h */,
-				1608084716B437AA00039339 /* AppDelegate.m */,
-				1608084916B437AA00039339 /* HelloWorldLayer.h */,
-				1608084A16B437AA00039339 /* HelloWorldLayer.m */,
-				1608084C16B437AA00039339 /* IntroLayer.h */,
-				1608084D16B437AA00039339 /* IntroLayer.m */,
+				1608087E16B43FE500039339 /* AppDelegate.h */,
+				1608087F16B43FE500039339 /* AppDelegate.m */,
 				160806CF16B437A700039339 /* Resources */,
 				160806E916B437A800039339 /* libs */,
 				1608084216B437AA00039339 /* Supporting Files */,
@@ -1082,9 +1072,6 @@
 				1608083E16B437AA00039339 /* vec3.c in Sources */,
 				1608084016B437AA00039339 /* vec4.c in Sources */,
 				1608084516B437AA00039339 /* main.m in Sources */,
-				1608084816B437AA00039339 /* AppDelegate.m in Sources */,
-				1608084B16B437AA00039339 /* HelloWorldLayer.m in Sources */,
-				1608084E16B437AA00039339 /* IntroLayer.m in Sources */,
 				1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */,
 				1608086C16B43CEF00039339 /* DataUtils.m in Sources */,
 				1608086D16B43CEF00039339 /* GameConstants.m in Sources */,
@@ -1093,6 +1080,7 @@
 				1608087016B43CEF00039339 /* SpriteUtils.m in Sources */,
 				1608087616B43D2100039339 /* ArmController.m in Sources */,
 				1608087716B43D2100039339 /* HandController.m in Sources */,
+				1608088016B43FE500039339 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

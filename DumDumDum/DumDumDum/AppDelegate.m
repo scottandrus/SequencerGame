@@ -1,15 +1,15 @@
 //
 //  AppDelegate.m
-//  DumDumDum
+//  FishSet
 //
-//  Created by John Saba on 1/26/13.
+//  Created by John Saba on 1/18/13.
 //  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "IntroLayer.h"
+#import "PuzzleLayer.h"
 
 @implementation AppController
 
@@ -71,9 +71,18 @@
 
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+    
+
+    
+    
+    
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [IntroLayer scene]]; 
+	[director_ pushScene: [PuzzleLayer sceneWithPuzzle:0]];
+    
+    
+    
+    
 
 	
 	// Create a Navigation Controller with the Director

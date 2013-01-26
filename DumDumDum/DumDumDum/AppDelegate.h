@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  DumDumDum
+//  FishSet
 //
-//  Created by John Saba on 1/26/13.
+//  Created by John Saba on 1/18/13.
 //  Copyright __MyCompanyName__ 2013. All rights reserved.
 //
 

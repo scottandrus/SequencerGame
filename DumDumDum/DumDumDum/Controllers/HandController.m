@@ -52,9 +52,4 @@ static int const kSpeedCellsPerSecond = 10;
      ];
 }
 
-- (BOOL)didHandChangeCells
-{
-    
-}
-
 @end
