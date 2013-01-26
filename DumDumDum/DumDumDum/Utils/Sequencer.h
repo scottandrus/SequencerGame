@@ -10,4 +10,19 @@
 
 @interface Sequencer : NSObject
 
+
+
+/*
+ 
+ [
+    soundKey
+    soundKey
+    soundKey
+    soundKey
+ ]
+ 
+*/
+
+@property (nonatomic, strong) NSMutableArray *sequence;
+
 @end

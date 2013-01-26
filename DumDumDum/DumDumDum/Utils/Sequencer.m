@@ -8,6 +8,11 @@
 
 #import "Sequencer.h"
 
+static NSString *const normalBeat = @"sound file name";
+static NSString *const robotBeat = @"sound file name";
+
 @implementation Sequencer
+
+
 
 @end

@@ -9,7 +9,7 @@
 #import "SequenceLayer.h"
 #import "DataUtils.h"
 #import "GameConstants.h"
-
+#import "SimpleAudioEngine.h"
 
 @implementation SequenceLayer
 
@@ -24,6 +24,8 @@
 }
 
 
+
+
 - (id)initWithSequence:(int)sequence
 {
     self = [super init];
@@ -34,7 +36,10 @@
         // setup grid
         _gridSize = [DataUtils sequenceGridSize:sequence];
         _gridOrigin = [SequenceLayer sharedGridOrigin];
-                
+        
+        // patterns
+        _finalPattern = [DataUtils sequencePattern:sequence];
+        _dynamicPattern = [NSMutableArray arrayWithCapacity:4];
         
     }
     return self;
@@ -67,6 +72,31 @@
     [GridUtils drawGridWithSize:self.gridSize unitSize:kSizeGridUnit origin:_gridOrigin];
 }
 
+#pragma mark - sequencer
 
+- (void)scheduleFinalPattern
+{
+    //    CCTimer *myTimer = [[CCTimer alloc] initWithTarget:self selector:@selector(playPatternItem:) interval:delay repeat:1 delay:0];
+
+    float delay = 1.0; // Number of seconds between each call of myTimedMethod:
+    [self schedule:@selector(playFinalPatternItem:) interval:delay repeat:0 delay:0];
+}
+
+- (void)playFinalPatternItem:(ccTime)dt
+{
+    
+    NSLog(@"dt: %g", dt);
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Heart Robot 1.caf"];
+}
+
+# pragma mark - targeted touch delegate
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    NSLog(@"touch began");
+    [self scheduleFinalPattern];
+    
+    return YES;
+}
 
 @end

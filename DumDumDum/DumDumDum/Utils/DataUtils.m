@@ -18,7 +18,7 @@ static NSString *const kPuzzlesPlistSizeY = @"size.y";
 static NSString *const kSequencePlist = @"Sequence";
 static NSString *const kSequenceGridSizeX = @"size.x";
 static NSString *const kSequenceGridSizeY = @"size.y";
-
+static NSString *const kSequencePattern = @"pattern";
 
 @implementation DataUtils
 {
@@ -76,7 +76,7 @@ static NSString *const kSequenceGridSizeY = @"size.y";
     return seq;
 }
 
-// entry coordinate for puzzle
+// sequence grid size
 + (GridCoord)sequenceGridSize:(NSUInteger)sequence
 {
     NSDictionary *seq = [DataUtils sequenceData:sequence];
@@ -84,6 +84,14 @@ static NSString *const kSequenceGridSizeY = @"size.y";
     NSNumber *y = [seq valueForKeyPath:kSequenceGridSizeY];
     return GridCoordMake([x intValue], [y intValue]);
 }
+
+// the pattern you make to win
++ (NSArray *)sequencePattern:(NSUInteger)sequence
+{
+    NSDictionary *seq = [DataUtils sequenceData:sequence];
+    return [seq valueForKeyPath:kSequencePattern];
+}
+
 
 
 

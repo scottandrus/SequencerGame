@@ -3,6 +3,13 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>pattern</key>
+		<array>
+			<string>standard</string>
+			<string>robot</string>
+			<string>standard</string>
+			<string>robot</string>
+		</array>
 		<key>size</key>
 		<dict>
 			<key>x</key>

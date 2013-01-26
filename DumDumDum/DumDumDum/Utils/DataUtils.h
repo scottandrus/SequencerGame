@@ -14,6 +14,7 @@
 @interface DataUtils : NSObject
 
 + (GridCoord)sequenceGridSize:(NSUInteger)sequence;
++ (NSArray *)sequencePattern:(NSUInteger)sequence;
 
 
 

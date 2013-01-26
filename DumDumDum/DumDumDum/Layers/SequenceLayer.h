@@ -16,6 +16,10 @@
 @property (assign) GridCoord gridSize;
 @property (assign) CGPoint gridOrigin;
 
+@property (nonatomic, strong) NSArray *finalPattern;
+@property (nonatomic, strong) NSMutableArray *dynamicPattern;
+
+
 + (CCScene *)sceneWithSequence:(int)sequence;
 + (CGPoint)sharedGridOrigin;
 
