@@ -144,7 +144,6 @@
 		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
 		1608088316B4416000039339 /* SequenceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608088216B4416000039339 /* SequenceLayer.m */; };
 		1608088516B443E100039339 /* Sequence.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608088416B443E100039339 /* Sequence.plist */; };
-		1608088816B4494200039339 /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608088716B4494200039339 /* Sequencer.m */; };
 		1608089216B4516F00039339 /* Heart Meaty 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088916B4516F00039339 /* Heart Meaty 2.caf */; };
 		1608089316B4516F00039339 /* Heart Meaty 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088A16B4516F00039339 /* Heart Meaty 1.caf */; };
 		1608089416B4516F00039339 /* Heart Robot 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088B16B4516F00039339 /* Heart Robot 3.caf */; };
@@ -437,8 +436,6 @@
 		1608088116B4415F00039339 /* SequenceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceLayer.h; sourceTree = "<group>"; };
 		1608088216B4416000039339 /* SequenceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceLayer.m; sourceTree = "<group>"; };
 		1608088416B443E100039339 /* Sequence.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sequence.plist; sourceTree = "<group>"; };
-		1608088616B4494200039339 /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequencer.h; sourceTree = "<group>"; };
-		1608088716B4494200039339 /* Sequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequencer.m; sourceTree = "<group>"; };
 		1608088916B4516F00039339 /* Heart Meaty 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 2.caf"; path = "Resources/Heart Meaty 2.caf"; sourceTree = "<group>"; };
 		1608088A16B4516F00039339 /* Heart Meaty 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Meaty 1.caf"; path = "Resources/Heart Meaty 1.caf"; sourceTree = "<group>"; };
 		1608088B16B4516F00039339 /* Heart Robot 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 3.caf"; path = "Resources/Heart Robot 3.caf"; sourceTree = "<group>"; };
@@ -918,8 +915,6 @@
 				1608086816B43CEF00039339 /* GridUtils.m */,
 				1608086916B43CEF00039339 /* SpriteUtils.h */,
 				1608086A16B43CEF00039339 /* SpriteUtils.m */,
-				1608088616B4494200039339 /* Sequencer.h */,
-				1608088716B4494200039339 /* Sequencer.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1132,7 +1127,6 @@
 				1608087716B43D2100039339 /* HandController.m in Sources */,
 				1608088016B43FE500039339 /* AppDelegate.m in Sources */,
 				1608088316B4416000039339 /* SequenceLayer.m in Sources */,
-				1608088816B4494200039339 /* Sequencer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

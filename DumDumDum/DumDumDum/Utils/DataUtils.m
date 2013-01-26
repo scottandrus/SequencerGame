@@ -100,6 +100,13 @@ static NSString *const kSequencePattern = @"pattern";
 
 
 
+
+
+
+
+
+
+
 //
 //// entry coordinate for puzzle
 //+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber

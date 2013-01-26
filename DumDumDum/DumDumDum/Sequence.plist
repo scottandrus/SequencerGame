@@ -5,10 +5,14 @@
 	<dict>
 		<key>pattern</key>
 		<array>
-			<string>standard</string>
 			<string>robot</string>
 			<string>standard</string>
 			<string>robot</string>
+			<string>meaty</string>
+			<string>robot</string>
+			<string>standard</string>
+			<string>robot</string>
+			<string>meaty</string>
 		</array>
 		<key>size</key>
 		<dict>

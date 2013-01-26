@@ -11,6 +11,17 @@
 #import "GameConstants.h"
 #import "SimpleAudioEngine.h"
 
+static NSUInteger const kTotalPatternTicks = 8;
+
+static NSString *const kKeyStandard = @"standard";
+static NSString *const kKeyRobot = @"robot";
+static NSString *const kKeyMeaty = @"meaty";
+
+static NSString *const kSoundStandard = @"Heart 1.caf";
+static NSString *const kSoundRobot = @"Heart Robot 1.caf";
+static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
+
+
 @implementation SequenceLayer
 
 + (CCScene *)sceneWithSequence:(int)sequence
@@ -39,7 +50,11 @@
         
         // patterns
         _finalPattern = [DataUtils sequencePattern:sequence];
-        _dynamicPattern = [NSMutableArray arrayWithCapacity:4];
+        
+        NSLog(@"final pattern: %@", _finalPattern);
+        
+        _dynamicPattern = [NSMutableArray arrayWithCapacity:8];
+        _patternCount = 0;
         
     }
     return self;
@@ -78,15 +93,25 @@
 {
     //    CCTimer *myTimer = [[CCTimer alloc] initWithTarget:self selector:@selector(playPatternItem:) interval:delay repeat:1 delay:0];
 
-    float delay = 1.0; // Number of seconds between each call of myTimedMethod:
-    [self schedule:@selector(playFinalPatternItem:) interval:delay repeat:0 delay:0];
+    float delay = .5; // Number of seconds between each call of myTimedMethod:
+    [self schedule:@selector(playFinalPatternItem:) interval:delay repeat:kTotalPatternTicks - 1 delay:0];
+    
+    
 }
 
 - (void)playFinalPatternItem:(ccTime)dt
 {
     
-    NSLog(@"dt: %g", dt);
-    [[SimpleAudioEngine sharedEngine] playEffect:@"Heart Robot 1.caf"];
+    NSLog(@"pattern count: %i", self.patternCount);
+    
+    NSString *key = [self.finalPattern objectAtIndex:self.patternCount];
+    [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+    
+    self.patternCount += 1;
+    if (self.patternCount == kTotalPatternTicks) {
+        self.patternCount = 0;
+        NSLog(@"reset pattern count");
+    }
 }
 
 # pragma mark - targeted touch delegate
@@ -97,6 +122,25 @@
     [self scheduleFinalPattern];
     
     return YES;
+}
+
+#pragma mark - sound access
+
+- (NSString *)soundNameForKey:(NSString *)key
+{
+    if ([key isEqualToString:kKeyStandard]) {
+        return kSoundStandard;
+    }
+    else if ([key isEqualToString:kKeyRobot]) {
+        return kSoundRobot;
+    }
+    else if ([key isEqualToString:kKeyMeaty]) {
+        return kSoundMeaty;
+    }
+    else {
+        NSLog(@"warning: sound not found");
+        return @"";
+    }
 }
 
 @end
