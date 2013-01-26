@@ -25,6 +25,9 @@
 @property (nonatomic, strong) CCSprite *finalPatternButton;
 @property (nonatomic, strong) CCSprite *dynamicPatternButton;
 
+// heart sprites
+@property (nonatomic, strong) NSMutableDictionary *heartSprites;
+
 
 + (CCScene *)sceneWithSequence:(int)sequence;
 + (CGPoint)sharedGridOrigin;

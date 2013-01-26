@@ -15,7 +15,6 @@
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
 
-
 static NSString *const kKeyStandard = @"standard";
 static NSString *const kKeyRobot = @"robot";
 static NSString *const kKeyMeaty = @"meaty";
@@ -50,9 +49,6 @@ typedef enum
     return scene;
 }
 
-
-
-
 - (id)initWithSequence:(int)sequence
 {
     self = [super init];
@@ -83,6 +79,16 @@ typedef enum
         _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
         _finalPatternButton.position = CGPointMake(950, 700);
         [self addChild:_finalPatternButton];
+        
+        _dynamicPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _dynamicPatternButton.position = CGPointMake(50, 700);
+        [self addChild:_dynamicPatternButton];
+        
+        
+        
+        
+        
+        _heartSprites = [NSMutableDictionary dictionary];
         
     }
     return self;
@@ -119,20 +125,29 @@ typedef enum
 
 - (void)scheduleFinalPattern
 {
-    //    CCTimer *myTimer = [[CCTimer alloc] initWithTarget:self selector:@selector(playPatternItem:) interval:delay repeat:1 delay:0];
-
     float delay = .5; // Number of seconds between each call of myTimedMethod:
     [self schedule:@selector(playFinalPatternItem:) interval:delay repeat:kTotalPatternTicks - 1 delay:0];
-    
-    
+}
+
+- (void)scheduleDynamicPattern
+{
+    float delay = .5; // Number of seconds between each call of myTimedMethod:
+    [self schedule:@selector(playDynamicPatternItem:) interval:delay repeat:kTotalPatternTicks - 1 delay:0];  
 }
 
 - (void)playFinalPatternItem:(ccTime)dt
 {
-    
-    NSLog(@"pattern count: %i", self.patternCount);
-    
-    NSString *key = [self.finalPattern objectAtIndex:self.patternCount];
+    [self playPatternItem:self.finalPattern];
+}
+
+- (void)playDynamicPatternItem:(ccTime)dt
+{
+    [self playPatternItem:self.dynamicPattern];
+}
+
+- (void)playPatternItem:(NSArray *)pattern
+{
+    NSString *key = [pattern objectAtIndex:self.patternCount];
     
     if ([key isEqualToString:@""] == NO) {
         [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
@@ -141,7 +156,64 @@ typedef enum
     self.patternCount += 1;
     if (self.patternCount == kTotalPatternTicks) {
         self.patternCount = 0;
-        NSLog(@"reset pattern count");
+    }
+}
+
+- (void)handleCellSelection:(GridCoord)cell key:(NSString *)key
+{
+    if ([[self.dynamicPattern objectAtIndex:cell.x - 1] isEqualToString:key]) {
+        [self.dynamicPattern replaceObjectAtIndex:cell.x - 1 withObject:kKeyNoSound];        
+        [self removeBeatSpriteFromCell:cell];
+    }
+    else {
+        [self.dynamicPattern replaceObjectAtIndex:cell.x - 1 withObject:key];
+        [self addBeatSpriteToCell:cell];
+    }
+}
+
+#pragma mark - access heart sprites
+
+- (void)addBeatSpriteToCell:(GridCoord)cell
+{
+    NSString *keyString = [NSString stringWithFormat:@"%i%i", cell.x, cell.y];
+    CCSprite *sprite = [self heartSpriteForBeatType:(kBeatType)cell.y];
+    sprite.position = [GridUtils spriteAbsolutePositionForGridCoord:cell unitSize:kSizeGridUnit origin:self.gridOrigin];
+    [self.heartSprites setObject:sprite forKey:keyString];
+    [self addChild:sprite];
+}
+
+- (void)removeBeatSpriteFromCell:(GridCoord)cell
+{
+    NSString *keyString = [NSString stringWithFormat:@"%i%i", cell.x, cell.y];
+    CCSprite *sprite = [self.heartSprites objectForKey:keyString];
+    
+    if (sprite != nil) {
+        [sprite removeFromParentAndCleanup:YES];
+        [self.heartSprites removeObjectForKey:keyString];
+    }
+}
+
+- (void)removeAllBeatSpritesFromTick:(int)tick
+{
+    for (int y = 1; y < 5; y++) {
+        [self removeBeatSpriteFromCell:GridCoordMake(tick, y)];
+    }
+}
+
+
+- (CCSprite *)heartSpriteForBeatType:(kBeatType)beatType
+{
+    if (beatType == kBeatTypeStandard) {
+        return [CCSprite spriteWithFile:@"standardHeart.png"];
+    }
+    else if (beatType == kBeatTypeRobot) {
+        return [CCSprite spriteWithFile:@"robotHeart.png"];
+    }
+    else if (beatType == kBeatTypeMeaty) {
+        return [CCSprite spriteWithFile:@"meatyHeart.png"];
+    }
+    else {
+        return nil;
     }
 }
 
@@ -159,46 +231,35 @@ typedef enum
     }
     
     // touch dynamic pattern button to play dynamic pattern
-    // needs implementation
+    if (CGRectContainsPoint(self.dynamicPatternButton.boundingBox, touchPosition)) {
+        [self scheduleDynamicPattern];
+        return YES;
+    }
 
-    
     // add heart beat to sequencer if touch on grid
     GridCoord cell = [GridUtils gridCoordForAbsolutePosition:touchPosition unitSize:kSizeGridUnit origin:self.gridOrigin];
     if ([self isValidCell:cell]) {
         
         // always remove whatever graphic is at the current dynamicPattern index -- we only support one beat per tick
+        [self removeAllBeatSpritesFromTick:cell.x];
         
         if (cell.y == kBeatTypeStandard) {
-            [self handleCellSelectionX:cell.x key:kKeyStandard];
+            [self handleCellSelection:cell key:kKeyStandard];
         }
         else if (cell.y == kBeatTypeRobot) {
-            [self handleCellSelectionX:cell.x key:kKeyRobot];
+            [self handleCellSelection:cell key:kKeyRobot];
         }
         else if (cell.y == kBeatTypeMeaty) {
-            [self handleCellSelectionX:cell.x key:kKeyMeaty];
+            [self handleCellSelection:cell key:kKeyMeaty];
         }
         else if (cell.y == kBeatTypeAlien) {
-            [self handleCellSelectionX:cell.x key:kKeyAlien];
+            [self handleCellSelection:cell key:kKeyAlien];
         }
-        
-        NSLog(@"self.dynamicPattern: %@", self.dynamicPattern);
-        
+                
         return YES;
     }
     
     return YES;
-}
-
-- (void)handleCellSelectionX:(int)x key:(NSString *)key
-{
-    if ([[self.dynamicPattern objectAtIndex:x - 1] isEqualToString:key]) {
-        [self.dynamicPattern replaceObjectAtIndex:x - 1 withObject:kKeyNoSound];
-        // remove graphic
-    }
-    else {
-        [self.dynamicPattern replaceObjectAtIndex:x - 1 withObject:key];
-        // add graphic
-    }
 }
 
 #pragma mark - sound access
@@ -233,4 +294,6 @@ typedef enum
     }
     return NO;
 }
+
+
 @end

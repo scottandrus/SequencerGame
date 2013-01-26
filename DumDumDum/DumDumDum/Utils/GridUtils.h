@@ -38,6 +38,9 @@ GridCoordMake(const int x, const int y)
 // grid coordinate for absolute position on a grid (any position inside a grid unit)
 + (GridCoord) gridCoordForAbsolutePosition:(CGPoint)position unitSize:(CGFloat)unitSize origin:(CGPoint)origin;
 
+// for sprites
++ (CGPoint) spriteAbsolutePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin;
+
 #pragma mark - drawing
 
 // draws grid lines, call in layer's draw method

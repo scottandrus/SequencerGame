@@ -33,6 +33,13 @@
     return GridCoordMake(x, y);
 }
 
++ (CGPoint) spriteAbsolutePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin
+{
+    CGPoint point = [GridUtils absolutePositionForGridCoord:coord unitSize:unitSize origin:origin];
+    return CGPointMake(point.x + unitSize/2, point.y + unitSize/2);
+}
+
+
 #pragma mark - drawing
 
 // draws grid lines, call in layer's draw method
