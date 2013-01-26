@@ -13,16 +13,29 @@
 #import "SpriteUtils.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
+static NSUInteger const kTotalHeartTypes = 4;
+
 
 static NSString *const kKeyStandard = @"standard";
 static NSString *const kKeyRobot = @"robot";
 static NSString *const kKeyMeaty = @"meaty";
+static NSString *const kKeyAlien = @"alien";
 static NSString *const kKeyNoSound = @"no sound";
 
 
 static NSString *const kSoundStandard = @"Heart 1.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
+static NSString *const kSoundAlien = @"NEEDS FILE";
+
+typedef enum
+{
+    kBeatTypeNone,
+    kBeatTypeStandard,
+    kBeatTypeRobot,
+    kBeatTypeMeaty,
+    kBeatTypeAlien
+}kBeatType;
 
 
 @implementation SequenceLayer
@@ -52,9 +65,19 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
         _gridOrigin = [SequenceLayer sharedGridOrigin];
         
         // patterns
-        _finalPattern = [DataUtils sequencePattern:sequence];
-        _dynamicPattern = [NSMutableArray arrayWithCapacity:8];
         _patternCount = 0;
+        _finalPattern = [DataUtils sequencePattern:sequence];
+        _dynamicPattern = [NSMutableArray array];
+        [_dynamicPattern addObjectsFromArray:[NSArray arrayWithObjects:
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound,
+                                              kKeyNoSound, nil]];
+        
         
         // buttons
         _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
@@ -129,15 +152,53 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
     
     CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
 
+    // touch final pattern button to play final pattern
     if (CGRectContainsPoint(self.finalPatternButton.boundingBox, touchPosition)) {
-        NSLog(@"final pattern button");
         [self scheduleFinalPattern];
         return YES;
     }
+    
+    // touch dynamic pattern button to play dynamic pattern
+    // needs implementation
 
     
+    // add heart beat to sequencer if touch on grid
+    GridCoord cell = [GridUtils gridCoordForAbsolutePosition:touchPosition unitSize:kSizeGridUnit origin:self.gridOrigin];
+    if ([self isValidCell:cell]) {
+        
+        // always remove whatever graphic is at the current dynamicPattern index -- we only support one beat per tick
+        
+        if (cell.y == kBeatTypeStandard) {
+            [self handleCellSelectionX:cell.x key:kKeyStandard];
+        }
+        else if (cell.y == kBeatTypeRobot) {
+            [self handleCellSelectionX:cell.x key:kKeyRobot];
+        }
+        else if (cell.y == kBeatTypeMeaty) {
+            [self handleCellSelectionX:cell.x key:kKeyMeaty];
+        }
+        else if (cell.y == kBeatTypeAlien) {
+            [self handleCellSelectionX:cell.x key:kKeyAlien];
+        }
+        
+        NSLog(@"self.dynamicPattern: %@", self.dynamicPattern);
+        
+        return YES;
+    }
     
     return YES;
+}
+
+- (void)handleCellSelectionX:(int)x key:(NSString *)key
+{
+    if ([[self.dynamicPattern objectAtIndex:x - 1] isEqualToString:key]) {
+        [self.dynamicPattern replaceObjectAtIndex:x - 1 withObject:kKeyNoSound];
+        // remove graphic
+    }
+    else {
+        [self.dynamicPattern replaceObjectAtIndex:x - 1 withObject:key];
+        // add graphic
+    }
 }
 
 #pragma mark - sound access
@@ -163,4 +224,13 @@ static NSString *const kSoundMeaty = @"Heart Meaty 1.caf";
     
 }
 
+#pragma mark - custom cell helpers
+
+- (BOOL)isValidCell:(GridCoord)cell
+{
+    if (cell.x >= 1 && cell.x <= kTotalPatternTicks && cell.y >= 1 && cell.y <= kTotalHeartTypes) {
+        return YES;
+    }
+    return NO;
+}
 @end

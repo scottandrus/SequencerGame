@@ -153,6 +153,9 @@
 		1608089816B4516F00039339 /* Heart 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608088F16B4516F00039339 /* Heart 3.caf */; };
 		1608089916B4516F00039339 /* Heart 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608089016B4516F00039339 /* Heart 2.caf */; };
 		1608089A16B4516F00039339 /* Heart 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1608089116B4516F00039339 /* Heart 1.caf */; };
+		160808A416B4765C00039339 /* meatyHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A116B4765B00039339 /* meatyHeart.png */; };
+		160808A516B4765C00039339 /* robotHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A216B4765B00039339 /* robotHeart.png */; };
+		160808A616B4765C00039339 /* standardHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808A316B4765C00039339 /* standardHeart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -445,6 +448,9 @@
 		1608088F16B4516F00039339 /* Heart 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 3.caf"; path = "Resources/Heart 3.caf"; sourceTree = "<group>"; };
 		1608089016B4516F00039339 /* Heart 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 2.caf"; path = "Resources/Heart 2.caf"; sourceTree = "<group>"; };
 		1608089116B4516F00039339 /* Heart 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart 1.caf"; path = "Resources/Heart 1.caf"; sourceTree = "<group>"; };
+		160808A116B4765B00039339 /* meatyHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meatyHeart.png; path = Resources/meatyHeart.png; sourceTree = "<group>"; };
+		160808A216B4765B00039339 /* robotHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robotHeart.png; path = Resources/robotHeart.png; sourceTree = "<group>"; };
+		160808A316B4765C00039339 /* standardHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = standardHeart.png; path = Resources/standardHeart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +524,9 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808A116B4765B00039339 /* meatyHeart.png */,
+				160808A216B4765B00039339 /* robotHeart.png */,
+				160808A316B4765C00039339 /* standardHeart.png */,
 				1608088916B4516F00039339 /* Heart Meaty 2.caf */,
 				1608088A16B4516F00039339 /* Heart Meaty 1.caf */,
 				1608088B16B4516F00039339 /* Heart Robot 3.caf */,
@@ -1006,6 +1015,9 @@
 				1608089816B4516F00039339 /* Heart 3.caf in Resources */,
 				1608089916B4516F00039339 /* Heart 2.caf in Resources */,
 				1608089A16B4516F00039339 /* Heart 1.caf in Resources */,
+				160808A416B4765C00039339 /* meatyHeart.png in Resources */,
+				160808A516B4765C00039339 /* robotHeart.png in Resources */,
+				160808A616B4765C00039339 /* standardHeart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
