@@ -13,14 +13,18 @@
 
 @interface DataUtils : NSObject
 
-// entry coordinate for puzzle
-+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber;
++ (GridCoord)sequenceGridSize:(NSUInteger)sequence;
 
-// entry coordinate for puzzle
-+ (GridCoord)puzzleSize:(NSUInteger)puzzleNumber;
 
-// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
-+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber;
+
+//// entry coordinate for puzzle
+//+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber;
+//
+//// entry coordinate for puzzle
+//+ (GridCoord)puzzleSize:(NSUInteger)puzzleNumber;
+//
+//// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
+//+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber;
 
 
 @end

@@ -15,43 +15,43 @@
 
 @implementation PuzzleLayer
 
-+ (CCScene *)sceneWithPuzzle:(int)puzzle
-{
-    CCScene *scene = [CCScene node];
-    
-    PuzzleLayer *puzzleLayer = [[PuzzleLayer alloc] initWithPuzzle:puzzle];
-    [scene addChild:puzzleLayer];
-       
-    return scene;
-}
-
-
-- (id)initWithPuzzle:(int)puzzle 
-{
-    self = [super init];
-    if (self) {
-
-        [self setIsTouchEnabled:YES];
-        
-        _gridSize = [DataUtils puzzleSize:puzzle];
-        _gridOrigin = [PuzzleLayer sharedGridOrigin];
-        
-        // hand
-        _handConroller = [[HandController alloc] initWithContentSize:CGSizeMake(kSizeGridUnit, kSizeGridUnit)];
-        _handEntryCoord = [DataUtils puzzleEntryCoord:puzzle];
-        _handConroller.position = [GridUtils absolutePositionForGridCoord:_handEntryCoord unitSize:kSizeGridUnit origin:_gridOrigin];
-        [self addChild:_handConroller];
-        
-        [_handConroller setDirectionFacing:[DataUtils puzzleEntryDireciton:puzzle]];
-        
-        // arm
-        _armController = [[ArmController alloc] init];
-        [self addChild:_armController];
-        
-        
-    }
-    return self;
-}
+//+ (CCScene *)sceneWithPuzzle:(int)puzzle
+//{
+//    CCScene *scene = [CCScene node];
+//    
+//    PuzzleLayer *puzzleLayer = [[PuzzleLayer alloc] initWithPuzzle:puzzle];
+//    [scene addChild:puzzleLayer];
+//       
+//    return scene;
+//}
+//
+//
+//- (id)initWithPuzzle:(int)puzzle 
+//{
+//    self = [super init];
+//    if (self) {
+//
+//        [self setIsTouchEnabled:YES];
+//        
+//        _gridSize = [DataUtils puzzleSize:puzzle];
+//        _gridOrigin = [PuzzleLayer sharedGridOrigin];
+//        
+//        // hand
+//        _handConroller = [[HandController alloc] initWithContentSize:CGSizeMake(kSizeGridUnit, kSizeGridUnit)];
+//        _handEntryCoord = [DataUtils puzzleEntryCoord:puzzle];
+//        _handConroller.position = [GridUtils absolutePositionForGridCoord:_handEntryCoord unitSize:kSizeGridUnit origin:_gridOrigin];
+//        [self addChild:_handConroller];
+//        
+//        [_handConroller setDirectionFacing:[DataUtils puzzleEntryDireciton:puzzle]];
+//        
+//        // arm
+//        _armController = [[ArmController alloc] init];
+//        [self addChild:_armController];
+//        
+//        
+//    }
+//    return self;
+//}
 
 #pragma mark - globals
 

@@ -142,6 +142,9 @@
 		1608087C16B43F1F00039339 /* handSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087916B43F1F00039339 /* handSprite.png */; };
 		1608087D16B43F1F00039339 /* Puzzles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608087A16B43F1F00039339 /* Puzzles.plist */; };
 		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
+		1608088316B4416000039339 /* SequenceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608088216B4416000039339 /* SequenceLayer.m */; };
+		1608088516B443E100039339 /* Sequence.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608088416B443E100039339 /* Sequence.plist */; };
+		1608088816B4494200039339 /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608088716B4494200039339 /* Sequencer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -422,6 +425,11 @@
 		1608087A16B43F1F00039339 /* Puzzles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Puzzles.plist; path = Resources/Puzzles.plist; sourceTree = "<group>"; };
 		1608087E16B43FE500039339 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1608087F16B43FE500039339 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1608088116B4415F00039339 /* SequenceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceLayer.h; sourceTree = "<group>"; };
+		1608088216B4416000039339 /* SequenceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceLayer.m; sourceTree = "<group>"; };
+		1608088416B443E100039339 /* Sequence.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sequence.plist; sourceTree = "<group>"; };
+		1608088616B4494200039339 /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequencer.h; sourceTree = "<group>"; };
+		1608088716B4494200039339 /* Sequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequencer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +519,7 @@
 				160806E416B437A700039339 /* Icon@2x.png */,
 				160806E616B437A800039339 /* Info.plist */,
 				160806E716B437A800039339 /* iTunesArtwork */,
+				1608088416B443E100039339 /* Sequence.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -863,6 +872,8 @@
 			children = (
 				1608085E16B43CEF00039339 /* PuzzleLayer.h */,
 				1608085F16B43CEF00039339 /* PuzzleLayer.m */,
+				1608088116B4415F00039339 /* SequenceLayer.h */,
+				1608088216B4416000039339 /* SequenceLayer.m */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -880,6 +891,8 @@
 				1608086816B43CEF00039339 /* GridUtils.m */,
 				1608086916B43CEF00039339 /* SpriteUtils.h */,
 				1608086A16B43CEF00039339 /* SpriteUtils.m */,
+				1608088616B4494200039339 /* Sequencer.h */,
+				1608088716B4494200039339 /* Sequencer.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -961,6 +974,7 @@
 				1608087B16B43F1F00039339 /* armUnit.png in Resources */,
 				1608087C16B43F1F00039339 /* handSprite.png in Resources */,
 				1608087D16B43F1F00039339 /* Puzzles.plist in Resources */,
+				1608088516B443E100039339 /* Sequence.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,6 +1095,8 @@
 				1608087616B43D2100039339 /* ArmController.m in Sources */,
 				1608087716B43D2100039339 /* HandController.m in Sources */,
 				1608088016B43FE500039339 /* AppDelegate.m in Sources */,
+				1608088316B4416000039339 /* SequenceLayer.m in Sources */,
+				1608088816B4494200039339 /* Sequencer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

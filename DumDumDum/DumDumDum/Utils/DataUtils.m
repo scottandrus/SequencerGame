@@ -15,7 +15,17 @@ static NSString *const kPuzzlesPlistEntryDirection =@"entry direction";
 static NSString *const kPuzzlesPlistSizeX = @"size.x";
 static NSString *const kPuzzlesPlistSizeY = @"size.y";
 
+static NSString *const kSequencePlist = @"Sequence";
+static NSString *const kSequenceGridSizeX = @"size.x";
+static NSString *const kSequenceGridSizeY = @"size.y";
+
+
 @implementation DataUtils
+{
+    
+}
+
+#pragma mark - plist utils
 
 + (NSData *)plistXML:(NSString *)plist
 {
@@ -56,38 +66,48 @@ static NSString *const kPuzzlesPlistSizeY = @"size.y";
     return plistArray;
 }
 
+#pragma mark - access sequence plist
+
 // return puzzle data from plist, 0-based index
-+ (NSDictionary *)puzzleData:(NSUInteger)puzzleNumber
++ (NSDictionary *)sequenceData:(NSUInteger)sequence
 {
-    NSArray *plist = [DataUtils plistArray:kPuzzlesPlist];
-    NSDictionary * puzzle = [plist objectAtIndex:puzzleNumber];
-    return puzzle;
+    NSArray *plist = [DataUtils plistArray:kSequencePlist];
+    NSDictionary * seq = [plist objectAtIndex:sequence];
+    return seq;
 }
 
 // entry coordinate for puzzle
-+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber
++ (GridCoord)sequenceGridSize:(NSUInteger)sequence
 {
-    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
-    NSNumber *x = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordX];
-    NSNumber *y = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordY];
+    NSDictionary *seq = [DataUtils sequenceData:sequence];
+    NSNumber *x = [seq valueForKeyPath:kSequenceGridSizeX];
+    NSNumber *y = [seq valueForKeyPath:kSequenceGridSizeY];
     return GridCoordMake([x intValue], [y intValue]);
 }
 
-// entry coordinate for puzzle
-+ (GridCoord)puzzleSize:(NSUInteger)puzzleNumber
-{
-    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
-    NSNumber *x = [puzzle valueForKeyPath:kPuzzlesPlistSizeX];
-    NSNumber *y = [puzzle valueForKeyPath:kPuzzlesPlistSizeY];
-    return GridCoordMake([x intValue], [y intValue]);
-}
 
-// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
-+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber
-{
-    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
-    NSNumber *direction = [puzzle valueForKeyPath:kPuzzlesPlistEntryDirection];
-    return [direction intValue];
-}
+
+
+
+
+
+
+//
+//// entry coordinate for puzzle
+//+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber
+//{
+//    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
+//    NSNumber *x = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordX];
+//    NSNumber *y = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordY];
+//    return GridCoordMake([x intValue], [y intValue]);
+//}
+//
+//// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
+//+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber
+//{
+//    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
+//    NSNumber *direction = [puzzle valueForKeyPath:kPuzzlesPlistEntryDirection];
+//    return [direction intValue];
+//}
 
 @end

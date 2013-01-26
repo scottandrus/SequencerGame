@@ -9,7 +9,7 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "PuzzleLayer.h"
+#import "SequenceLayer.h"
 
 @implementation AppController
 
@@ -78,7 +78,7 @@
     
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [PuzzleLayer sceneWithPuzzle:0]];
+	[director_ pushScene: [SequenceLayer sceneWithSequence:0]];
     
     
     
