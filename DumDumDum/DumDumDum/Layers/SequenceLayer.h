@@ -24,6 +24,9 @@
 // buttons
 @property (nonatomic, strong) CCSprite *finalPatternButton;
 @property (nonatomic, strong) CCSprite *dynamicPatternButton;
+@property (nonatomic, strong) CCSprite *previousButton;
+@property (nonatomic, strong) CCSprite *nextButton;
+
 
 // heart sprites
 @property (nonatomic, strong) NSMutableDictionary *heartSprites;

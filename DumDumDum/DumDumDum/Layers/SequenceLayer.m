@@ -76,20 +76,28 @@ typedef enum
         
         
         // buttons
-        _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
-        _finalPatternButton.position = CGPointMake(950, 700);
-        [self addChild:_finalPatternButton];
         
+        CGFloat buttonSide = [[CCSprite spriteWithFile:@"armUnit.png"] boundingBox].size.height;
+        CGFloat buttonsY = self.gridOrigin.y + (self.gridSize.y * kSizeGridUnit) + buttonSide/2;
+        CGFloat gridWidth = self.gridSize.x * kSizeGridUnit;
+    
+        _previousButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _previousButton.position = CGPointMake(self.gridOrigin.x + gridWidth/4 - kSizeGridUnit, buttonsY);
+        [self addChild:_previousButton];
+                
         _dynamicPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
-        _dynamicPatternButton.position = CGPointMake(50, 700);
+        _dynamicPatternButton.position = CGPointMake(self.gridOrigin.x + gridWidth/2 - kSizeGridUnit, buttonsY);
         [self addChild:_dynamicPatternButton];
         
-        
-        
-        
-        
+        _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _finalPatternButton.position = CGPointMake(self.gridOrigin.x + 3*gridWidth/4 - kSizeGridUnit, buttonsY);
+        [self addChild:_finalPatternButton];
+
+        _nextButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _nextButton.position = CGPointMake(self.gridOrigin.x + gridWidth - kSizeGridUnit, buttonsY);
+        [self addChild:_nextButton];
+
         _heartSprites = [NSMutableDictionary dictionary];
-        
     }
     return self;
 }
@@ -242,6 +250,11 @@ typedef enum
         [self scheduleDynamicPattern];
         return YES;
     }
+    
+    // touch previous button
+    
+    // touch next button
+    
 
     // add heart beat to sequencer if touch on grid
     GridCoord cell = [GridUtils gridCoordForAbsolutePosition:touchPosition unitSize:kSizeGridUnit origin:self.gridOrigin];
