@@ -21,7 +21,6 @@ static NSString *const kKeyMeaty = @"meaty";
 static NSString *const kKeyAlien = @"alien";
 static NSString *const kKeyNoSound = @"no sound";
 
-
 static NSString *const kSoundStandard = @"Heart 4.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
@@ -55,6 +54,7 @@ typedef enum
     if (self) {
         
         [self setIsTouchEnabled:YES];
+        _sequence = sequence;
         
         // setup grid
         _gridSize = [DataUtils sequenceGridSize:sequence];
@@ -73,7 +73,6 @@ typedef enum
                                               kKeyNoSound,
                                               kKeyNoSound,
                                               kKeyNoSound, nil]];
-        
         
         // buttons
         
@@ -111,13 +110,35 @@ typedef enum
 
 #pragma mark - scene management
 
--(void) onEnterTransitionDidFinish
+- (void)onEnterTransitionDidFinish
 {
     [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];
 }
--(void) onExit
+- (void)onExit
 {
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+}
+
+- (void)nextScene
+{
+    if (self.sequence  < [DataUtils numberOfSequences] - 1) {
+        CCScene *scene = [SequenceLayer sceneWithSequence:self.sequence + 1];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInL transitionWithDuration:0.5 scene:scene]];
+    }
+    else {
+        NSLog(@"no next scene");
+    }
+}
+
+- (void)previousScene
+{
+    if (self.sequence > 0) {
+        CCScene *scene = [SequenceLayer sceneWithSequence:self.sequence - 1];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:0.5 scene:scene]];
+    }
+    else {
+        NSLog(@"no prev scene");
+    }
 }
 
 # pragma mark - draw
@@ -251,10 +272,17 @@ typedef enum
         return YES;
     }
     
-    // touch previous button
+    // touch previous button takes us to previous sequence, if there is one
+    if (CGRectContainsPoint(self.previousButton.boundingBox, touchPosition)) {
+        [self previousScene];
+        return YES;
+    }
     
-    // touch next button
-    
+    // touch next button takes us to next sequence, if there is one
+    if (CGRectContainsPoint(self.nextButton.boundingBox, touchPosition)) {
+        [self nextScene];
+        return YES;
+    }
 
     // add heart beat to sequencer if touch on grid
     GridCoord cell = [GridUtils gridCoordForAbsolutePosition:touchPosition unitSize:kSizeGridUnit origin:self.gridOrigin];
@@ -331,6 +359,5 @@ typedef enum
     }
     return YES;
 }
-
 
 @end

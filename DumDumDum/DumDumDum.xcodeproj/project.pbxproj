@@ -536,6 +536,7 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1608088416B443E100039339 /* Sequence.plist */,
 				160808C516B48F5400039339 /* alienHeart.png */,
 				160808A716B48B7300039339 /* Heart 1.caf */,
 				160808A816B48B7400039339 /* Heart 2.caf */,
@@ -570,7 +571,6 @@
 				160806E416B437A700039339 /* Icon@2x.png */,
 				160806E616B437A800039339 /* Info.plist */,
 				160806E716B437A800039339 /* iTunesArtwork */,
-				1608088416B443E100039339 /* Sequence.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";

@@ -15,6 +15,7 @@
 
 + (GridCoord)sequenceGridSize:(NSUInteger)sequence;
 + (NSArray *)sequencePattern:(NSUInteger)sequence;
++ (NSUInteger)numberOfSequences;
 
 
 

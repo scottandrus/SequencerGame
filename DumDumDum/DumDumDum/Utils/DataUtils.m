@@ -68,7 +68,7 @@ static NSString *const kSequencePattern = @"pattern";
 
 #pragma mark - access sequence plist
 
-// return puzzle data from plist, 0-based index
+// return sequence from plist, 0-based index
 + (NSDictionary *)sequenceData:(NSUInteger)sequence
 {
     NSArray *plist = [DataUtils plistArray:kSequencePlist];
@@ -90,6 +90,12 @@ static NSString *const kSequencePattern = @"pattern";
 {
     NSDictionary *seq = [DataUtils sequenceData:sequence];
     return [seq valueForKeyPath:kSequencePattern];
+}
+
++ (NSUInteger)numberOfSequences
+{
+    NSArray *plist = [DataUtils plistArray:kSequencePlist];
+    return [plist count];
 }
 
 

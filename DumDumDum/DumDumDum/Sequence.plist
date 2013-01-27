@@ -6,20 +6,60 @@
 		<key>pattern</key>
 		<array>
 			<string>standard</string>
+			<string></string>
 			<string>standard</string>
-			<string>meaty</string>
+			<string></string>
 			<string>standard</string>
+			<string></string>
 			<string>standard</string>
-			<string>alien</string>
-			<string>standard</string>
-			<string>robot</string>
+			<string></string>
 		</array>
 		<key>size</key>
 		<dict>
 			<key>x</key>
 			<integer>8</integer>
 			<key>y</key>
-			<string>4</string>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>pattern</key>
+		<array>
+			<string>standard</string>
+			<string>robot</string>
+			<string>meaty</string>
+			<string></string>
+			<string>standard</string>
+			<string>robot</string>
+			<string>meaty</string>
+			<string></string>
+		</array>
+		<key>size</key>
+		<dict>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>pattern</key>
+		<array>
+			<string>standard</string>
+			<string>standard</string>
+			<string>meaty</string>
+			<string>standard</string>
+			<string>standard</string>
+			<string>standard</string>
+			<string>meaty</string>
+			<string>alien</string>
+		</array>
+		<key>size</key>
+		<dict>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 </array>
