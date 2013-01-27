@@ -6,13 +6,13 @@
 		<key>pattern</key>
 		<array>
 			<string>standard</string>
-			<string></string>
+			<string>no sound</string>
 			<string>standard</string>
-			<string></string>
+			<string>no sound</string>
 			<string>standard</string>
-			<string></string>
+			<string>no sound</string>
 			<string>standard</string>
-			<string></string>
+			<string>no sound</string>
 		</array>
 		<key>size</key>
 		<dict>
@@ -28,11 +28,11 @@
 			<string>standard</string>
 			<string>robot</string>
 			<string>meaty</string>
-			<string></string>
+			<string>no sound</string>
 			<string>standard</string>
 			<string>robot</string>
 			<string>meaty</string>
-			<string></string>
+			<string>no sound</string>
 		</array>
 		<key>size</key>
 		<dict>

@@ -15,6 +15,7 @@
 @property (assign) int sequence;
 @property (assign) GridCoord gridSize;
 @property (assign) CGPoint gridOrigin;
+@property (assign) BOOL isAnySequencePlaying;
 
 // pattern
 @property (nonatomic, strong) NSArray *finalPattern;

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "GameTypes.h"
+#import "cocos2d.h"
 
 @interface SpriteUtils : NSObject
 
 + (float)degreesForDirection:(kDirection)direction;
++ (void)switchImageForSprite:(CCSprite *)sprite textureKey:(NSString *)key;
 
 @end

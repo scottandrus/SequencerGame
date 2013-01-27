@@ -26,6 +26,13 @@ static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
 static NSString *const kSoundAlien = @"Heart Alien 2.caf";
 
+static NSString *const kImageDynamicButtonDefault = @"dynamicButtonDefault.png";
+static NSString *const kImageDynamicButtonSelected = @"dynamicButtonSelected.png";
+static NSString *const kImageDynamicButtonComplete = @"dynamicButtonComplete.png";
+
+static NSString *const kImageFinalButtonDefault = @"finalButtonDefault.png";
+static NSString *const kImageFinalButtonSelected = @"finalButtonSelected.png";
+
 typedef enum
 {
     kBeatTypeNone,
@@ -53,8 +60,15 @@ typedef enum
     self = [super init];
     if (self) {
         
+        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonDefault];
+        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonSelected];
+        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonComplete];
+        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonDefault];
+        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonSelected];
+        
         [self setIsTouchEnabled:YES];
         _sequence = sequence;
+        _isAnySequencePlaying = NO;
         
         // setup grid
         _gridSize = [DataUtils sequenceGridSize:sequence];
@@ -76,23 +90,23 @@ typedef enum
         
         // buttons
         
-        CGFloat buttonSide = [[CCSprite spriteWithFile:@"armUnit.png"] boundingBox].size.height;
+        CGFloat buttonSide = [[CCSprite spriteWithFile:@"previousButton.png"] boundingBox].size.height;
         CGFloat buttonsY = self.gridOrigin.y + (self.gridSize.y * kSizeGridUnit) + buttonSide/2;
         CGFloat gridWidth = self.gridSize.x * kSizeGridUnit;
     
-        _previousButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _previousButton = [CCSprite spriteWithFile:@"previousButton.png"];
         _previousButton.position = CGPointMake(self.gridOrigin.x + gridWidth/4 - kSizeGridUnit, buttonsY);
         [self addChild:_previousButton];
                 
-        _dynamicPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _dynamicPatternButton = [CCSprite spriteWithFile:kImageDynamicButtonDefault];
         _dynamicPatternButton.position = CGPointMake(self.gridOrigin.x + gridWidth/2 - kSizeGridUnit, buttonsY);
         [self addChild:_dynamicPatternButton];
         
-        _finalPatternButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _finalPatternButton = [CCSprite spriteWithFile:kImageFinalButtonDefault];
         _finalPatternButton.position = CGPointMake(self.gridOrigin.x + 3*gridWidth/4 - kSizeGridUnit, buttonsY);
         [self addChild:_finalPatternButton];
 
-        _nextButton = [CCSprite spriteWithFile:@"armUnit.png"];
+        _nextButton = [CCSprite spriteWithFile:@"nextButton.png"];
         _nextButton.position = CGPointMake(self.gridOrigin.x + gridWidth - kSizeGridUnit, buttonsY);
         [self addChild:_nextButton];
 
@@ -180,14 +194,23 @@ typedef enum
     
     if ([key isEqualToString:@"no sound"] == NO) {
         [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
-
     }
     
     self.patternCount += 1;
     if (self.patternCount == kTotalPatternTicks) {
         self.patternCount = 0;
+        self.isAnySequencePlaying = NO;
+        
         if ([pattern isEqualToArray:self.dynamicPattern]) {
-            NSLog(@"self did win: %i", [self didWin]);
+            if ([self didWin]) {
+                [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonComplete];
+            }
+            else {
+                [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonDefault];
+            }
+        }
+        else {
+            [SpriteUtils switchImageForSprite:self.finalPatternButton textureKey:kImageFinalButtonDefault];
         }
     }
 }
@@ -262,14 +285,22 @@ typedef enum
 
     // touch final pattern button to play final pattern
     if (CGRectContainsPoint(self.finalPatternButton.boundingBox, touchPosition)) {
-        [self scheduleFinalPattern];
-        return YES;
+        if (self.isAnySequencePlaying == NO) {
+            self.isAnySequencePlaying = YES;
+            [self scheduleFinalPattern];
+            [SpriteUtils switchImageForSprite:self.finalPatternButton textureKey:kImageFinalButtonSelected];
+            return YES;
+        }
     }
     
     // touch dynamic pattern button to play dynamic pattern
     if (CGRectContainsPoint(self.dynamicPatternButton.boundingBox, touchPosition)) {
-        [self scheduleDynamicPattern];
-        return YES;
+        if (self.isAnySequencePlaying == NO) {
+            self.isAnySequencePlaying = YES;
+            [self scheduleDynamicPattern];
+            [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonSelected];
+            return YES;
+        }
     }
     
     // touch previous button takes us to previous sequence, if there is one
@@ -303,8 +334,6 @@ typedef enum
         else if (cell.y == kBeatTypeAlien) {
             [self handleCellSelection:cell key:kKeyAlien];
         }
-        
-        NSLog(@"dynamic pattern : %@", self.dynamicPattern);
         return YES;
     }
     

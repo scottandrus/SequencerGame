@@ -28,4 +28,9 @@
     return 0.0f;
 }
 
++ (void)switchImageForSprite:(CCSprite *)sprite textureKey:(NSString *)key
+{
+    [sprite setTexture:[[CCTextureCache sharedTextureCache] textureForKey:key]];
+}
+
 @end
