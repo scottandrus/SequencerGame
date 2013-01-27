@@ -62,5 +62,45 @@
 			<integer>4</integer>
 		</dict>
 	</dict>
+	<dict>
+		<key>pattern</key>
+		<array>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+		</array>
+		<key>size</key>
+		<dict>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>pattern</key>
+		<array>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+			<string>standard</string>
+			<string>no sound</string>
+		</array>
+		<key>size</key>
+		<dict>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
 </array>
 </plist>

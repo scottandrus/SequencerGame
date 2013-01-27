@@ -170,9 +170,10 @@
 		160808D816B4AD0700039339 /* previousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808D616B4AD0600039339 /* previousButton.png */; };
 		160808DE16B4D4E500039339 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808DD16B4D4E500039339 /* blank.png */; };
 		160808E016B4DBD200039339 /* Heart Alien New.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808DF16B4DBD200039339 /* Heart Alien New.caf */; };
-		160808E216B4DD7F00039339 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808E116B4DD7F00039339 /* background.png */; };
-		160808E516B4E21700039339 /* ambient3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808E316B4E21500039339 /* ambient3.caf */; };
-		160808E616B4E21700039339 /* ambient4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808E416B4E21500039339 /* ambient4.caf */; };
+		160808ED16B4E5D700039339 /* ambient3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160808EB16B4E5D700039339 /* ambient3.mp3 */; };
+		160808EE16B4E5D700039339 /* ambient4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160808EC16B4E5D700039339 /* ambient4.mp3 */; };
+		160808F216B4E7B900039339 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F016B4E7B900039339 /* arrow.png */; };
+		160808F316B4E7B900039339 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F116B4E7B900039339 /* screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -482,9 +483,10 @@
 		160808D616B4AD0600039339 /* previousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = previousButton.png; path = Resources/previousButton.png; sourceTree = "<group>"; };
 		160808DD16B4D4E500039339 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = Resources/blank.png; sourceTree = "<group>"; };
 		160808DF16B4DBD200039339 /* Heart Alien New.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Alien New.caf"; path = "Resources/Heart Alien New.caf"; sourceTree = "<group>"; };
-		160808E116B4DD7F00039339 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
-		160808E316B4E21500039339 /* ambient3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ambient3.caf; path = Resources/ambient3.caf; sourceTree = "<group>"; };
-		160808E416B4E21500039339 /* ambient4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ambient4.caf; path = Resources/ambient4.caf; sourceTree = "<group>"; };
+		160808EB16B4E5D700039339 /* ambient3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient3.mp3; path = Resources/ambient3.mp3; sourceTree = "<group>"; };
+		160808EC16B4E5D700039339 /* ambient4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient4.mp3; path = Resources/ambient4.mp3; sourceTree = "<group>"; };
+		160808F016B4E7B900039339 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
+		160808F116B4E7B900039339 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,10 +560,11 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808F016B4E7B900039339 /* arrow.png */,
+				160808F116B4E7B900039339 /* screen.png */,
+				160808EB16B4E5D700039339 /* ambient3.mp3 */,
+				160808EC16B4E5D700039339 /* ambient4.mp3 */,
 				1608088416B443E100039339 /* Sequence.plist */,
-				160808E316B4E21500039339 /* ambient3.caf */,
-				160808E416B4E21500039339 /* ambient4.caf */,
-				160808E116B4DD7F00039339 /* background.png */,
 				160808DF16B4DBD200039339 /* Heart Alien New.caf */,
 				160808DD16B4D4E500039339 /* blank.png */,
 				160808D516B4AD0600039339 /* nextButton.png */,
@@ -1083,9 +1086,10 @@
 				160808D816B4AD0700039339 /* previousButton.png in Resources */,
 				160808DE16B4D4E500039339 /* blank.png in Resources */,
 				160808E016B4DBD200039339 /* Heart Alien New.caf in Resources */,
-				160808E216B4DD7F00039339 /* background.png in Resources */,
-				160808E516B4E21700039339 /* ambient3.caf in Resources */,
-				160808E616B4E21700039339 /* ambient4.caf in Resources */,
+				160808ED16B4E5D700039339 /* ambient3.mp3 in Resources */,
+				160808EE16B4E5D700039339 /* ambient4.mp3 in Resources */,
+				160808F216B4E7B900039339 /* arrow.png in Resources */,
+				160808F316B4E7B900039339 /* screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1312,6 +1316,7 @@
 				1608085316B437AA00039339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

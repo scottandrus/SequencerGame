@@ -49,8 +49,6 @@ typedef enum
 
 + (CCScene *)sceneWithSequence:(int)sequence
 {
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ambient3.caf" loop:YES];
-
     CCScene *scene = [CCScene node];
     
     SequenceLayer *sequenceLayer = [[SequenceLayer alloc] initWithSequence:sequence];
@@ -79,7 +77,7 @@ typedef enum
         _gridOrigin = [SequenceLayer sharedGridOrigin];
         
         // sequencer screen background
-        _screenImage = [CCSprite spriteWithFile:@"background.png"];
+        _screenImage = [CCSprite spriteWithFile:@"screen.png"];
         _screenImage.position = [GridUtils absolutePositionForGridCoord:GridCoordMake(5, 3) unitSize:kSizeGridUnit origin:_gridOrigin];
         [self addChild:_screenImage];
         
@@ -126,8 +124,7 @@ typedef enum
         _heartSprites = [NSMutableDictionary dictionary];
         
         // tick indicator shows what tick we are on
-        _tickIndicator = [SpriteUtils spriteWithSize:CGSizeMake(100,100) color3B:ccYELLOW];
-        _tickIndicator.opacity = 150;
+        _tickIndicator = [CCSprite spriteWithFile:@"arrow.png"];
         _tickIndicator.visible = NO;
         [self addChild:_tickIndicator];
         
