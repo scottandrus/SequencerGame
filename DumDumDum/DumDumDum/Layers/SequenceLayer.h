@@ -34,7 +34,7 @@
 // tick indicator
 @property (nonatomic, strong) CCSprite *tickIndicator;
 
-
+@property (nonatomic, strong) CCSprite *screenImage;
 
 + (CCScene *)sceneWithSequence:(int)sequence;
 + (CGPoint)sharedGridOrigin;

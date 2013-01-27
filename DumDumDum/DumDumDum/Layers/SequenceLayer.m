@@ -24,7 +24,7 @@ static NSString *const kKeyNoSound = @"no sound";
 static NSString *const kSoundStandard = @"Heart 4.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
-static NSString *const kSoundAlien = @"Heart Alien 2.caf";
+static NSString *const kSoundAlien = @"Heart Alien New.caf";
 
 static NSString *const kImageDynamicButtonDefault = @"dynamicButtonDefault.png";
 static NSString *const kImageDynamicButtonSelected = @"dynamicButtonSelected.png";
@@ -49,6 +49,8 @@ typedef enum
 
 + (CCScene *)sceneWithSequence:(int)sequence
 {
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ambient3.caf" loop:YES];
+
     CCScene *scene = [CCScene node];
     
     SequenceLayer *sequenceLayer = [[SequenceLayer alloc] initWithSequence:sequence];
@@ -75,6 +77,14 @@ typedef enum
         // setup grid
         _gridSize = [DataUtils sequenceGridSize:sequence];
         _gridOrigin = [SequenceLayer sharedGridOrigin];
+        
+        // sequencer screen background
+        _screenImage = [CCSprite spriteWithFile:@"background.png"];
+        _screenImage.position = [GridUtils absolutePositionForGridCoord:GridCoordMake(5, 3) unitSize:kSizeGridUnit origin:_gridOrigin];
+        [self addChild:_screenImage];
+        
+        
+        
         
         // patterns
         _patternCount = 0;
@@ -116,11 +126,13 @@ typedef enum
         _heartSprites = [NSMutableDictionary dictionary];
         
         // tick indicator shows what tick we are on
-        CGSize indicatorSize = CGSizeMake(kSizeGridUnit, self.gridSize.y * kSizeGridUnit);
         _tickIndicator = [SpriteUtils spriteWithSize:CGSizeMake(100,100) color3B:ccYELLOW];
         _tickIndicator.opacity = 150;
         _tickIndicator.visible = NO;
         [self addChild:_tickIndicator];
+        
+        
+        
     }
     return self;
 }

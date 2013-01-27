@@ -169,6 +169,10 @@
 		160808D716B4AD0700039339 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808D516B4AD0600039339 /* nextButton.png */; };
 		160808D816B4AD0700039339 /* previousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808D616B4AD0600039339 /* previousButton.png */; };
 		160808DE16B4D4E500039339 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808DD16B4D4E500039339 /* blank.png */; };
+		160808E016B4DBD200039339 /* Heart Alien New.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808DF16B4DBD200039339 /* Heart Alien New.caf */; };
+		160808E216B4DD7F00039339 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808E116B4DD7F00039339 /* background.png */; };
+		160808E516B4E21700039339 /* ambient3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808E316B4E21500039339 /* ambient3.caf */; };
+		160808E616B4E21700039339 /* ambient4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808E416B4E21500039339 /* ambient4.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -477,6 +481,10 @@
 		160808D516B4AD0600039339 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = Resources/nextButton.png; sourceTree = "<group>"; };
 		160808D616B4AD0600039339 /* previousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = previousButton.png; path = Resources/previousButton.png; sourceTree = "<group>"; };
 		160808DD16B4D4E500039339 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = Resources/blank.png; sourceTree = "<group>"; };
+		160808DF16B4DBD200039339 /* Heart Alien New.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Alien New.caf"; path = "Resources/Heart Alien New.caf"; sourceTree = "<group>"; };
+		160808E116B4DD7F00039339 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		160808E316B4E21500039339 /* ambient3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ambient3.caf; path = Resources/ambient3.caf; sourceTree = "<group>"; };
+		160808E416B4E21500039339 /* ambient4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ambient4.caf; path = Resources/ambient4.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,6 +558,10 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808E316B4E21500039339 /* ambient3.caf */,
+				160808E416B4E21500039339 /* ambient4.caf */,
+				160808E116B4DD7F00039339 /* background.png */,
+				160808DF16B4DBD200039339 /* Heart Alien New.caf */,
 				160808DD16B4D4E500039339 /* blank.png */,
 				160808D516B4AD0600039339 /* nextButton.png */,
 				160808D616B4AD0600039339 /* previousButton.png */,
@@ -1070,6 +1082,10 @@
 				160808D716B4AD0700039339 /* nextButton.png in Resources */,
 				160808D816B4AD0700039339 /* previousButton.png in Resources */,
 				160808DE16B4D4E500039339 /* blank.png in Resources */,
+				160808E016B4DBD200039339 /* Heart Alien New.caf in Resources */,
+				160808E216B4DD7F00039339 /* background.png in Resources */,
+				160808E516B4E21700039339 /* ambient3.caf in Resources */,
+				160808E616B4E21700039339 /* ambient4.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

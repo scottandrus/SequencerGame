@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "SequenceLayer.h"
+#import "SimpleAudioEngine.h"
 
 @implementation AppController
 
@@ -79,7 +80,6 @@
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [SequenceLayer sceneWithSequence:0]];
-    
     
     
     
