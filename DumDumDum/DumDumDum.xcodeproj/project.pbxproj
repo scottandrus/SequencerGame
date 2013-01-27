@@ -558,6 +558,7 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1608088416B443E100039339 /* Sequence.plist */,
 				160808E316B4E21500039339 /* ambient3.caf */,
 				160808E416B4E21500039339 /* ambient4.caf */,
 				160808E116B4DD7F00039339 /* background.png */,
@@ -570,7 +571,6 @@
 				160808CD16B4ABFD00039339 /* dynamicButtonSelected.png */,
 				160808CE16B4ABFE00039339 /* finalButtonDefault.png */,
 				160808CF16B4ABFE00039339 /* finalButtonSelected.png */,
-				1608088416B443E100039339 /* Sequence.plist */,
 				160808C516B48F5400039339 /* alienHeart.png */,
 				160808A716B48B7300039339 /* Heart 1.caf */,
 				160808A816B48B7400039339 /* Heart 2.caf */,
