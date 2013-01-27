@@ -65,14 +65,14 @@
 	<dict>
 		<key>pattern</key>
 		<array>
+			<string>meaty</string>
 			<string>standard</string>
+			<string>meaty</string>
+			<string>alien</string>
 			<string>no sound</string>
 			<string>standard</string>
-			<string>no sound</string>
-			<string>standard</string>
-			<string>no sound</string>
-			<string>standard</string>
-			<string>no sound</string>
+			<string>alien</string>
+			<string>robot</string>
 		</array>
 		<key>size</key>
 		<dict>
@@ -86,13 +86,13 @@
 		<key>pattern</key>
 		<array>
 			<string>standard</string>
-			<string>no sound</string>
+			<string>alien</string>
+			<string>meaty</string>
+			<string>alien</string>
 			<string>standard</string>
-			<string>no sound</string>
 			<string>standard</string>
-			<string>no sound</string>
-			<string>standard</string>
-			<string>no sound</string>
+			<string>meaty</string>
+			<string>robot</string>
 		</array>
 		<key>size</key>
 		<dict>

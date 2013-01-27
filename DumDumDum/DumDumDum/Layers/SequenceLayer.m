@@ -81,9 +81,7 @@ typedef enum
         _screenImage.position = [GridUtils absolutePositionForGridCoord:GridCoordMake(5, 3) unitSize:kSizeGridUnit origin:_gridOrigin];
         [self addChild:_screenImage];
         
-        
-        
-        
+
         // patterns
         _patternCount = 0;
         _finalPattern = [DataUtils sequencePattern:sequence];
@@ -138,7 +136,9 @@ typedef enum
 
 + (CGPoint)sharedGridOrigin
 {
-    return CGPointMake(100, 100);
+//    return CGPointMake((2048 - 800)/2, 130);
+    return CGPointMake((1024 - 800)/2, 130);
+
 }
 
 #pragma mark - scene management

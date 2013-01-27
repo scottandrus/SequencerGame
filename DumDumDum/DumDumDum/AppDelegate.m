@@ -72,12 +72,13 @@
 
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+    
+//    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ambient4.mp3" loop:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [SequenceLayer sceneWithSequence:0]];
     
-//    // not working
-//    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ambient4.mp3" loop:YES];
+
 
     
 

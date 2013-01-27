@@ -560,11 +560,11 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1608088416B443E100039339 /* Sequence.plist */,
 				160808F016B4E7B900039339 /* arrow.png */,
 				160808F116B4E7B900039339 /* screen.png */,
 				160808EB16B4E5D700039339 /* ambient3.mp3 */,
 				160808EC16B4E5D700039339 /* ambient4.mp3 */,
-				1608088416B443E100039339 /* Sequence.plist */,
 				160808DF16B4DBD200039339 /* Heart Alien New.caf */,
 				160808DD16B4D4E500039339 /* blank.png */,
 				160808D516B4AD0600039339 /* nextButton.png */,
