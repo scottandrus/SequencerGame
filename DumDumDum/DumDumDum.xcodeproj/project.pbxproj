@@ -162,6 +162,11 @@
 		160808C116B48B7600039339 /* Heart Robot 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B316B48B7500039339 /* Heart Robot 2.caf */; };
 		160808C216B48B7600039339 /* Heart Robot 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 160808B416B48B7600039339 /* Heart Robot 3.caf */; };
 		160808C616B48F5400039339 /* alienHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808C516B48F5400039339 /* alienHeart.png */; };
+		160808D016B4ABFF00039339 /* dynamicButtonComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CB16B4ABFD00039339 /* dynamicButtonComplete.png */; };
+		160808D116B4ABFF00039339 /* dynamicButtonDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CC16B4ABFD00039339 /* dynamicButtonDefault.png */; };
+		160808D216B4ABFF00039339 /* dynamicButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CD16B4ABFD00039339 /* dynamicButtonSelected.png */; };
+		160808D316B4ABFF00039339 /* finalButtonDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CE16B4ABFE00039339 /* finalButtonDefault.png */; };
+		160808D416B4ABFF00039339 /* finalButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CF16B4ABFE00039339 /* finalButtonSelected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -463,6 +468,11 @@
 		160808B316B48B7500039339 /* Heart Robot 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 2.caf"; path = "Resources/Heart Robot 2.caf"; sourceTree = "<group>"; };
 		160808B416B48B7600039339 /* Heart Robot 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Heart Robot 3.caf"; path = "Resources/Heart Robot 3.caf"; sourceTree = "<group>"; };
 		160808C516B48F5400039339 /* alienHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alienHeart.png; path = Resources/alienHeart.png; sourceTree = "<group>"; };
+		160808CB16B4ABFD00039339 /* dynamicButtonComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dynamicButtonComplete.png; path = Resources/dynamicButtonComplete.png; sourceTree = "<group>"; };
+		160808CC16B4ABFD00039339 /* dynamicButtonDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dynamicButtonDefault.png; path = Resources/dynamicButtonDefault.png; sourceTree = "<group>"; };
+		160808CD16B4ABFD00039339 /* dynamicButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dynamicButtonSelected.png; path = Resources/dynamicButtonSelected.png; sourceTree = "<group>"; };
+		160808CE16B4ABFE00039339 /* finalButtonDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finalButtonDefault.png; path = Resources/finalButtonDefault.png; sourceTree = "<group>"; };
+		160808CF16B4ABFE00039339 /* finalButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finalButtonSelected.png; path = Resources/finalButtonSelected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +546,11 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808CB16B4ABFD00039339 /* dynamicButtonComplete.png */,
+				160808CC16B4ABFD00039339 /* dynamicButtonDefault.png */,
+				160808CD16B4ABFD00039339 /* dynamicButtonSelected.png */,
+				160808CE16B4ABFE00039339 /* finalButtonDefault.png */,
+				160808CF16B4ABFE00039339 /* finalButtonSelected.png */,
 				1608088416B443E100039339 /* Sequence.plist */,
 				160808C516B48F5400039339 /* alienHeart.png */,
 				160808A716B48B7300039339 /* Heart 1.caf */,
@@ -1042,6 +1057,11 @@
 				160808C116B48B7600039339 /* Heart Robot 2.caf in Resources */,
 				160808C216B48B7600039339 /* Heart Robot 3.caf in Resources */,
 				160808C616B48F5400039339 /* alienHeart.png in Resources */,
+				160808D016B4ABFF00039339 /* dynamicButtonComplete.png in Resources */,
+				160808D116B4ABFF00039339 /* dynamicButtonDefault.png in Resources */,
+				160808D216B4ABFF00039339 /* dynamicButtonSelected.png in Resources */,
+				160808D316B4ABFF00039339 /* finalButtonDefault.png in Resources */,
+				160808D416B4ABFF00039339 /* finalButtonSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
