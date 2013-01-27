@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DumDumDum.xcodeproj">
+      location = "self:SequencerGame.xcodeproj">
    </FileRef>
 </Workspace>

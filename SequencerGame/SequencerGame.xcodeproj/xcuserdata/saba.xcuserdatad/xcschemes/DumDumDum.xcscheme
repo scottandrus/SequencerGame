@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "160806B716B437A700039339"
-               BuildableName = "DumDumDum.app"
-               BlueprintName = "DumDumDum"
-               ReferencedContainer = "container:DumDumDum.xcodeproj">
+               BuildableName = "SequencerGame.app"
+               BlueprintName = "SequencerGame"
+               ReferencedContainer = "container:SequencerGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "160806B716B437A700039339"
-            BuildableName = "DumDumDum.app"
-            BlueprintName = "DumDumDum"
-            ReferencedContainer = "container:DumDumDum.xcodeproj">
+            BuildableName = "SequencerGame.app"
+            BlueprintName = "SequencerGame"
+            ReferencedContainer = "container:SequencerGame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "160806B716B437A700039339"
-            BuildableName = "DumDumDum.app"
-            BlueprintName = "DumDumDum"
-            ReferencedContainer = "container:DumDumDum.xcodeproj">
+            BuildableName = "SequencerGame.app"
+            BlueprintName = "SequencerGame"
+            ReferencedContainer = "container:SequencerGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "160806B716B437A700039339"
-            BuildableName = "DumDumDum.app"
-            BlueprintName = "DumDumDum"
-            ReferencedContainer = "container:DumDumDum.xcodeproj">
+            BuildableName = "SequencerGame.app"
+            BlueprintName = "SequencerGame"
+            ReferencedContainer = "container:SequencerGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

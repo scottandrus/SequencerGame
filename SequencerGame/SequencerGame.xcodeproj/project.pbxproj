@@ -177,7 +177,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		160806B816B437A700039339 /* DumDumDum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DumDumDum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		160806B816B437A700039339 /* SequencerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequencerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		160806BC16B437A700039339 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		160806BE16B437A700039339 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		160806C016B437A700039339 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -199,7 +199,7 @@
 		160806E216B437A700039339 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		160806E416B437A700039339 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		160806E616B437A800039339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		160806E716B437A800039339 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
+		160806E716B437A800039339 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = text; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		160806EB16B437A800039339 /* CCAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAction.h; path = libs/cocos2d/CCAction.h; sourceTree = "<group>"; };
 		160806EC16B437A800039339 /* CCAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CCAction.m; path = libs/cocos2d/CCAction.m; sourceTree = "<group>"; };
 		160806EE16B437A800039339 /* CCActionCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCActionCamera.h; path = libs/cocos2d/CCActionCamera.h; sourceTree = "<group>"; };
@@ -512,7 +512,7 @@
 		160806AD16B437A700039339 = {
 			isa = PBXGroup;
 			children = (
-				160806CE16B437A700039339 /* DumDumDum */,
+				160806CE16B437A700039339 /* SequencerGame */,
 				160806BB16B437A700039339 /* Frameworks */,
 				160806B916B437A700039339 /* Products */,
 			);
@@ -521,7 +521,7 @@
 		160806B916B437A700039339 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				160806B816B437A700039339 /* DumDumDum.app */,
+				160806B816B437A700039339 /* SequencerGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		160806CE16B437A700039339 /* DumDumDum */ = {
+		160806CE16B437A700039339 /* SequencerGame */ = {
 			isa = PBXGroup;
 			children = (
 				1608087116B43D2100039339 /* Controllers */,
@@ -554,7 +554,7 @@
 				160806E916B437A800039339 /* libs */,
 				1608084216B437AA00039339 /* Supporting Files */,
 			);
-			path = DumDumDum;
+			path = SequencerGame;
 			sourceTree = "<group>";
 		};
 		160806CF16B437A700039339 /* Resources */ = {
@@ -996,9 +996,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		160806B716B437A700039339 /* DumDumDum */ = {
+		160806B716B437A700039339 /* SequencerGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1608085116B437AA00039339 /* Build configuration list for PBXNativeTarget "DumDumDum" */;
+			buildConfigurationList = 1608085116B437AA00039339 /* Build configuration list for PBXNativeTarget "SequencerGame" */;
 			buildPhases = (
 				160806B416B437A700039339 /* Sources */,
 				160806B516B437A700039339 /* Frameworks */,
@@ -1008,9 +1008,9 @@
 			);
 			dependencies = (
 			);
-			name = DumDumDum;
-			productName = DumDumDum;
-			productReference = 160806B816B437A700039339 /* DumDumDum.app */;
+			name = SequencerGame;
+			productName = SequencerGame;
+			productReference = 160806B816B437A700039339 /* SequencerGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1021,7 +1021,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 160806B216B437A700039339 /* Build configuration list for PBXProject "DumDumDum" */;
+			buildConfigurationList = 160806B216B437A700039339 /* Build configuration list for PBXProject "SequencerGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1033,7 +1033,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				160806B716B437A700039339 /* DumDumDum */,
+				160806B716B437A700039339 /* SequencerGame */,
 			);
 		};
 /* End PBXProject section */
@@ -1265,14 +1265,14 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DumDumDum/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"DumDumDum/libs/kazmath/include\"";
-				INFOPLIST_FILE = DumDumDum/Resources/Info.plist;
+				GCC_PREFIX_HEADER = SequencerGame/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"SequencerGame/libs/kazmath/include\"";
+				INFOPLIST_FILE = SequencerGame/Resources/Info.plist;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SequencerGame;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1284,14 +1284,14 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DumDumDum/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"DumDumDum/libs/kazmath/include\"";
-				INFOPLIST_FILE = DumDumDum/Resources/Info.plist;
+				GCC_PREFIX_HEADER = SequencerGame/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"SequencerGame/libs/kazmath/include\"";
+				INFOPLIST_FILE = SequencerGame/Resources/Info.plist;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SequencerGame;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1300,7 +1300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		160806B216B437A700039339 /* Build configuration list for PBXProject "DumDumDum" */ = {
+		160806B216B437A700039339 /* Build configuration list for PBXProject "SequencerGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1608084F16B437AA00039339 /* Debug */,
@@ -1309,7 +1309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1608085116B437AA00039339 /* Build configuration list for PBXNativeTarget "DumDumDum" */ = {
+		1608085116B437AA00039339 /* Build configuration list for PBXNativeTarget "SequencerGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1608085216B437AA00039339 /* Debug */,
