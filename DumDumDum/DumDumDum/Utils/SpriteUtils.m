@@ -33,4 +33,12 @@
     [sprite setTexture:[[CCTextureCache sharedTextureCache] textureForKey:key]];
 }
 
++ (CCSprite *)spriteWithSize:(CGSize)size color3B:(ccColor3B)color3B
+{
+    CCSprite *spr = [CCSprite spriteWithFile:@"blank.png"];
+    [spr setTextureRect:CGRectMake(0, 0, size.width, size.height)];
+    spr.color = color3B;
+    return spr;
+}
+
 @end

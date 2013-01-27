@@ -138,7 +138,6 @@
 		1608087016B43CEF00039339 /* SpriteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086A16B43CEF00039339 /* SpriteUtils.m */; };
 		1608087616B43D2100039339 /* ArmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087316B43D2100039339 /* ArmController.m */; };
 		1608087716B43D2100039339 /* HandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087516B43D2100039339 /* HandController.m */; };
-		1608087B16B43F1F00039339 /* armUnit.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087816B43F1F00039339 /* armUnit.png */; };
 		1608087C16B43F1F00039339 /* handSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087916B43F1F00039339 /* handSprite.png */; };
 		1608087D16B43F1F00039339 /* Puzzles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608087A16B43F1F00039339 /* Puzzles.plist */; };
 		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
@@ -169,6 +168,7 @@
 		160808D416B4ABFF00039339 /* finalButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808CF16B4ABFE00039339 /* finalButtonSelected.png */; };
 		160808D716B4AD0700039339 /* nextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808D516B4AD0600039339 /* nextButton.png */; };
 		160808D816B4AD0700039339 /* previousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808D616B4AD0600039339 /* previousButton.png */; };
+		160808DE16B4D4E500039339 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808DD16B4D4E500039339 /* blank.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -444,7 +444,6 @@
 		1608087316B43D2100039339 /* ArmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmController.m; sourceTree = "<group>"; };
 		1608087416B43D2100039339 /* HandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandController.h; sourceTree = "<group>"; };
 		1608087516B43D2100039339 /* HandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandController.m; sourceTree = "<group>"; };
-		1608087816B43F1F00039339 /* armUnit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = armUnit.png; path = Resources/armUnit.png; sourceTree = "<group>"; };
 		1608087916B43F1F00039339 /* handSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = handSprite.png; path = Resources/handSprite.png; sourceTree = "<group>"; };
 		1608087A16B43F1F00039339 /* Puzzles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Puzzles.plist; path = Resources/Puzzles.plist; sourceTree = "<group>"; };
 		1608087E16B43FE500039339 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -477,6 +476,7 @@
 		160808CF16B4ABFE00039339 /* finalButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finalButtonSelected.png; path = Resources/finalButtonSelected.png; sourceTree = "<group>"; };
 		160808D516B4AD0600039339 /* nextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nextButton.png; path = Resources/nextButton.png; sourceTree = "<group>"; };
 		160808D616B4AD0600039339 /* previousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = previousButton.png; path = Resources/previousButton.png; sourceTree = "<group>"; };
+		160808DD16B4D4E500039339 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blank.png; path = Resources/blank.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,6 +550,7 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				160808DD16B4D4E500039339 /* blank.png */,
 				160808D516B4AD0600039339 /* nextButton.png */,
 				160808D616B4AD0600039339 /* previousButton.png */,
 				160808CB16B4ABFD00039339 /* dynamicButtonComplete.png */,
@@ -576,7 +577,6 @@
 				160808A116B4765B00039339 /* meatyHeart.png */,
 				160808A216B4765B00039339 /* robotHeart.png */,
 				160808A316B4765C00039339 /* standardHeart.png */,
-				1608087816B43F1F00039339 /* armUnit.png */,
 				1608087916B43F1F00039339 /* handSprite.png */,
 				1608087A16B43F1F00039339 /* Puzzles.plist */,
 				160806D016B437A700039339 /* Default.png */,
@@ -1041,7 +1041,6 @@
 				160806E516B437A700039339 /* Icon@2x.png in Resources */,
 				160806E816B437A800039339 /* iTunesArtwork in Resources */,
 				1608082616B437AA00039339 /* ChangeLog in Resources */,
-				1608087B16B43F1F00039339 /* armUnit.png in Resources */,
 				1608087C16B43F1F00039339 /* handSprite.png in Resources */,
 				1608087D16B43F1F00039339 /* Puzzles.plist in Resources */,
 				1608088516B443E100039339 /* Sequence.plist in Resources */,
@@ -1070,6 +1069,7 @@
 				160808D416B4ABFF00039339 /* finalButtonSelected.png in Resources */,
 				160808D716B4AD0700039339 /* nextButton.png in Resources */,
 				160808D816B4AD0700039339 /* previousButton.png in Resources */,
+				160808DE16B4D4E500039339 /* blank.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

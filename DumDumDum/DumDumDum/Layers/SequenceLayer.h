@@ -28,9 +28,12 @@
 @property (nonatomic, strong) CCSprite *previousButton;
 @property (nonatomic, strong) CCSprite *nextButton;
 
-
 // heart sprites
 @property (nonatomic, strong) NSMutableDictionary *heartSprites;
+
+// tick indicator
+@property (nonatomic, strong) CCSprite *tickIndicator;
+
 
 
 + (CCScene *)sceneWithSequence:(int)sequence;

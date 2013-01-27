@@ -33,6 +33,8 @@ static NSString *const kImageDynamicButtonComplete = @"dynamicButtonComplete.png
 static NSString *const kImageFinalButtonDefault = @"finalButtonDefault.png";
 static NSString *const kImageFinalButtonSelected = @"finalButtonSelected.png";
 
+static CGFloat const kPatternDelay = 0.5;
+
 typedef enum
 {
     kBeatTypeNone,
@@ -110,7 +112,15 @@ typedef enum
         _nextButton.position = CGPointMake(self.gridOrigin.x + gridWidth - kSizeGridUnit, buttonsY);
         [self addChild:_nextButton];
 
+        // heart sprites appear in selected sequencer cells
         _heartSprites = [NSMutableDictionary dictionary];
+        
+        // tick indicator shows what tick we are on
+        CGSize indicatorSize = CGSizeMake(kSizeGridUnit, self.gridSize.y * kSizeGridUnit);
+        _tickIndicator = [SpriteUtils spriteWithSize:CGSizeMake(100,100) color3B:ccYELLOW];
+        _tickIndicator.opacity = 150;
+        _tickIndicator.visible = NO;
+        [self addChild:_tickIndicator];
     }
     return self;
 }
@@ -168,13 +178,13 @@ typedef enum
 
 - (void)scheduleFinalPattern
 {
-    float delay = .5; // Number of seconds between each call of myTimedMethod:
+    float delay = kPatternDelay; // Number of seconds between each call of myTimedMethod:
     [self schedule:@selector(playFinalPatternItem:) interval:delay repeat:kTotalPatternTicks - 1 delay:0];
 }
 
 - (void)scheduleDynamicPattern
 {
-    float delay = .5; // Number of seconds between each call of myTimedMethod:
+    float delay = kPatternDelay; // Number of seconds between each call of myTimedMethod:
     [self schedule:@selector(playDynamicPatternItem:) interval:delay repeat:kTotalPatternTicks - 1 delay:0];  
 }
 
@@ -195,13 +205,17 @@ typedef enum
     if ([key isEqualToString:@"no sound"] == NO) {
         [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
     }
+    if ([pattern isEqualToArray:self.dynamicPattern]) {
+        [self positionTickIndicatorForCurrentTick];
+    }
     
     self.patternCount += 1;
     if (self.patternCount == kTotalPatternTicks) {
-        self.patternCount = 0;
         self.isAnySequencePlaying = NO;
         
         if ([pattern isEqualToArray:self.dynamicPattern]) {
+            self.tickIndicator.visible = NO;
+                        
             if ([self didWin]) {
                 [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonComplete];
             }
@@ -212,6 +226,8 @@ typedef enum
         else {
             [SpriteUtils switchImageForSprite:self.finalPatternButton textureKey:kImageFinalButtonDefault];
         }
+        
+        self.patternCount = 0;
     }
 }
 
@@ -225,6 +241,12 @@ typedef enum
         [self.dynamicPattern replaceObjectAtIndex:cell.x - 1 withObject:key];
         [self addBeatSpriteToCell:cell];
     }
+}
+
+- (void)positionTickIndicatorForCurrentTick
+{
+    self.tickIndicator.position = [GridUtils spriteAbsolutePositionForGridCoord:GridCoordMake(self.patternCount + 1, 0) unitSize:kSizeGridUnit origin:self.gridOrigin];
+    self.tickIndicator.visible = YES;
 }
 
 #pragma mark - access heart sprites
@@ -298,7 +320,7 @@ typedef enum
         if (self.isAnySequencePlaying == NO) {
             self.isAnySequencePlaying = YES;
             [self scheduleDynamicPattern];
-            [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonSelected];
+            [SpriteUtils switchImageForSprite:self.dynamicPatternButton textureKey:kImageDynamicButtonSelected];            
             return YES;
         }
     }

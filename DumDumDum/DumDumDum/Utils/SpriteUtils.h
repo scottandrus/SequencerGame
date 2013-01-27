@@ -14,5 +14,6 @@
 
 + (float)degreesForDirection:(kDirection)direction;
 + (void)switchImageForSprite:(CCSprite *)sprite textureKey:(NSString *)key;
++ (CCSprite *)spriteWithSize:(CGSize)size color3B:(ccColor3B)color3B;
 
 @end
