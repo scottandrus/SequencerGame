@@ -130,14 +130,11 @@
 		1608083E16B437AA00039339 /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1608083D16B437AA00039339 /* vec3.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1608084016B437AA00039339 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 1608083F16B437AA00039339 /* vec4.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1608084516B437AA00039339 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608084416B437AA00039339 /* main.m */; };
-		1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608085F16B43CEF00039339 /* PuzzleLayer.m */; };
 		1608086C16B43CEF00039339 /* DataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086216B43CEF00039339 /* DataUtils.m */; };
 		1608086D16B43CEF00039339 /* GameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086416B43CEF00039339 /* GameConstants.m */; };
 		1608086E16B43CEF00039339 /* GameTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086616B43CEF00039339 /* GameTypes.m */; };
 		1608086F16B43CEF00039339 /* GridUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086816B43CEF00039339 /* GridUtils.m */; };
 		1608087016B43CEF00039339 /* SpriteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608086A16B43CEF00039339 /* SpriteUtils.m */; };
-		1608087616B43D2100039339 /* ArmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087316B43D2100039339 /* ArmController.m */; };
-		1608087716B43D2100039339 /* HandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087516B43D2100039339 /* HandController.m */; };
 		1608087C16B43F1F00039339 /* handSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1608087916B43F1F00039339 /* handSprite.png */; };
 		1608087D16B43F1F00039339 /* Puzzles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1608087A16B43F1F00039339 /* Puzzles.plist */; };
 		1608088016B43FE500039339 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1608087F16B43FE500039339 /* AppDelegate.m */; };
@@ -433,8 +430,6 @@
 		1608084116B437AA00039339 /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Kazmath.txt; path = libs/LICENSE_Kazmath.txt; sourceTree = "<group>"; };
 		1608084316B437AA00039339 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		1608084416B437AA00039339 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1608085E16B43CEF00039339 /* PuzzleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleLayer.h; sourceTree = "<group>"; };
-		1608085F16B43CEF00039339 /* PuzzleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleLayer.m; sourceTree = "<group>"; };
 		1608086116B43CEF00039339 /* DataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUtils.h; sourceTree = "<group>"; };
 		1608086216B43CEF00039339 /* DataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataUtils.m; sourceTree = "<group>"; };
 		1608086316B43CEF00039339 /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
@@ -445,10 +440,6 @@
 		1608086816B43CEF00039339 /* GridUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridUtils.m; sourceTree = "<group>"; };
 		1608086916B43CEF00039339 /* SpriteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteUtils.h; sourceTree = "<group>"; };
 		1608086A16B43CEF00039339 /* SpriteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteUtils.m; sourceTree = "<group>"; };
-		1608087216B43D2100039339 /* ArmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArmController.h; sourceTree = "<group>"; };
-		1608087316B43D2100039339 /* ArmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArmController.m; sourceTree = "<group>"; };
-		1608087416B43D2100039339 /* HandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandController.h; sourceTree = "<group>"; };
-		1608087516B43D2100039339 /* HandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandController.m; sourceTree = "<group>"; };
 		1608087916B43F1F00039339 /* handSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = handSprite.png; path = Resources/handSprite.png; sourceTree = "<group>"; };
 		1608087A16B43F1F00039339 /* Puzzles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Puzzles.plist; path = Resources/Puzzles.plist; sourceTree = "<group>"; };
 		1608087E16B43FE500039339 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -545,7 +536,6 @@
 		160806CE16B437A700039339 /* SequencerGame */ = {
 			isa = PBXGroup;
 			children = (
-				1608087116B43D2100039339 /* Controllers */,
 				1608085D16B43CEF00039339 /* Layers */,
 				1608086016B43CEF00039339 /* Utils */,
 				1608087E16B43FE500039339 /* AppDelegate.h */,
@@ -957,8 +947,6 @@
 		1608085D16B43CEF00039339 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				1608085E16B43CEF00039339 /* PuzzleLayer.h */,
-				1608085F16B43CEF00039339 /* PuzzleLayer.m */,
 				1608088116B4415F00039339 /* SequenceLayer.h */,
 				1608088216B4416000039339 /* SequenceLayer.m */,
 			);
@@ -980,17 +968,6 @@
 				1608086A16B43CEF00039339 /* SpriteUtils.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		1608087116B43D2100039339 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1608087216B43D2100039339 /* ArmController.h */,
-				1608087316B43D2100039339 /* ArmController.m */,
-				1608087416B43D2100039339 /* HandController.h */,
-				1608087516B43D2100039339 /* HandController.m */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1019,7 +996,7 @@
 		160806AF16B437A700039339 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 160806B216B437A700039339 /* Build configuration list for PBXProject "SequencerGame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1201,14 +1178,11 @@
 				1608083E16B437AA00039339 /* vec3.c in Sources */,
 				1608084016B437AA00039339 /* vec4.c in Sources */,
 				1608084516B437AA00039339 /* main.m in Sources */,
-				1608086B16B43CEF00039339 /* PuzzleLayer.m in Sources */,
 				1608086C16B43CEF00039339 /* DataUtils.m in Sources */,
 				1608086D16B43CEF00039339 /* GameConstants.m in Sources */,
 				1608086E16B43CEF00039339 /* GameTypes.m in Sources */,
 				1608086F16B43CEF00039339 /* GridUtils.m in Sources */,
 				1608087016B43CEF00039339 /* SpriteUtils.m in Sources */,
-				1608087616B43D2100039339 /* ArmController.m in Sources */,
-				1608087716B43D2100039339 /* HandController.m in Sources */,
 				1608088016B43FE500039339 /* AppDelegate.m in Sources */,
 				1608088316B4416000039339 /* SequenceLayer.m in Sources */,
 			);
@@ -1221,6 +1195,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1231,6 +1209,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
@@ -1242,6 +1221,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1250,6 +1233,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
