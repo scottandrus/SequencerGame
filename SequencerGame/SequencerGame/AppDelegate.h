@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "PdAudioController.h"
+
 
 @interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate>
 {
@@ -20,5 +22,7 @@
 @property (nonatomic, strong) UIWindow *window;
 @property (readonly) UINavigationController *navController;
 @property (unsafe_unretained, readonly) CCDirectorIOS *director;
+
+@property (strong, nonatomic, readonly) PdAudioController *audioController;
 
 @end

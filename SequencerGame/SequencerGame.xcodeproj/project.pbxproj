@@ -172,6 +172,7 @@
 		160808F216B4E7B900039339 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F016B4E7B900039339 /* arrow.png */; };
 		160808F316B4E7B900039339 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F116B4E7B900039339 /* screen.png */; };
 		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
+		16918DFB172CF64200566A17 /* synth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 16918DFA172CF64200566A17 /* synth.pd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -504,6 +505,7 @@
 		160808F016B4E7B900039339 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
 		160808F116B4E7B900039339 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
 		16918DEE172CE66100566A17 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = ../libpd/libpd.xcodeproj; sourceTree = "<group>"; };
+		16918DFA172CF64200566A17 /* synth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth.pd; path = Resources/synth.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +580,7 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				16918DFA172CF64200566A17 /* synth.pd */,
 				1608088416B443E100039339 /* Sequence.plist */,
 				160808F016B4E7B900039339 /* arrow.png */,
 				160808F116B4E7B900039339 /* screen.png */,
@@ -1128,6 +1131,7 @@
 				160808EE16B4E5D700039339 /* ambient4.mp3 in Resources */,
 				160808F216B4E7B900039339 /* arrow.png in Resources */,
 				160808F316B4E7B900039339 /* screen.png in Resources */,
+				16918DFB172CF64200566A17 /* synth.pd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1326,7 +1330,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SequencerGame;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1346,7 +1350,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SequencerGame;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

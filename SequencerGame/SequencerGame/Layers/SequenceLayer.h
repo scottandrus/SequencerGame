@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "GridUtils.h"
+#import "PdDispatcher.h"
 
 @interface SequenceLayer : CCLayer
+{
+    PdDispatcher *_dispatcher;
+    void *_patch;
+}
 
 @property (assign) int sequence;
 @property (assign) GridCoord gridSize;
@@ -38,5 +43,12 @@
 
 + (CCScene *)sceneWithSequence:(int)sequence;
 + (CGPoint)sharedGridOrigin;
+
+- (IBAction)playE:(id)sender;
+- (IBAction)playA:(id)sender;
+- (IBAction)playD:(id)sender;
+- (IBAction)playG:(id)sender;
+- (IBAction)playB:(id)sender;
+- (IBAction)playE2:(id)sender;
 
 @end

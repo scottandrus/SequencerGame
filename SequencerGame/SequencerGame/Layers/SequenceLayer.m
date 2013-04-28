@@ -132,24 +132,86 @@ typedef enum
     return self;
 }
 
+#pragma mark - pure data hooks
+
+- (void)playNote:(int)n
+{
+    [PdBase sendFloat:n toReceiver:@"midinote"];
+    [PdBase sendBangToReceiver:@"trigger"];
+}
+
+- (void)playE
+{
+    NSLog(@"playing E");
+    [self playNote:40];
+}
+
+- (void)playA
+{
+    NSLog(@"playing A");
+    [self playNote:45];
+}
+
+- (void)playD
+{
+    NSLog(@"playing D");
+    [self playNote:50];
+}
+
+- (IBAction)playG
+{
+    NSLog(@"playing G");
+    [self playNote:55];
+}
+
+- (void)playB
+{
+    NSLog(@"playing B");
+    [self playNote:59];
+}
+
+- (void)playE2
+{
+    NSLog(@"playing E2");
+    [self playNote:64];
+}
+
 #pragma mark - shared data
 
 + (CGPoint)sharedGridOrigin
 {
-//    return CGPointMake((2048 - 800)/2, 130);
     return CGPointMake((1024 - 800)/2, 130);
-
 }
 
 #pragma mark - scene management
 
+- (void)onEnter
+{
+    [super onEnter];
+    
+    _dispatcher = [[PdDispatcher alloc] init];
+    [PdBase setDelegate:_dispatcher];
+    _patch = [PdBase openFile:@"synth.pd" path:[[NSBundle mainBundle] resourcePath]];
+    if (!_patch) {
+        NSLog(@"Failed to open patch");
+        // handle failure
+    }
+}
+
 - (void)onEnterTransitionDidFinish
 {
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];
+    [super onEnterTransitionDidFinish];
+
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];    
 }
 - (void)onExit
 {
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+    
+    [PdBase closeFile:_patch];
+    [PdBase setDelegate:nil];
+
+    [super onExit];
 }
 
 - (void)nextScene
@@ -212,7 +274,8 @@ typedef enum
     NSString *key = [pattern objectAtIndex:self.patternCount];
     
     if ([key isEqualToString:@"no sound"] == NO) {
-        [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+//        [[SimpleAudioEngine sharedEngine] playEffect:[self soundNameForKey:key]];
+        [self playSoundForKey:key];
     }
     if ([pattern isEqualToArray:self.dynamicPattern]) {
         [self positionTickIndicatorForCurrentTick];
@@ -372,6 +435,25 @@ typedef enum
 }
 
 #pragma mark - sound access
+
+- (void)playSoundForKey:(NSString *)key
+{
+    if ([key isEqualToString:kKeyStandard]) {
+        [self playG];
+    }
+    else if ([key isEqualToString:kKeyRobot]) {
+        [self playD];
+    }
+    else if ([key isEqualToString:kKeyMeaty]) {
+        [self playB];
+    }
+    else if ([key isEqualToString:kKeyAlien]) {
+        [self playE2];
+    }
+    else {
+        NSLog(@"warning: sound with key '%@' not found", key);
+    }
+}
 
 - (NSString *)soundNameForKey:(NSString *)key
 {

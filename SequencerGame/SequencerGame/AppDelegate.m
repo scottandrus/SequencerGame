@@ -73,14 +73,17 @@
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
     
-//    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"ambient4.mp3" loop:YES];
-
+    // ********************
+    
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [SequenceLayer sceneWithSequence:0]];
     
-
-
+    _audioController = [[PdAudioController alloc] init];
+    if ([self.audioController configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES] != PdAudioOK) {
+        NSLog(@"failed to initialize audio components");
+    }
     
+    // ********************
 
 	
 	// Create a Navigation Controller with the Director
@@ -107,15 +110,19 @@
 // getting a call, pause the game
 -(void) applicationWillResignActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ pause];
+    }
+    self.audioController.active = NO;
 }
 
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-	if( [navController_ visibleViewController] == director_ )
+	if( [navController_ visibleViewController] == director_ ) {
 		[director_ resume];
+    }
+    self.audioController.active = YES;
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application
