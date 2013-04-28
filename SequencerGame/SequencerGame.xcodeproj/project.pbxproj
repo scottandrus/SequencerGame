@@ -171,7 +171,32 @@
 		160808EE16B4E5D700039339 /* ambient4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160808EC16B4E5D700039339 /* ambient4.mp3 */; };
 		160808F216B4E7B900039339 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F016B4E7B900039339 /* arrow.png */; };
 		160808F316B4E7B900039339 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F116B4E7B900039339 /* screen.png */; };
+		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16918DF3172CE66200566A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16918DEE172CE66100566A17 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+		16918DF5172CE66200566A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16918DEE172CE66100566A17 /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
+		};
+		16918DF7172CE6AA00566A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16918DEE172CE66100566A17 /* libpd.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = "libpd-ios";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		160806B816B437A700039339 /* SequencerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequencerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -478,6 +503,7 @@
 		160808EC16B4E5D700039339 /* ambient4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient4.mp3; path = Resources/ambient4.mp3; sourceTree = "<group>"; };
 		160808F016B4E7B900039339 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
 		160808F116B4E7B900039339 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
+		16918DEE172CE66100566A17 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = ../libpd/libpd.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,11 +511,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */,
+				160806C516B437A700039339 /* AVFoundation.framework in Frameworks */,
+				160806C316B437A700039339 /* AudioToolbox.framework in Frameworks */,
 				160806BD16B437A700039339 /* QuartzCore.framework in Frameworks */,
 				160806BF16B437A700039339 /* OpenGLES.framework in Frameworks */,
 				160806C116B437A700039339 /* OpenAL.framework in Frameworks */,
-				160806C316B437A700039339 /* AudioToolbox.framework in Frameworks */,
-				160806C516B437A700039339 /* AVFoundation.framework in Frameworks */,
 				160806C716B437A700039339 /* UIKit.framework in Frameworks */,
 				160806C916B437A700039339 /* Foundation.framework in Frameworks */,
 				160806CB16B437A700039339 /* CoreGraphics.framework in Frameworks */,
@@ -503,6 +530,7 @@
 		160806AD16B437A700039339 = {
 			isa = PBXGroup;
 			children = (
+				16918DEE172CE66100566A17 /* libpd.xcodeproj */,
 				160806CE16B437A700039339 /* SequencerGame */,
 				160806BB16B437A700039339 /* Frameworks */,
 				160806B916B437A700039339 /* Products */,
@@ -970,6 +998,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		16918DEF172CE66100566A17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16918DF4172CE66200566A17 /* libpd-ios.a */,
+				16918DF6172CE66200566A17 /* libpd-osx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -984,6 +1021,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				16918DF8172CE6AA00566A17 /* PBXTargetDependency */,
 			);
 			name = SequencerGame;
 			productName = SequencerGame;
@@ -1008,12 +1046,35 @@
 			mainGroup = 160806AD16B437A700039339;
 			productRefGroup = 160806B916B437A700039339 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 16918DEF172CE66100566A17 /* Products */;
+					ProjectRef = 16918DEE172CE66100566A17 /* libpd.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				160806B716B437A700039339 /* SequencerGame */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		16918DF4172CE66200566A17 /* libpd-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-ios.a";
+			remoteRef = 16918DF3172CE66200566A17 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16918DF6172CE66200566A17 /* libpd-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-osx.a";
+			remoteRef = 16918DF5172CE66200566A17 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		160806B616B437A700039339 /* Resources */ = {
@@ -1190,6 +1251,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		16918DF8172CE6AA00566A17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libpd-ios";
+			targetProxy = 16918DF7172CE6AA00566A17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1608084F16B437AA00039339 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1257,6 +1326,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SequencerGame;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1276,6 +1346,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = SequencerGame;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../libpd";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
