@@ -7,36 +7,86 @@
 //
 
 #import "GridUtils.h"
-
 #import "CCDrawingPrimitives.h"
+
 
 @implementation GridUtils
 {
     
 }
 
-#pragma mark - coord to position conversions
+
+#pragma mark - conversions
 
 // absolute position on a grid for grid coordinate, bottom left
-+ (CGPoint) absolutePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin
++ (CGPoint)absolutePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin
 {
     CGFloat x = ((coord.x - 1) * unitSize) + origin.x;
     CGFloat y = ((coord.y - 1) * unitSize) + origin.y;
     return CGPointMake(x, y);
 }
 
-// grid coordinate for absolute position on a grid
-+ (GridCoord) gridCoordForAbsolutePosition:(CGPoint)position unitSize:(CGFloat)unitSize origin:(CGPoint)origin;
++ (CGPoint)relativePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize 
 {
-    NSInteger x = floorf((position.x - origin.x) / unitSize) + 1;
-    NSInteger y = floorf((position.y - origin.y) / unitSize) + 1;
+    CGFloat x = ((coord.x - 1) * unitSize);
+    CGFloat y = ((coord.y - 1) * unitSize);
+    return CGPointMake(x, y);
+}
+
+// grid coordinate for absolute position on a grid
++ (GridCoord)gridCoordForAbsolutePosition:(CGPoint)position unitSize:(CGFloat)unitSize origin:(CGPoint)origin;
+{
+    int x = floorf((position.x - origin.x) / unitSize) + 1;
+    int y = floorf((position.y - origin.y) / unitSize) + 1;
     return GridCoordMake(x, y);
 }
 
-+ (CGPoint) spriteAbsolutePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin
+// grid coordinate for relative position on a grid
++ (GridCoord)gridCoordForRelativePosition:(CGPoint)position unitSize:(CGFloat)unitSize origin:(CGPoint)origin;
 {
-    CGPoint point = [GridUtils absolutePositionForGridCoord:coord unitSize:unitSize origin:origin];
-    return CGPointMake(point.x + unitSize/2, point.y + unitSize/2);
+    int x = floorf(position.x / unitSize) + 1;
+    int y = floorf(position.y / unitSize) + 1;
+    return GridCoordMake(x, y);
+}
+
+
+// absolute position made for sprite (anchor point middle) on a grid for grid coordinate
++ (CGPoint)absoluteSpritePositionForGridCoord:(GridCoord)coord unitSize:(CGFloat)unitSize origin:(CGPoint)origin
+{
+    CGFloat x = ((coord.x - 1) * unitSize) + origin.x;
+    CGFloat y = ((coord.y - 1) * unitSize) + origin.y;
+    return CGPointMake(x + unitSize/2, y + unitSize/2);
+}
+
++ (GridCoord)gridCoordFromSize:(CGSize)size
+{
+    return GridCoordMake((int)size.width, (int)size.height);
+}
+
+
+# pragma mark - tiled map editor 
+
+// translate a standard gridcoord [(1,1) == bottom left] to tiled grid coord [(0,0) == top left]
++ (GridCoord)tiledGridCoordForGameGridCoord:(GridCoord)coord tileMapHeight:(CGFloat)height
+{
+    return GridCoordMake(coord.x - 1, height - coord.y);
+}
+
+// translate cocos2d position [(0.0, 0.0) == bottom left] to tiled grid coord [(0,0) == top left];
++ (GridCoord)tiledGridCoordForPosition:(CGPoint)position tileMap:(CCTMXTiledMap *)tileMap origin:(CGPoint)origin
+{
+    if (tileMap.tileSize.width != tileMap.tileSize.height) {
+        NSLog(@"warning: tileMap tileSize is not square");
+    }
+    GridCoord coord = [GridUtils gridCoordForAbsolutePosition:position unitSize:(tileMap.tileSize.width / 2) origin:origin];
+    return [self tiledGridCoordForGameGridCoord:coord tileMapHeight:tileMap.mapSize.height];
+}
+
+// translate cocos2d position [(0.0, 0.0) == bottom left] to a tiled format coord [(0.0, 0.0) == top left]
++ (CGPoint)tiledCoordForPosition:(CGPoint)position tileMap:(CCTMXTiledMap *)tileMap origin:(CGPoint)origin
+{
+    GridCoord coord = [GridUtils tiledGridCoordForPosition:position tileMap:tileMap origin:origin];
+    return CGPointMake(coord.x, coord.y);
 }
 
 
@@ -67,7 +117,8 @@
     }
 }
 
-#pragma mark - compare 
+
+#pragma mark - distance
 
 // number of cell steps to get from starting coord to ending coord, no diagonal path allowed
 + (int)numberOfStepsBetweenStart:(GridCoord)start end:(GridCoord)end
@@ -86,10 +137,15 @@
     }
 }
 
+#pragma mark - directions
+
 // direction by comparing starting coord and ending coord, no diagonal path allowed
 + (kDirection)directionFromStart:(GridCoord)start end:(GridCoord)end
 {
     // y movement
+    if ((start.x == end.x) && (start.y == end.y)) {
+        NSLog(@"warning: starting point is same as ending point, returning kDirectionNone");
+    }
     if (start.x == end.x) {
         if (start.y > end.y) {
             return kDirectionDown;
@@ -97,7 +153,7 @@
         else if (start.y < end.y) {
             return kDirectionUp;
         }
-    }
+     }
     // x movement
     else if (start.y == end.y) {
         if (start.x > end.x) {
@@ -107,15 +163,112 @@
             return kDirectionRight;
         }
     }
-    
-    // if none of above cases are true, move is invalid
     return kDirectionNone;
 }
 
++ (kDirection)oppositeDirection:(kDirection)direction
+{
+    switch (direction) {
+        case kDirectionDown:
+            return kDirectionUp;
+        case kDirectionUp:
+            return kDirectionDown;
+        case kDirectionLeft:
+            return kDirectionRight;
+        case kDirectionRight:
+            return kDirectionLeft;
+        default:
+            NSLog(@"warning: invalid direction given, returning kDirectionNone");
+            return kDirectionNone;
+    }
+}
+
++ (GridCoord)stepInDirection:(kDirection)direction fromCell:(GridCoord)cell
+{
+    if (direction == kDirectionUp) {
+        return GridCoordMake(cell.x, cell.y + 1);
+    }
+    else if (direction == kDirectionRight) {
+        return GridCoordMake(cell.x + 1, cell.y);
+    }
+    else if (direction == kDirectionDown) {
+        return GridCoordMake(cell.x, cell.y - 1);
+    }
+    else if (direction == kDirectionLeft) {
+        return GridCoordMake(cell.x - 1, cell.y);
+    }
+    else {
+        NSLog(@"warning: unrecognized direction");
+        return cell;
+    }
+}
+
++ (NSString *)directionStringForDirection:(kDirection)direction
+{
+    switch (direction) {
+        case kDirectionUp:
+            return @"up";
+        case kDirectionRight:
+            return @"right";
+        case kDirectionDown:
+            return @"down";
+        case kDirectionLeft:
+            return @"left";
+        default:
+            NSLog(@"warning: unrecognized direction");
+            return nil;
+    }
+}
 
 
+#pragma mark - compare
+
+// checks for gridcoords as same coordinate
++ (BOOL)isCell:(GridCoord)firstCell equalToCell:(GridCoord)secondCell
+{
+    return ((firstCell.x == secondCell.x) && (firstCell.y == secondCell.y));
+}
+
++ (BOOL)isCellInBounds:(GridCoord)cell gridSize:(GridCoord)size
+{
+    return (cell.x > 0 && cell.x <= size.x && cell.y > 0 && cell.y <= size.y);
+}
 
 
+#pragma mark - perform
+
+// iterate between a path strictly up/down or left/right performing block with cell
++ (void)performBlockBetweenFirstCell:(GridCoord)firstCell
+                          secondCell:(GridCoord)secondCell
+                               block:(void (^)(GridCoord cell, kDirection direction))block
+{
+    kDirection movingDirection = [GridUtils directionFromStart:firstCell end:secondCell];
+    if (movingDirection == kDirectionUp) {
+        for (int y = firstCell.y; y <= secondCell.y; y++) {
+            GridCoord cell = GridCoordMake(firstCell.x, y);
+            block(cell, movingDirection);
+        }
+    }
+    else if (movingDirection == kDirectionRight) {
+        for (int x = firstCell.x; x <= secondCell.x; x++) {
+            GridCoord cell = GridCoordMake(x, firstCell.y);
+            block(cell, movingDirection);
+        }
+    }
+    else if (movingDirection == kDirectionDown) {
+        for (int y = firstCell.y; y >= secondCell.y; y--) {
+
+            GridCoord cell = GridCoordMake(firstCell.x, y);
+            block(cell, movingDirection);
+        }
+    }
+    else if (movingDirection == kDirectionLeft) {
+        for (int x = firstCell.x; x >= secondCell.x; x--) {
+            GridCoord cell = GridCoordMake(x, firstCell.y);
+            block(cell, movingDirection);
+        }
+    } 
+}
 
 
 

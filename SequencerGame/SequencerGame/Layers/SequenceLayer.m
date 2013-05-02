@@ -317,7 +317,7 @@ typedef enum
 
 - (void)positionTickIndicatorForCurrentTick
 {
-    self.tickIndicator.position = [GridUtils spriteAbsolutePositionForGridCoord:GridCoordMake(self.patternCount + 1, 0) unitSize:kSizeGridUnit origin:self.gridOrigin];
+    self.tickIndicator.position = [GridUtils absoluteSpritePositionForGridCoord:GridCoordMake(self.patternCount + 1, 0) unitSize:kSizeGridUnit origin:self.gridOrigin];
     self.tickIndicator.visible = YES;
 }
 
@@ -327,7 +327,7 @@ typedef enum
 {
     NSString *keyString = [NSString stringWithFormat:@"%i%i", cell.x, cell.y];
     CCSprite *sprite = [self heartSpriteForBeatType:(kBeatType)cell.y];
-    sprite.position = [GridUtils spriteAbsolutePositionForGridCoord:cell unitSize:kSizeGridUnit origin:self.gridOrigin];
+    sprite.position = [GridUtils absoluteSpritePositionForGridCoord:cell unitSize:kSizeGridUnit origin:self.gridOrigin];
     [self.heartSprites setObject:sprite forKey:keyString];
     [self addChild:sprite];
 }

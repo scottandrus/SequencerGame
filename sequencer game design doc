@@ -1,0 +1,58 @@
+sequencer game programming doc
+
+
+
+
+@protocol TickResponder <NSObject>
+
+responders should handle animation and pass back a kTickEvent
+those events should be defined by a kTickEvent enum.  
+the timing should be handled in PD?
+
+// example implementation from an object that adopts TickResponder, such as a left facing arrow: 
+- (kTickEvent)tick:(bpm)bpm
+{
+	// animate
+	[self startAnimation:bpm];
+
+	// return desired tick event for our ticker 
+	// we could add logic to support multiple return types
+	return kTickEventLeft
+}
+
+
+TickDispatcher Class:
+
+- (void)tick
+{
+	
+}
+
+
+
+
+
+
+
+* tick dispatcher
+
+	// the timer coordinates 'tick events' to send to receivers
+	- properties:
+		- active cell
+		- next cell
+	- methods
+		-
+
+
+
+
+* puzzle layer
+
+* tone cell 
+* empty cell
+* fx cell
+
+
+
+
+

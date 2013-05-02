@@ -171,6 +171,7 @@
 		160808EE16B4E5D700039339 /* ambient4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 160808EC16B4E5D700039339 /* ambient4.mp3 */; };
 		160808F216B4E7B900039339 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F016B4E7B900039339 /* arrow.png */; };
 		160808F316B4E7B900039339 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F116B4E7B900039339 /* screen.png */; };
+		168CF7B017308009009683BF /* TickDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CF7AF17308009009683BF /* TickDispatcher.m */; };
 		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
 		16918DFB172CF64200566A17 /* synth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 16918DFA172CF64200566A17 /* synth.pd */; };
 /* End PBXBuildFile section */
@@ -504,6 +505,8 @@
 		160808EC16B4E5D700039339 /* ambient4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient4.mp3; path = Resources/ambient4.mp3; sourceTree = "<group>"; };
 		160808F016B4E7B900039339 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
 		160808F116B4E7B900039339 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
+		168CF7AE17308009009683BF /* TickDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickDispatcher.h; sourceTree = "<group>"; };
+		168CF7AF17308009009683BF /* TickDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickDispatcher.m; sourceTree = "<group>"; };
 		16918DEE172CE66100566A17 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = ../libpd/libpd.xcodeproj; sourceTree = "<group>"; };
 		16918DFA172CF64200566A17 /* synth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth.pd; path = Resources/synth.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -997,6 +1000,8 @@
 				1608086816B43CEF00039339 /* GridUtils.m */,
 				1608086916B43CEF00039339 /* SpriteUtils.h */,
 				1608086A16B43CEF00039339 /* SpriteUtils.m */,
+				168CF7AE17308009009683BF /* TickDispatcher.h */,
+				168CF7AF17308009009683BF /* TickDispatcher.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1250,6 +1255,7 @@
 				1608087016B43CEF00039339 /* SpriteUtils.m in Sources */,
 				1608088016B43FE500039339 /* AppDelegate.m in Sources */,
 				1608088316B4416000039339 /* SequenceLayer.m in Sources */,
+				168CF7B017308009009683BF /* TickDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
