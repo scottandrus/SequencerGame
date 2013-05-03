@@ -172,6 +172,9 @@
 		160808F216B4E7B900039339 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F016B4E7B900039339 /* arrow.png */; };
 		160808F316B4E7B900039339 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 160808F116B4E7B900039339 /* screen.png */; };
 		1624D1DE1733453200851B45 /* TextureUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624D1DD1733453200851B45 /* TextureUtils.m */; };
+		1624D1E317337FBE00851B45 /* CCTMXTiledMap+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624D1E217337FBD00851B45 /* CCTMXTiledMap+Utils.m */; };
+		1624D1E71733807300851B45 /* PathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624D1E61733807200851B45 /* PathUtils.m */; };
+		1624D1EA1733822C00851B45 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624D1E91733822B00851B45 /* ColorUtils.m */; };
 		168CF7B017308009009683BF /* TickDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CF7AF17308009009683BF /* TickDispatcher.m */; };
 		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
 		16918DFB172CF64200566A17 /* synth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 16918DFA172CF64200566A17 /* synth.pd */; };
@@ -508,6 +511,12 @@
 		160808F116B4E7B900039339 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
 		1624D1DC1733453100851B45 /* TextureUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureUtils.h; sourceTree = "<group>"; };
 		1624D1DD1733453200851B45 /* TextureUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureUtils.m; sourceTree = "<group>"; };
+		1624D1E117337FBC00851B45 /* CCTMXTiledMap+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTMXTiledMap+Utils.h"; sourceTree = "<group>"; };
+		1624D1E217337FBD00851B45 /* CCTMXTiledMap+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCTMXTiledMap+Utils.m"; sourceTree = "<group>"; };
+		1624D1E51733807100851B45 /* PathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathUtils.h; sourceTree = "<group>"; };
+		1624D1E61733807200851B45 /* PathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathUtils.m; sourceTree = "<group>"; };
+		1624D1E81733822A00851B45 /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
+		1624D1E91733822B00851B45 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
 		168CF7AE17308009009683BF /* TickDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickDispatcher.h; sourceTree = "<group>"; };
 		168CF7AF17308009009683BF /* TickDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickDispatcher.m; sourceTree = "<group>"; };
 		16918DEE172CE66100566A17 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = ../libpd/libpd.xcodeproj; sourceTree = "<group>"; };
@@ -993,6 +1002,12 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1624D1E81733822A00851B45 /* ColorUtils.h */,
+				1624D1E91733822B00851B45 /* ColorUtils.m */,
+				1624D1E51733807100851B45 /* PathUtils.h */,
+				1624D1E61733807200851B45 /* PathUtils.m */,
+				1624D1E117337FBC00851B45 /* CCTMXTiledMap+Utils.h */,
+				1624D1E217337FBD00851B45 /* CCTMXTiledMap+Utils.m */,
 				1624D1DC1733453100851B45 /* TextureUtils.h */,
 				1624D1DD1733453200851B45 /* TextureUtils.m */,
 				1608086116B43CEF00039339 /* DataUtils.h */,
@@ -1262,6 +1277,9 @@
 				1608088316B4416000039339 /* SequenceLayer.m in Sources */,
 				168CF7B017308009009683BF /* TickDispatcher.m in Sources */,
 				1624D1DE1733453200851B45 /* TextureUtils.m in Sources */,
+				1624D1E317337FBE00851B45 /* CCTMXTiledMap+Utils.m in Sources */,
+				1624D1E71733807300851B45 /* PathUtils.m in Sources */,
+				1624D1EA1733822C00851B45 /* ColorUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
