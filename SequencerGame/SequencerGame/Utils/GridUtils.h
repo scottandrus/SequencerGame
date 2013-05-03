@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "GameConstants.h"
 #import "cocos2d.h"
-#import "GameTypes.h"
 
 typedef struct
 {

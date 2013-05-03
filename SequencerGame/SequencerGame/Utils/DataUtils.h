@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "GridUtils.h"
-#import "GameTypes.h"
 
 @interface DataUtils : NSObject
 

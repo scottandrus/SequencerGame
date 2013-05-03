@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GameTypes.h"
 #import "cocos2d.h"
+#import "GameConstants.h"
 
 @interface SpriteUtils : NSObject
 
