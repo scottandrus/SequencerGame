@@ -177,6 +177,7 @@
 		168CF7B017308009009683BF /* TickDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 168CF7AF17308009009683BF /* TickDispatcher.m */; };
 		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
 		16918DFB172CF64200566A17 /* synth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 16918DFA172CF64200566A17 /* synth.pd */; };
+		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -518,6 +519,8 @@
 		168CF7AF17308009009683BF /* TickDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickDispatcher.m; sourceTree = "<group>"; };
 		16918DEE172CE66100566A17 /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = ../libpd/libpd.xcodeproj; sourceTree = "<group>"; };
 		16918DFA172CF64200566A17 /* synth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth.pd; path = Resources/synth.pd; sourceTree = "<group>"; };
+		169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObjectLibrary.h; sourceTree = "<group>"; };
+		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -999,6 +1002,8 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */,
+				169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */,
 				1624D1E81733822A00851B45 /* ColorUtils.h */,
 				1624D1E91733822B00851B45 /* ColorUtils.m */,
 				1624D1E51733807100851B45 /* PathUtils.h */,
@@ -1274,6 +1279,7 @@
 				1624D1E317337FBE00851B45 /* CCTMXTiledMap+Utils.m in Sources */,
 				1624D1E71733807300851B45 /* PathUtils.m in Sources */,
 				1624D1EA1733822C00851B45 /* ColorUtils.m in Sources */,
+				169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
