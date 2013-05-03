@@ -1,6 +1,6 @@
 //
 //  DataUtils.h
-//  FishSet
+//  SequencerGame
 //
 //  Created by John Saba on 1/19/13.
 //

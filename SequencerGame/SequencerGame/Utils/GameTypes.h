@@ -1,6 +1,6 @@
 //
 //  GameTypes.h
-//  FishSet
+//  SequencerGame
 //
 //  Created by John Saba on 1/19/13.
 //
@@ -16,3 +16,4 @@ typedef enum
     kDirectionDown,
     kDirectionLeft
 } kDirection;
+

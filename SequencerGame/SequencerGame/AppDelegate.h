@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  FishSet
+//  SequencerGame
 //
 //  Created by John Saba on 1/18/13.
 //  Copyright __MyCompanyName__ 2013. All rights reserved.

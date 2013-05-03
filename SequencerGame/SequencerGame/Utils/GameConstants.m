@@ -1,6 +1,6 @@
 //
 //  GameConstants.m
-//  FishSet
+//  SequencerGame
 //
 //  Created by John Saba on 1/20/13.
 //
