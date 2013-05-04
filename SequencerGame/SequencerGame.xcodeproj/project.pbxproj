@@ -208,6 +208,8 @@
 		D258C842173582200056EE96 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C841173582200056EE96 /* SAViewManipulator.m */; };
 		D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84617358D100056EE96 /* UIColor+i7HexColor.m */; };
 		D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84817358D100056EE96 /* UIView+Frame.m */; };
+		D258C84F17359B850056EE96 /* DropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84D17359B850056EE96 /* DropShadow.png */; };
+		D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84E17359B850056EE96 /* DropShadow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -593,6 +595,8 @@
 		D258C84617358D100056EE96 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
 		D258C84717358D100056EE96 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		D258C84817358D100056EE96 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		D258C84D17359B850056EE96 /* DropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropShadow.png; sourceTree = "<group>"; };
+		D258C84E17359B850056EE96 /* DropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropShadow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -674,6 +678,8 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D258C84D17359B850056EE96 /* DropShadow.png */,
+				D258C84E17359B850056EE96 /* DropShadow@2x.png */,
 				169B8D831735911F0002FD60 /* seq1.tmx */,
 				169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */,
 				169B8D5B17355EAE0002FD60 /* arrow-ipadhd.png */,
@@ -1353,6 +1359,8 @@
 				D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */,
 				169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */,
 				169B8D841735911F0002FD60 /* seq1.tmx in Resources */,
+				D258C84F17359B850056EE96 /* DropShadow.png in Resources */,
+				D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
