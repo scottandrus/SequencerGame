@@ -9,8 +9,6 @@
 #import "SequenceViewController.h"
 #import "TextureUtils.h"
 #import "SequenceLayer.h"
-#import "MPTransition.h"
-#import "MPFoldTransition.h"
 
 @interface SequenceViewController ()
 

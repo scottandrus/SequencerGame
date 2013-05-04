@@ -10,8 +10,6 @@
 #import "PathUtils.h"
 #import "SequenceMenuCell.h"
 #import "SAViewManipulator.h"
-#import "MPTransition.h"
-#import "MPFoldTransition.h"
 #import "InfoViewController.h"
 
 // Categories
