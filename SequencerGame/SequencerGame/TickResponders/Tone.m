@@ -7,6 +7,7 @@
 //
 
 #import "Tone.h"
+#import "CCTMXTiledMap+Utils.h"
 
 @implementation Tone
 
@@ -14,6 +15,9 @@
 {
     self = [super init];
     if (self) {
+        
+        
+        
 //        self.colorGroup = [door valueForKey:kTLDPropertyColorGroup];
 //        self.edge = [PGTiledUtils directionNamed:[door valueForKey:kTLDPropertyEdge]];
 //        
@@ -24,7 +28,7 @@
 //        
 //        self.layer = [[door valueForKey:kTLDPropertyLayer] intValue];
 //        
-//        self.cell = [tiledMap gridCoordForObject:door];
+        self.cell = [tiledMap gridCoordForObject:tone];
 //        self.position = [GridUtils absolutePositionForGridCoord:self.cell unitSize:kSizeGridUnit origin:origin];
 //        
 //        self.isOpen = NO;
