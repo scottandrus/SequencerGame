@@ -203,6 +203,7 @@
 		169B8D8E1735A50B0002FD60 /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D8D1735A50B0002FD60 /* Arrow.m */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
+		3D11F3661735A54D00172154 /* TickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D11F3651735A54D00172154 /* TickerView.m */; };
 		D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */; };
 		D258C842173582200056EE96 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C841173582200056EE96 /* SAViewManipulator.m */; };
 		D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84617358D100056EE96 /* UIColor+i7HexColor.m */; };
@@ -587,6 +588,8 @@
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
 		169FC6BC1734A2E1008EC4C4 /* CellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellNode.m; path = Nodes/CellNode.m; sourceTree = "<group>"; };
+		3D11F3641735A54D00172154 /* TickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerView.h; sourceTree = "<group>"; };
+		3D11F3651735A54D00172154 /* TickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerView.m; sourceTree = "<group>"; };
 		D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SequenceMenuCellLabel.xib; sourceTree = "<group>"; };
 		D258C840173582200056EE96 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAViewManipulator.h; path = ../Views/SAViewManipulator.h; sourceTree = "<group>"; };
 		D258C841173582200056EE96 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAViewManipulator.m; path = ../Views/SAViewManipulator.m; sourceTree = "<group>"; };
@@ -1159,6 +1162,10 @@
 		165A41971734DEA8005BFC32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				165A41A61734EC6A005BFC32 /* SequenceMenuCell.h */,
+				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
+				3D11F3641735A54D00172154 /* TickerView.h */,
+				3D11F3651735A54D00172154 /* TickerView.m */,
 				D258C84B173591B80056EE96 /* SequenceMenuCell */,
 			);
 			path = Views;
@@ -1495,6 +1502,7 @@
 				165A41A21734E7F8005BFC32 /* SequenceViewController.m in Sources */,
 				165A41A51734EA65005BFC32 /* SGTiledUtils.m in Sources */,
 				165A41A81734EC6A005BFC32 /* SequenceMenuCell.m in Sources */,
+				3D11F3661735A54D00172154 /* TickerView.m in Sources */,
 				D258C842173582200056EE96 /* SAViewManipulator.m in Sources */,
 				D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */,
 				D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */,
