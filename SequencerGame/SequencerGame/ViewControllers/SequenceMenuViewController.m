@@ -10,9 +10,14 @@
 #import "PathUtils.h"
 #import "SequenceMenuCell.h"
 #import "SAViewManipulator.h"
-#import "UIColor+i7HexColor.h"
 
-@interface SequenceMenuViewController ()
+// Categories
+#import "UIColor+i7HexColor.h"
+#import "UIView+Frame.h"
+
+@interface SequenceMenuViewController () {
+    
+}
 
 @end
 
@@ -34,6 +39,7 @@
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     [self customizeInterface];
+    self.dropShadowImageView.hidden = YES;
 }
 
 - (void)customizeInterface {
@@ -87,6 +93,18 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     return CGSizeMake(0, 0);
 }
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.collectionView.contentOffset.y > 0) {
+        if (self.dropShadowImageView.hidden)
+            [SAViewManipulator fadeUnhideView:self.dropShadowImageView];
+    }
+    else if (!self.dropShadowImageView.hidden) {
+        [SAViewManipulator fadeHideView:self.dropShadowImageView];
+    }
+} // any offset changes
 
 #pragma mark - sequenceViewControllerDelegate
 
