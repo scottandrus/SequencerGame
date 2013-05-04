@@ -10,18 +10,18 @@
 #import "ColorUtils.h"
 
 // tiled object groups
-NSString *const kTLDGroupMeta = @"meta";
+NSString *const kTLDGroupTickResponders = @"Tick Responders";
 
 // tiled objects
+NSString *const kTLDObjectSequence = @"sequence";
 NSString *const kTLDObjectEntry = @"entry";
-NSString *const kTLDObjectConnection = @"connection";
+NSString *const kTLDObjectTone = @"tone";
+NSString *const kTLDObjectArrow = @"arrow";
 
 // tiled object properties
-NSString *const kTLDPropertyLayer = @"layer";
+NSString *const kTLDPropertyLayer = @"midiValue";
+NSString *const kTLDPropertyDirection = @"direction";
 
-// tiled tile layers
-NSString *const kTLDLayerPipes1 = @"pipes1";
-NSString *const kTLDLayerPipes2 = @"pipes2";
 
 @implementation PGTiledUtils
 

@@ -11,6 +11,8 @@
 #import "GameConstants.h"
 #import "SimpleAudioEngine.h"
 #import "SpriteUtils.h"
+#import "CCTMXTiledMap+Utils.h"
+#import "SGTiledUtils.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -61,6 +63,11 @@ typedef enum
 {
     self = [super init];
     if (self) {
+
+        
+        CCTMXTiledMap *tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"baseSequence.tmx"];
+        NSMutableArray *tones = [tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
+        NSLog(@"tones: %@", tones);
         
         [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonDefault];
         [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonSelected];
