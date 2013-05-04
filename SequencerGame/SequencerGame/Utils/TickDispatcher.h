@@ -9,21 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "GridUtils.h"
 
-typedef enum
-{
-    kTickEventUp = 0,
-    kTickEventRight,
-    kTickEventDown,
-    kTickEventLeft,
-    kTickEventDissolve,
-} kTickEvent;
-
 @protocol TickResponder <NSObject>
-- (kTickEvent)tick:(NSInteger)bpm;
+- (id)tick:(NSInteger)bpm;
 - (GridCoord)responderCell;
 @end
 
 
 @interface TickDispatcher : NSObject
+
+- (void)registerTickResponder:(id<TickResponder>)responder;
 
 @end
