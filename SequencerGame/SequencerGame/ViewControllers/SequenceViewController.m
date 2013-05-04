@@ -57,5 +57,8 @@
 - (IBAction)pressedBack:(id)sender
 {
     [self.delegate pressedBack];
+//    [[self presentingViewController] dismissViewControllerWithFoldStyle:MPFoldStyleDefault completion:^(BOOL finished) {
+        // completion
+//    }];
 }
 @end

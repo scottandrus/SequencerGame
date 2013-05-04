@@ -10,6 +10,7 @@
 #import "GameConstants.h"
 #import "Tone.h"
 #import "Arrow.h"
+#import "SGTiledUtils.h"
 
 static NSInteger const kBPM = 120;
 
@@ -18,13 +19,28 @@ static NSInteger const kBPM = 120;
 @interface TickDispatcher ()
 
 @property (strong, nonatomic) NSMutableArray *responders;
+@property (assign) GridCoord startingCell;
 @property (assign) GridCoord currentCell;
 @property (assign) GridCoord nextCell;
+@property (assign) kDirection startingDirection;
 
 @end
 
 
 @implementation TickDispatcher
+
+- (id)initWithEventSequence:(NSDictionary *)sequence
+{
+    self = [super init];
+    if (self) {
+        NSString *rawEventSeq = [sequence objectForKey:kTLDPropertyEvents];
+        NSArray *groupByTick = [rawEventSeq componentsSeparatedByString:@";"];
+        
+
+    }
+    return self;
+}
+
 
 - (void)registerTickResponder:(id<TickResponder>)responder
 {
@@ -62,11 +78,7 @@ static NSInteger const kBPM = 120;
             
             
             
-            
-            
-            
-            
-            
+        
             
 //            id event = [responder tick:kBPM];
 //                        

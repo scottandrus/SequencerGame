@@ -18,6 +18,7 @@
 
 @interface TickDispatcher : NSObject
 
+- (id)initWithEventSequence:(NSDictionary *)sequence;
 - (void)registerTickResponder:(id<TickResponder>)responder;
 
 @end

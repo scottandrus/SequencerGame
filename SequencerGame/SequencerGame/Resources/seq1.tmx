@@ -83,7 +83,11 @@
    </properties>
    <ellipse/>
   </object>
-  <object name="sequence" x="82" y="-93" width="295" height="36"/>
+  <object name="sequence" x="82" y="-93" width="295" height="36">
+   <properties>
+    <property name="events" value="48,n;49;50n;51"/>
+   </properties>
+  </object>
   <object name="entry" x="17" y="34" width="125" height="121">
    <properties>
     <property name="direction" value="right"/>

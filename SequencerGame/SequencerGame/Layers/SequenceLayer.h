@@ -23,8 +23,9 @@
 @property (nonatomic, strong) CCTMXTiledMap *tileMap;
 @property (nonatomic, strong) CellObjectLibrary *cellObjectLibrary;
 
-@property (nonatomic, strong) NSMutableArray *tones;
+//@property (nonatomic, strong) 
 
+@property (nonatomic, strong) NSMutableArray *tones;
 
 
 
