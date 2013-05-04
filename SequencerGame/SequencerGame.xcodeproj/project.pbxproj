@@ -200,6 +200,8 @@
 		169B8D75173567C50002FD60 /* Tone.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D74173567C50002FD60 /* Tone.m */; };
 		169B8D791735691C0002FD60 /* Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D781735691C0002FD60 /* Direction.m */; };
 		169B8D7C173569340002FD60 /* Dissolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D7B173569340002FD60 /* Dissolve.m */; };
+		169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */; };
+		169B8D841735911F0002FD60 /* seq1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D831735911F0002FD60 /* seq1.tmx */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
 		D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */; };
@@ -578,6 +580,8 @@
 		169B8D781735691C0002FD60 /* Direction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Direction.m; path = TickEvents/Direction.m; sourceTree = "<group>"; };
 		169B8D7A173569340002FD60 /* Dissolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dissolve.h; sourceTree = "<group>"; };
 		169B8D7B173569340002FD60 /* Dissolve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dissolve.m; sourceTree = "<group>"; };
+		169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipeTilesetBase1.png; path = Resources/pipeTilesetBase1.png; sourceTree = "<group>"; };
+		169B8D831735911F0002FD60 /* seq1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = seq1.tmx; path = Resources/seq1.tmx; sourceTree = "<group>"; };
 		169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObjectLibrary.h; sourceTree = "<group>"; };
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
@@ -670,6 +674,8 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				169B8D831735911F0002FD60 /* seq1.tmx */,
+				169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */,
 				169B8D5B17355EAE0002FD60 /* arrow-ipadhd.png */,
 				169B8D5C17355EAE0002FD60 /* dynamicButtonComplete-ipadhd.png */,
 				169B8D5D17355EAE0002FD60 /* dynamicButtonComplete-ipadhd.png.zip */,
@@ -1345,6 +1351,8 @@
 				169B8D7117355EAE0002FD60 /* robotHeart-ipadhd.png in Resources */,
 				169B8D7217355EAE0002FD60 /* standardHeart-ipadhd.png in Resources */,
 				D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */,
+				169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */,
+				169B8D841735911F0002FD60 /* seq1.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

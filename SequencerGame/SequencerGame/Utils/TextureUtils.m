@@ -11,12 +11,20 @@
 
 @implementation TextureUtils
 
-NSString *const kImageNameImage = @"image";
+NSString *const kImageDynamicButtonDefault = @"dynamicButtonDefault.png";
+NSString *const kImageDynamicButtonSelected = @"dynamicButtonSelected.png";
+NSString *const kImageDynamicButtonComplete = @"dynamicButtonComplete.png";
+NSString *const kImageFinalButtonDefault = @"finalButtonDefault.png";
+NSString *const kImageFinalButtonSelected = @"finalButtonSelected.png";
 
 // don't forget to load the images
 + (void)loadTextures
-{
-    [[CCTextureCache sharedTextureCache] addImage:kImageNameImage];
+{    
+    [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonDefault];
+    [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonSelected];
+    [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonComplete];
+    [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonDefault];
+    [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonSelected];
 }
 
 @end

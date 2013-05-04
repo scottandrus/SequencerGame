@@ -11,6 +11,9 @@
 #import "GameConstants.h"
 #import "SimpleAudioEngine.h"
 #import "SpriteUtils.h"
+#import "CCTMXTiledMap+Utils.h"
+#import "SGTiledUtils.h"
+#import "TextureUtils.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -25,13 +28,6 @@ static NSString *const kSoundStandard = @"Heart 4.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
 static NSString *const kSoundAlien = @"Heart Alien New.caf";
-
-static NSString *const kImageDynamicButtonDefault = @"dynamicButtonDefault.png";
-static NSString *const kImageDynamicButtonSelected = @"dynamicButtonSelected.png";
-static NSString *const kImageDynamicButtonComplete = @"dynamicButtonComplete.png";
-
-static NSString *const kImageFinalButtonDefault = @"finalButtonDefault.png";
-static NSString *const kImageFinalButtonSelected = @"finalButtonSelected.png";
 
 static CGFloat const kPatternDelay = 0.5;
 
@@ -61,14 +57,24 @@ typedef enum
 {
     self = [super init];
     if (self) {
+        self.isTouchEnabled = YES;
         
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonDefault];
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonSelected];
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonComplete];
-        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonDefault];
-        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonSelected];
+        [TextureUtils loadTextures];
         
-        [self setIsTouchEnabled:YES];
+        CCTMXTiledMap *tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"seq1.tmx"];
+        NSMutableArray *tones = [tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
+        NSLog(@"tones: %@", tones);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         _sequence = sequence;
         _isAnySequencePlaying = NO;
         
