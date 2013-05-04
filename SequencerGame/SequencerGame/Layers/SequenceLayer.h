@@ -11,7 +11,7 @@
 #import "GridUtils.h"
 #import "PdDispatcher.h"
 
-@class CellObjectLibrary;
+@class CellObjectLibrary, TickDispatcher;
 
 @interface SequenceLayer : CCLayer
 {
@@ -22,13 +22,9 @@
 
 @property (nonatomic, strong) CCTMXTiledMap *tileMap;
 @property (nonatomic, strong) CellObjectLibrary *cellObjectLibrary;
-
-//@property (nonatomic, strong) 
+@property (nonatomic, strong) TickDispatcher *tickDispatcher;
 
 @property (nonatomic, strong) NSMutableArray *tones;
-
-
-
 
 
 //////////

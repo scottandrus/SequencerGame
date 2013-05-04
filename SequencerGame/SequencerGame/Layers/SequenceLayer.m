@@ -72,7 +72,7 @@ typedef enum
 
         // sequence
         NSMutableDictionary *seq = [self.tileMap objectNamed:kTLDObjectSequence groupNamed:kTLDGroupTickResponders];
-        [[TickDispatcher alloc] initWithEventSequence:seq];
+        self.tickDispatcher = [[TickDispatcher alloc] initWithEventSequence:seq];
 
         
         
@@ -83,9 +83,6 @@ typedef enum
         for (NSMutableDictionary *tone in tones) {
             Tone *toneNode = [[Tone alloc] initWithTone:tone tiledMap:self.tileMap puzzleOrigin:self.position];
             [self.tones addObject:toneNode];
-            
-            NSLog(@"tone node: %@", toneNode);
-            
             [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
         }
 
