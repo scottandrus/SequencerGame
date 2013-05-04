@@ -9,7 +9,7 @@
 #import "CellNode.h"
 #import "GameConstants.h"
 #import "SpriteUtils.h"
-#import "PGTiledUtils.h"
+#import "SGTiledUtils.h"
 #import "CellObjectLibrary.h"
 
 
@@ -36,7 +36,7 @@
     return sprite;
 }
 
--(void) moveTo:(GridCoord)cell puzzleOrigin:(CGPoint)origin
+-(void) moveTo:(GridCoord)cell gridOrigin:(CGPoint)origin
 {
     GridCoord moveFrom = self.cell;
     self.cell = cell;

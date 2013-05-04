@@ -8,13 +8,6 @@
 
 #import "DataUtils.h"
 
-static NSString *const kPuzzlesPlist = @"Puzzles";
-static NSString *const kPuzzlesPlistEntryCoordX = @"entry coord.x";
-static NSString *const kPuzzlesPlistEntryCoordY = @"entry coord.y";
-static NSString *const kPuzzlesPlistEntryDirection =@"entry direction";
-static NSString *const kPuzzlesPlistSizeX = @"size.x";
-static NSString *const kPuzzlesPlistSizeY = @"size.y";
-
 static NSString *const kSequencePlist = @"Sequence";
 static NSString *const kSequenceGridSizeX = @"size.x";
 static NSString *const kSequenceGridSizeY = @"size.y";
@@ -97,38 +90,5 @@ static NSString *const kSequencePattern = @"pattern";
     NSArray *plist = [DataUtils plistArray:kSequencePlist];
     return [plist count];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//// entry coordinate for puzzle
-//+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber
-//{
-//    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
-//    NSNumber *x = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordX];
-//    NSNumber *y = [puzzle valueForKeyPath:kPuzzlesPlistEntryCoordY];
-//    return GridCoordMake([x intValue], [y intValue]);
-//}
-//
-//// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
-//+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber
-//{
-//    NSDictionary *puzzle = [DataUtils puzzleData:puzzleNumber];
-//    NSNumber *direction = [puzzle valueForKeyPath:kPuzzlesPlistEntryDirection];
-//    return [direction intValue];
-//}
 
 @end

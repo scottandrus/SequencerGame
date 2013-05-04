@@ -6,7 +6,7 @@
 //
 //
 
-#import "PGTiledUtils.h"
+#import "SGTiledUtils.h"
 #import "ColorUtils.h"
 
 // tiled object groups

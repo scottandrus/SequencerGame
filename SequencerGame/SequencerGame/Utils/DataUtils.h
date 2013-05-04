@@ -16,16 +16,4 @@
 + (NSArray *)sequencePattern:(NSUInteger)sequence;
 + (NSUInteger)numberOfSequences;
 
-
-
-//// entry coordinate for puzzle
-//+ (GridCoord)puzzleEntryCoord:(NSUInteger)puzzleNumber;
-//
-//// entry coordinate for puzzle
-//+ (GridCoord)puzzleSize:(NSUInteger)puzzleNumber;
-//
-//// direction hand enters puzzle, value 'right' would mean it enters to the right coming from the left side of a cell
-//+ (kDirection)puzzleEntryDireciton:(NSUInteger)puzzleNumber;
-
-
 @end

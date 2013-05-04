@@ -44,11 +44,11 @@
 + (CCScene *)sceneWithSequence:(int)sequence;
 + (CGPoint)sharedGridOrigin;
 
-- (IBAction)playE:(id)sender;
-- (IBAction)playA:(id)sender;
-- (IBAction)playD:(id)sender;
-- (IBAction)playG:(id)sender;
-- (IBAction)playB:(id)sender;
-- (IBAction)playE2:(id)sender;
+- (IBAction)playE;
+- (IBAction)playA;
+- (IBAction)playD;
+- (IBAction)playG;
+- (IBAction)playB;
+- (IBAction)playE2;
 
 @end
