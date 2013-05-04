@@ -204,6 +204,10 @@
 		169B8D841735911F0002FD60 /* seq1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D831735911F0002FD60 /* seq1.tmx */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
+		D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */; };
+		D258C842173582200056EE96 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C841173582200056EE96 /* SAViewManipulator.m */; };
+		D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84617358D100056EE96 /* UIColor+i7HexColor.m */; };
+		D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84817358D100056EE96 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -582,6 +586,13 @@
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
 		169FC6BC1734A2E1008EC4C4 /* CellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellNode.m; path = Nodes/CellNode.m; sourceTree = "<group>"; };
+		D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SequenceMenuCellLabel.xib; sourceTree = "<group>"; };
+		D258C840173582200056EE96 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAViewManipulator.h; path = ../Views/SAViewManipulator.h; sourceTree = "<group>"; };
+		D258C841173582200056EE96 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAViewManipulator.m; path = ../Views/SAViewManipulator.m; sourceTree = "<group>"; };
+		D258C84517358D100056EE96 /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		D258C84617358D100056EE96 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
+		D258C84717358D100056EE96 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		D258C84817358D100056EE96 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -642,6 +653,7 @@
 		160806CE16B437A700039339 /* SequencerGame */ = {
 			isa = PBXGroup;
 			children = (
+				D258C84417358CF90056EE96 /* Categories */,
 				169B8D76173568850002FD60 /* TickEvents */,
 				165A41921734DEA8005BFC32 /* ViewControllers */,
 				165A41971734DEA8005BFC32 /* Views */,
@@ -651,6 +663,7 @@
 				1608086016B43CEF00039339 /* Utils */,
 				1608087E16B43FE500039339 /* AppDelegate.h */,
 				1608087F16B43FE500039339 /* AppDelegate.m */,
+				D258C83A173579880056EE96 /* Storyboard */,
 				160806CF16B437A700039339 /* Resources */,
 				160806E916B437A800039339 /* libs */,
 				1608084216B437AA00039339 /* Supporting Files */,
@@ -725,7 +738,6 @@
 				160806E416B437A700039339 /* Icon@2x.png */,
 				160806E616B437A800039339 /* Info.plist */,
 				160806E716B437A800039339 /* iTunesArtwork */,
-				165A418B1734D870005BFC32 /* Storyboard.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1085,6 +1097,8 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D258C840173582200056EE96 /* SAViewManipulator.h */,
+				D258C841173582200056EE96 /* SAViewManipulator.m */,
 				165A41A31734EA64005BFC32 /* SGTiledUtils.h */,
 				165A41A41734EA65005BFC32 /* SGTiledUtils.m */,
 				169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */,
@@ -1134,8 +1148,7 @@
 		165A41971734DEA8005BFC32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				165A41A61734EC6A005BFC32 /* SequenceMenuCell.h */,
-				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
+				D258C84B173591B80056EE96 /* SequenceMenuCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1169,6 +1182,35 @@
 				169FC6BC1734A2E1008EC4C4 /* CellNode.m */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		D258C83A173579880056EE96 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				165A418B1734D870005BFC32 /* Storyboard.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		D258C84417358CF90056EE96 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D258C84517358D100056EE96 /* UIColor+i7HexColor.h */,
+				D258C84617358D100056EE96 /* UIColor+i7HexColor.m */,
+				D258C84717358D100056EE96 /* UIView+Frame.h */,
+				D258C84817358D100056EE96 /* UIView+Frame.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D258C84B173591B80056EE96 /* SequenceMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				165A41A61734EC6A005BFC32 /* SequenceMenuCell.h */,
+				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
+				D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */,
+			);
+			name = SequenceMenuCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1308,6 +1350,7 @@
 				169B8D7017355EAE0002FD60 /* previousButton-ipadhd.png in Resources */,
 				169B8D7117355EAE0002FD60 /* robotHeart-ipadhd.png in Resources */,
 				169B8D7217355EAE0002FD60 /* standardHeart-ipadhd.png in Resources */,
+				D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */,
 				169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */,
 				169B8D841735911F0002FD60 /* seq1.tmx in Resources */,
 			);
@@ -1442,6 +1485,9 @@
 				169B8D75173567C50002FD60 /* Tone.m in Sources */,
 				169B8D791735691C0002FD60 /* Direction.m in Sources */,
 				169B8D7C173569340002FD60 /* Dissolve.m in Sources */,
+				D258C842173582200056EE96 /* SAViewManipulator.m in Sources */,
+				D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */,
+				D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
