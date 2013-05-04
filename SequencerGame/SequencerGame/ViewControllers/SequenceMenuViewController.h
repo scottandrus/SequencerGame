@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SequenceViewController.h"
 
-@interface SequenceMenuViewController : UICollectionViewController <SequenceViewControllerDelegate>
+@interface SequenceMenuViewController : UIViewController <SequenceViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
