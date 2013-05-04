@@ -78,18 +78,6 @@ NSString *const kPGNotificationCellNodeLibraryChangedContents = @"CellNodeLibrar
     return [self.objectLibrary objectForKey:[self objectKeyForCell:cell]];
 }
 
-- (NSMutableArray *)nodesForCell:(GridCoord)cell layer:(int)layer
-{
-    NSMutableArray *nodes= [self nodesForCell:cell];
-    NSMutableArray *nodesAtLayer = [NSMutableArray array];
-    for (CellNode *node in nodes) {
-        if (node.layer == layer) {
-            [nodesAtLayer addObject:node];
-        }
-    }
-    return nodesAtLayer;
-}
-
 - (BOOL)containsNode:(CellNode *)node cell:(GridCoord)cell
 {
     if ([node isKindOfClass:[CellNode class]] == NO) {
@@ -105,27 +93,15 @@ NSString *const kPGNotificationCellNodeLibraryChangedContents = @"CellNodeLibrar
     return (results.count > 0);
 }
 
-- (BOOL)containsNodeOfKind:(Class)class layer:(int)layer cell:(GridCoord)cell
-{
-    NSMutableArray *matchingKind = [self nodesOfKind:class atCell:cell];
-    for (CellNode *node in matchingKind) {
-        if (node.layer == layer) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (BOOL)containsAnyNodeOfKinds:(NSArray *)kinds layer:(int)layer cell:(GridCoord)cell
+- (BOOL)containsAnyNodeOfKinds:(NSArray *)kinds cell:(GridCoord)cell
 {
     for (Class class in kinds) {
-        if ([self containsNodeOfKind:class layer:layer cell:cell]) {
+        if ([self containsNodeOfKind:class cell:cell]) {
             return YES;
         }
     }
     return NO;
 }
-
 
 - (NSMutableArray *)nodesOfKind:(Class)class atCell:(GridCoord)cell
 {
@@ -148,20 +124,6 @@ NSString *const kPGNotificationCellNodeLibraryChangedContents = @"CellNodeLibrar
         }
     }
     NSLog(@"warning, node of kind: %@, not found at cell %i, %i", class, cell.x, cell.y);
-    return nil;
-}
-
-- (id)firstNodeOfKind:(Class)class atCell:(GridCoord)cell layer:(int)layer
-{
-    NSMutableArray *results = [self nodesOfKind:class atCell:cell];
-    if (results.count > 0) {
-        for (CellNode *r in results) {
-            if (r.layer == layer) {
-                return r;
-            }
-        }
-    }
-    NSLog(@"warning: node of kind: %@, with firstPipeLayer: %i, not found at cell %i, %i", class, layer, cell.x, cell.y);
     return nil;
 }
 

@@ -26,7 +26,6 @@
 @property (copy, nonatomic) NSString *pgNotificationTouchEnded;
 
 @property (strong, nonatomic) CCSprite *sprite;
-@property (assign) int layer;
 @property (assign) GridCoord cell;
 
 @property (weak, nonatomic) id<TransferResponder>transferResponder;

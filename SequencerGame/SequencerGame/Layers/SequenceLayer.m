@@ -68,10 +68,10 @@ typedef enum
         // cell object library
         self.cellObjectLibrary = [[CellObjectLibrary alloc] initWithGridSize:_gridSize];
 
-//        // tones
-//        
-//        self.tones = [NSMutableArray array];
-//        NSMutableArray *tones = [self.tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
+        // tones
+        
+        self.tones = [NSMutableArray array];
+        NSMutableArray *tones = [self.tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
 //        for (NSMutableDictionary *tone in tones) {
 //             = [[CoverPoint alloc] initWithCoverPoint:rat tiledMap:_tileMap puzzleOrigin:self.position];
 //            ratNode.delegate = self;

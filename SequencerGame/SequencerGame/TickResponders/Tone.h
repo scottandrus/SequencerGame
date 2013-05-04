@@ -10,4 +10,8 @@
 
 @interface Tone : CellNode
 
+@property (assign) int midiValue;
+
+- (id)initWithTone:(NSMutableDictionary *)tone tiledMap:(CCTMXTiledMap *)tiledMap puzzleOrigin:(CGPoint)origin;
+
 @end
