@@ -9,6 +9,8 @@
 #import "SequenceViewController.h"
 #import "TextureUtils.h"
 #import "SequenceLayer.h"
+#import "MPTransition.h"
+#import "MPFoldTransition.h"
 
 @interface SequenceViewController ()
 
@@ -57,5 +59,8 @@
 - (IBAction)pressedBack:(id)sender
 {
     [self.delegate pressedBack];
+//    [[self presentingViewController] dismissViewControllerWithFoldStyle:MPFoldStyleDefault completion:^(BOOL finished) {
+        // completion
+//    }];
 }
 @end

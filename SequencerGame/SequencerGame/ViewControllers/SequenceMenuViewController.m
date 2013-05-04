@@ -10,10 +10,14 @@
 #import "PathUtils.h"
 #import "SequenceMenuCell.h"
 #import "SAViewManipulator.h"
+#import "MPTransition.h"
+#import "MPFoldTransition.h"
+#import "InfoViewController.h"
 
 // Categories
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
+#import "UIViewController+Overview.h"
 
 @interface SequenceMenuViewController () {
     
@@ -62,7 +66,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return 20;
     // once we get tiled maps in, we'll use this instead:
 //    return [PathUtils tileMapNames].count;
 }
@@ -82,10 +86,12 @@
 {
     SequenceViewController *sequenceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sequence"];
     sequenceViewController.sequence = indexPath.row;
+    sequenceViewController.sequence = MIN(4, sequenceViewController.sequence);
     sequenceViewController.delegate = self;
-    [self presentViewController:sequenceViewController animated:YES completion:^{
-        // completion
-    }];
+    [self presentViewController:sequenceViewController animated:YES completion:nil];
+//    [self presentViewController:sequenceViewController foldStyle:MPFoldStyleUnfold completion:^(BOOL finished){
+//        // completion
+//    }];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -105,6 +111,13 @@
         [SAViewManipulator fadeHideView:self.dropShadowImageView];
     }
 } // any offset changes
+
+#pragma mark - IBActions
+
+- (IBAction)infoPressed {
+    InfoViewController *infoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Info"];
+    [self presentOverviewController:infoViewController withOpacity:.8 animated:YES];
+}
 
 #pragma mark - sequenceViewControllerDelegate
 

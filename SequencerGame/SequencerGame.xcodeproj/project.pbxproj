@@ -209,6 +209,17 @@
 		D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84817358D100056EE96 /* UIView+Frame.m */; };
 		D258C84F17359B850056EE96 /* DropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84D17359B850056EE96 /* DropShadow.png */; };
 		D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84E17359B850056EE96 /* DropShadow@2x.png */; };
+		D2B34DDE1735AFDE00199562 /* MPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DC91735AFDE00199562 /* MPAnimation.m */; };
+		D2B34DDF1735AFDE00199562 /* MPFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DCC1735AFDE00199562 /* MPFlipTransition.m */; };
+		D2B34DE01735AFDE00199562 /* MPFoldTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DCF1735AFDE00199562 /* MPFoldTransition.m */; };
+		D2B34DE11735AFDE00199562 /* MPTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DD11735AFDE00199562 /* MPTransition.m */; };
+		D2B34DE21735AFDE00199562 /* MPFlipSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DD51735AFDE00199562 /* MPFlipSegue.m */; };
+		D2B34DE31735AFDE00199562 /* MPFoldModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DD71735AFDE00199562 /* MPFoldModalSegue.m */; };
+		D2B34DE41735AFDE00199562 /* MPFoldNavPopSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DD91735AFDE00199562 /* MPFoldNavPopSegue.m */; };
+		D2B34DE51735AFDE00199562 /* MPFoldNavPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DDB1735AFDE00199562 /* MPFoldNavPushSegue.m */; };
+		D2B34DE61735AFDE00199562 /* MPFoldSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DDD1735AFDE00199562 /* MPFoldSegue.m */; };
+		D2B34DEB1735B34400199562 /* UIViewController+Overview.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DEA1735B34400199562 /* UIViewController+Overview.m */; };
+		D2B34DEE1735B52D00199562 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DED1735B52D00199562 /* InfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -594,6 +605,31 @@
 		D258C84817358D100056EE96 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		D258C84D17359B850056EE96 /* DropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropShadow.png; sourceTree = "<group>"; };
 		D258C84E17359B850056EE96 /* DropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropShadow@2x.png"; sourceTree = "<group>"; };
+		D2B34DC81735AFDE00199562 /* MPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAnimation.h; sourceTree = "<group>"; };
+		D2B34DC91735AFDE00199562 /* MPAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAnimation.m; sourceTree = "<group>"; };
+		D2B34DCA1735AFDE00199562 /* MPFlipEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipEnumerations.h; sourceTree = "<group>"; };
+		D2B34DCB1735AFDE00199562 /* MPFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipTransition.h; sourceTree = "<group>"; };
+		D2B34DCC1735AFDE00199562 /* MPFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFlipTransition.m; sourceTree = "<group>"; };
+		D2B34DCD1735AFDE00199562 /* MPFoldEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldEnumerations.h; sourceTree = "<group>"; };
+		D2B34DCE1735AFDE00199562 /* MPFoldTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldTransition.h; sourceTree = "<group>"; };
+		D2B34DCF1735AFDE00199562 /* MPFoldTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFoldTransition.m; sourceTree = "<group>"; };
+		D2B34DD01735AFDE00199562 /* MPTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransition.h; sourceTree = "<group>"; };
+		D2B34DD11735AFDE00199562 /* MPTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTransition.m; sourceTree = "<group>"; };
+		D2B34DD21735AFDE00199562 /* MPTransitionEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransitionEnumerations.h; sourceTree = "<group>"; };
+		D2B34DD41735AFDE00199562 /* MPFlipSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFlipSegue.h; sourceTree = "<group>"; };
+		D2B34DD51735AFDE00199562 /* MPFlipSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFlipSegue.m; sourceTree = "<group>"; };
+		D2B34DD61735AFDE00199562 /* MPFoldModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldModalSegue.h; sourceTree = "<group>"; };
+		D2B34DD71735AFDE00199562 /* MPFoldModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFoldModalSegue.m; sourceTree = "<group>"; };
+		D2B34DD81735AFDE00199562 /* MPFoldNavPopSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldNavPopSegue.h; sourceTree = "<group>"; };
+		D2B34DD91735AFDE00199562 /* MPFoldNavPopSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFoldNavPopSegue.m; sourceTree = "<group>"; };
+		D2B34DDA1735AFDE00199562 /* MPFoldNavPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldNavPushSegue.h; sourceTree = "<group>"; };
+		D2B34DDB1735AFDE00199562 /* MPFoldNavPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFoldNavPushSegue.m; sourceTree = "<group>"; };
+		D2B34DDC1735AFDE00199562 /* MPFoldSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFoldSegue.h; sourceTree = "<group>"; };
+		D2B34DDD1735AFDE00199562 /* MPFoldSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFoldSegue.m; sourceTree = "<group>"; };
+		D2B34DE91735B34400199562 /* UIViewController+Overview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Overview.h"; sourceTree = "<group>"; };
+		D2B34DEA1735B34400199562 /* UIViewController+Overview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Overview.m"; sourceTree = "<group>"; };
+		D2B34DEC1735B52D00199562 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		D2B34DED1735B52D00199562 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1100,6 +1136,7 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D2B34DE81735AFE400199562 /* MPTransition */,
 				D258C840173582200056EE96 /* SAViewManipulator.h */,
 				D258C841173582200056EE96 /* SAViewManipulator.m */,
 				165A41A31734EA64005BFC32 /* SGTiledUtils.h */,
@@ -1144,6 +1181,8 @@
 				165A419E1734E7F8005BFC32 /* SequenceMenuViewController.m */,
 				165A419F1734E7F8005BFC32 /* SequenceViewController.h */,
 				165A41A01734E7F8005BFC32 /* SequenceViewController.m */,
+				D2B34DEC1735B52D00199562 /* InfoViewController.h */,
+				D2B34DED1735B52D00199562 /* InfoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1200,6 +1239,8 @@
 				D258C84617358D100056EE96 /* UIColor+i7HexColor.m */,
 				D258C84717358D100056EE96 /* UIView+Frame.h */,
 				D258C84817358D100056EE96 /* UIView+Frame.m */,
+				D2B34DE91735B34400199562 /* UIViewController+Overview.h */,
+				D2B34DEA1735B34400199562 /* UIViewController+Overview.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1212,6 +1253,43 @@
 				D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */,
 			);
 			name = SequenceMenuCell;
+			sourceTree = "<group>";
+		};
+		D2B34DD31735AFDE00199562 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				D2B34DD41735AFDE00199562 /* MPFlipSegue.h */,
+				D2B34DD51735AFDE00199562 /* MPFlipSegue.m */,
+				D2B34DD61735AFDE00199562 /* MPFoldModalSegue.h */,
+				D2B34DD71735AFDE00199562 /* MPFoldModalSegue.m */,
+				D2B34DD81735AFDE00199562 /* MPFoldNavPopSegue.h */,
+				D2B34DD91735AFDE00199562 /* MPFoldNavPopSegue.m */,
+				D2B34DDA1735AFDE00199562 /* MPFoldNavPushSegue.h */,
+				D2B34DDB1735AFDE00199562 /* MPFoldNavPushSegue.m */,
+				D2B34DDC1735AFDE00199562 /* MPFoldSegue.h */,
+				D2B34DDD1735AFDE00199562 /* MPFoldSegue.m */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
+		D2B34DE81735AFE400199562 /* MPTransition */ = {
+			isa = PBXGroup;
+			children = (
+				D2B34DC81735AFDE00199562 /* MPAnimation.h */,
+				D2B34DC91735AFDE00199562 /* MPAnimation.m */,
+				D2B34DCA1735AFDE00199562 /* MPFlipEnumerations.h */,
+				D2B34DCB1735AFDE00199562 /* MPFlipTransition.h */,
+				D2B34DCC1735AFDE00199562 /* MPFlipTransition.m */,
+				D2B34DCD1735AFDE00199562 /* MPFoldEnumerations.h */,
+				D2B34DCE1735AFDE00199562 /* MPFoldTransition.h */,
+				D2B34DCF1735AFDE00199562 /* MPFoldTransition.m */,
+				D2B34DD01735AFDE00199562 /* MPTransition.h */,
+				D2B34DD11735AFDE00199562 /* MPTransition.m */,
+				D2B34DD21735AFDE00199562 /* MPTransitionEnumerations.h */,
+				D2B34DD31735AFDE00199562 /* Segues */,
+			);
+			name = MPTransition;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1490,6 +1568,17 @@
 				D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */,
 				169B8D8A1735A4AF0002FD60 /* Tone.m in Sources */,
 				169B8D8E1735A50B0002FD60 /* Arrow.m in Sources */,
+				D2B34DDE1735AFDE00199562 /* MPAnimation.m in Sources */,
+				D2B34DDF1735AFDE00199562 /* MPFlipTransition.m in Sources */,
+				D2B34DE01735AFDE00199562 /* MPFoldTransition.m in Sources */,
+				D2B34DE11735AFDE00199562 /* MPTransition.m in Sources */,
+				D2B34DE21735AFDE00199562 /* MPFlipSegue.m in Sources */,
+				D2B34DE31735AFDE00199562 /* MPFoldModalSegue.m in Sources */,
+				D2B34DE41735AFDE00199562 /* MPFoldNavPopSegue.m in Sources */,
+				D2B34DE51735AFDE00199562 /* MPFoldNavPushSegue.m in Sources */,
+				D2B34DE61735AFDE00199562 /* MPFoldSegue.m in Sources */,
+				D2B34DEB1735B34400199562 /* UIViewController+Overview.m in Sources */,
+				D2B34DEE1735B52D00199562 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
