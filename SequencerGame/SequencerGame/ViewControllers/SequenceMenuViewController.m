@@ -16,6 +16,7 @@
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
 #import "UIViewController+Overview.h"
+#import "UIViewController+ExpandTransition.h"
 
 @interface SequenceMenuViewController () {
     
@@ -41,10 +42,11 @@
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     [self customizeInterface];
-    self.dropShadowImageView.hidden = YES;
+
 }
 
 - (void)customizeInterface {
+    self.dropShadowImageView.hidden = YES;
     self.view.frame = CGRectMake(self.view.frame.origin.x,
                                  self.view.frame.origin.y,
                                  self.view.frame.size.height,
@@ -52,7 +54,8 @@
     [SAViewManipulator setGradientBackgroundImageForView:self.view
                                             withTopColor:[UIColor colorWithHexString:@"F2F2F2"]
                                           andBottomColor:[UIColor colorWithHexString:@"BFBFBF"]];
-    NSLog(@"%@", self.view);
+    [SAViewManipulator addBorderToView:self.view withWidth:0 color:[UIColor clearColor] andRadius:10];
+    self.view.clipsToBounds = YES;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -87,6 +90,9 @@
     sequenceViewController.sequence = MIN(4, sequenceViewController.sequence);
     sequenceViewController.delegate = self;
     [self presentViewController:sequenceViewController animated:YES completion:nil];
+//    [self presentViewController:sequenceViewController
+//               expandedFromView:[self.collectionView cellForItemAtIndexPath:indexPath]
+//                       animated:YES completion:nil];
 //    [self presentViewController:sequenceViewController foldStyle:MPFoldStyleUnfold completion:^(BOOL finished){
 //        // completion
 //    }];

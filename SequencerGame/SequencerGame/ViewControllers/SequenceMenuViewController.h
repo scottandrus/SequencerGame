@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UIImageView *dropShadowImageView;
+@property (strong, nonatomic) IBOutlet UIView *topView;
 
 @end
