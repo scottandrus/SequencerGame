@@ -202,6 +202,7 @@
 		169B8D7C173569340002FD60 /* Dissolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D7B173569340002FD60 /* Dissolve.m */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
+		3D11F3661735A54D00172154 /* TickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D11F3651735A54D00172154 /* TickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -578,6 +579,8 @@
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
 		169FC6BC1734A2E1008EC4C4 /* CellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellNode.m; path = Nodes/CellNode.m; sourceTree = "<group>"; };
+		3D11F3641735A54D00172154 /* TickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerView.h; sourceTree = "<group>"; };
+		3D11F3651735A54D00172154 /* TickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1130,6 +1133,8 @@
 			children = (
 				165A41A61734EC6A005BFC32 /* SequenceMenuCell.h */,
 				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
+				3D11F3641735A54D00172154 /* TickerView.h */,
+				3D11F3651735A54D00172154 /* TickerView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1434,6 +1439,7 @@
 				169B8D75173567C50002FD60 /* Tone.m in Sources */,
 				169B8D791735691C0002FD60 /* Direction.m in Sources */,
 				169B8D7C173569340002FD60 /* Dissolve.m in Sources */,
+				3D11F3661735A54D00172154 /* TickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
