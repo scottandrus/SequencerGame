@@ -178,6 +178,21 @@
 		16918DF9172CE6B000566A17 /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16918DF4172CE66200566A17 /* libpd-ios.a */; };
 		16918DFB172CF64200566A17 /* synth.pd in Resources */ = {isa = PBXBuildFile; fileRef = 16918DFA172CF64200566A17 /* synth.pd */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
+		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
+		169FC6C11734A3E4008EC4C4 /* PGTiledUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6C01734A3E4008EC4C4 /* PGTiledUtils.m */; };
+		169FC6C31734AB95008EC4C4 /* alienHeart-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C21734AB95008EC4C4 /* alienHeart-hd.png */; };
+		169FC6D01734ABDD008EC4C4 /* arrow-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C41734ABD9008EC4C4 /* arrow-hd.png */; };
+		169FC6D11734ABDD008EC4C4 /* dynamicButtonComplete-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C51734ABDA008EC4C4 /* dynamicButtonComplete-hd.png */; };
+		169FC6D21734ABDD008EC4C4 /* dynamicButtonDefault-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C61734ABDA008EC4C4 /* dynamicButtonDefault-hd.png */; };
+		169FC6D31734ABDD008EC4C4 /* dynamicButtonSelected-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C71734ABDB008EC4C4 /* dynamicButtonSelected-hd.png */; };
+		169FC6D41734ABDD008EC4C4 /* finalButtonDefault-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C81734ABDB008EC4C4 /* finalButtonDefault-hd.png */; };
+		169FC6D51734ABDD008EC4C4 /* finalButtonSelected-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6C91734ABDB008EC4C4 /* finalButtonSelected-hd.png */; };
+		169FC6D61734ABDD008EC4C4 /* meatyHeart-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CA1734ABDC008EC4C4 /* meatyHeart-hd.png */; };
+		169FC6D71734ABDD008EC4C4 /* nextButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CB1734ABDD008EC4C4 /* nextButton-hd.png */; };
+		169FC6D81734ABDD008EC4C4 /* previousButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CC1734ABDD008EC4C4 /* previousButton-hd.png */; };
+		169FC6D91734ABDD008EC4C4 /* robotHeart-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CD1734ABDD008EC4C4 /* robotHeart-hd.png */; };
+		169FC6DA1734ABDD008EC4C4 /* screen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CE1734ABDD008EC4C4 /* screen-hd.png */; };
+		169FC6DB1734ABDD008EC4C4 /* standardHeart-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169FC6CF1734ABDD008EC4C4 /* standardHeart-hd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -521,6 +536,23 @@
 		16918DFA172CF64200566A17 /* synth.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = synth.pd; path = Resources/synth.pd; sourceTree = "<group>"; };
 		169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObjectLibrary.h; sourceTree = "<group>"; };
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
+		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
+		169FC6BC1734A2E1008EC4C4 /* CellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellNode.m; path = Nodes/CellNode.m; sourceTree = "<group>"; };
+		169FC6BF1734A3E4008EC4C4 /* PGTiledUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGTiledUtils.h; sourceTree = "<group>"; };
+		169FC6C01734A3E4008EC4C4 /* PGTiledUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGTiledUtils.m; sourceTree = "<group>"; };
+		169FC6C21734AB95008EC4C4 /* alienHeart-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "alienHeart-hd.png"; path = "Resources/alienHeart-hd.png"; sourceTree = "<group>"; };
+		169FC6C41734ABD9008EC4C4 /* arrow-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-hd.png"; path = "Resources/arrow-hd.png"; sourceTree = "<group>"; };
+		169FC6C51734ABDA008EC4C4 /* dynamicButtonComplete-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dynamicButtonComplete-hd.png"; path = "Resources/dynamicButtonComplete-hd.png"; sourceTree = "<group>"; };
+		169FC6C61734ABDA008EC4C4 /* dynamicButtonDefault-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dynamicButtonDefault-hd.png"; path = "Resources/dynamicButtonDefault-hd.png"; sourceTree = "<group>"; };
+		169FC6C71734ABDB008EC4C4 /* dynamicButtonSelected-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dynamicButtonSelected-hd.png"; path = "Resources/dynamicButtonSelected-hd.png"; sourceTree = "<group>"; };
+		169FC6C81734ABDB008EC4C4 /* finalButtonDefault-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "finalButtonDefault-hd.png"; path = "Resources/finalButtonDefault-hd.png"; sourceTree = "<group>"; };
+		169FC6C91734ABDB008EC4C4 /* finalButtonSelected-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "finalButtonSelected-hd.png"; path = "Resources/finalButtonSelected-hd.png"; sourceTree = "<group>"; };
+		169FC6CA1734ABDC008EC4C4 /* meatyHeart-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "meatyHeart-hd.png"; path = "Resources/meatyHeart-hd.png"; sourceTree = "<group>"; };
+		169FC6CB1734ABDD008EC4C4 /* nextButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nextButton-hd.png"; path = "Resources/nextButton-hd.png"; sourceTree = "<group>"; };
+		169FC6CC1734ABDD008EC4C4 /* previousButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "previousButton-hd.png"; path = "Resources/previousButton-hd.png"; sourceTree = "<group>"; };
+		169FC6CD1734ABDD008EC4C4 /* robotHeart-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "robotHeart-hd.png"; path = "Resources/robotHeart-hd.png"; sourceTree = "<group>"; };
+		169FC6CE1734ABDD008EC4C4 /* screen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "screen-hd.png"; path = "Resources/screen-hd.png"; sourceTree = "<group>"; };
+		169FC6CF1734ABDD008EC4C4 /* standardHeart-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "standardHeart-hd.png"; path = "Resources/standardHeart-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +613,7 @@
 		160806CE16B437A700039339 /* SequencerGame */ = {
 			isa = PBXGroup;
 			children = (
+				169FC6BE1734A2F2008EC4C4 /* Nodes */,
 				1608085D16B43CEF00039339 /* Layers */,
 				1608086016B43CEF00039339 /* Utils */,
 				1608087E16B43FE500039339 /* AppDelegate.h */,
@@ -595,6 +628,19 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				169FC6C41734ABD9008EC4C4 /* arrow-hd.png */,
+				169FC6C51734ABDA008EC4C4 /* dynamicButtonComplete-hd.png */,
+				169FC6C61734ABDA008EC4C4 /* dynamicButtonDefault-hd.png */,
+				169FC6C71734ABDB008EC4C4 /* dynamicButtonSelected-hd.png */,
+				169FC6C81734ABDB008EC4C4 /* finalButtonDefault-hd.png */,
+				169FC6C91734ABDB008EC4C4 /* finalButtonSelected-hd.png */,
+				169FC6CA1734ABDC008EC4C4 /* meatyHeart-hd.png */,
+				169FC6CB1734ABDD008EC4C4 /* nextButton-hd.png */,
+				169FC6CC1734ABDD008EC4C4 /* previousButton-hd.png */,
+				169FC6CD1734ABDD008EC4C4 /* robotHeart-hd.png */,
+				169FC6CE1734ABDD008EC4C4 /* screen-hd.png */,
+				169FC6CF1734ABDD008EC4C4 /* standardHeart-hd.png */,
+				169FC6C21734AB95008EC4C4 /* alienHeart-hd.png */,
 				16918DFA172CF64200566A17 /* synth.pd */,
 				1608088416B443E100039339 /* Sequence.plist */,
 				160808F016B4E7B900039339 /* arrow.png */,
@@ -1002,6 +1048,8 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				169FC6BF1734A3E4008EC4C4 /* PGTiledUtils.h */,
+				169FC6C01734A3E4008EC4C4 /* PGTiledUtils.m */,
 				169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */,
 				169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */,
 				1624D1E81733822A00851B45 /* ColorUtils.h */,
@@ -1033,6 +1081,15 @@
 				16918DF6172CE66200566A17 /* libpd-osx.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		169FC6BE1734A2F2008EC4C4 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				169FC6BB1734A2E1008EC4C4 /* CellNode.h */,
+				169FC6BC1734A2E1008EC4C4 /* CellNode.m */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1157,6 +1214,19 @@
 				160808F216B4E7B900039339 /* arrow.png in Resources */,
 				160808F316B4E7B900039339 /* screen.png in Resources */,
 				16918DFB172CF64200566A17 /* synth.pd in Resources */,
+				169FC6C31734AB95008EC4C4 /* alienHeart-hd.png in Resources */,
+				169FC6D01734ABDD008EC4C4 /* arrow-hd.png in Resources */,
+				169FC6D11734ABDD008EC4C4 /* dynamicButtonComplete-hd.png in Resources */,
+				169FC6D21734ABDD008EC4C4 /* dynamicButtonDefault-hd.png in Resources */,
+				169FC6D31734ABDD008EC4C4 /* dynamicButtonSelected-hd.png in Resources */,
+				169FC6D41734ABDD008EC4C4 /* finalButtonDefault-hd.png in Resources */,
+				169FC6D51734ABDD008EC4C4 /* finalButtonSelected-hd.png in Resources */,
+				169FC6D61734ABDD008EC4C4 /* meatyHeart-hd.png in Resources */,
+				169FC6D71734ABDD008EC4C4 /* nextButton-hd.png in Resources */,
+				169FC6D81734ABDD008EC4C4 /* previousButton-hd.png in Resources */,
+				169FC6D91734ABDD008EC4C4 /* robotHeart-hd.png in Resources */,
+				169FC6DA1734ABDD008EC4C4 /* screen-hd.png in Resources */,
+				169FC6DB1734ABDD008EC4C4 /* standardHeart-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1350,8 @@
 				1624D1E71733807300851B45 /* PathUtils.m in Sources */,
 				1624D1EA1733822C00851B45 /* ColorUtils.m in Sources */,
 				169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */,
+				169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */,
+				169FC6C11734A3E4008EC4C4 /* PGTiledUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1355,6 +1427,7 @@
 				GCC_PREFIX_HEADER = SequencerGame/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"SequencerGame/libs/kazmath/include\"";
 				INFOPLIST_FILE = SequencerGame/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1375,6 +1448,7 @@
 				GCC_PREFIX_HEADER = SequencerGame/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"SequencerGame/libs/kazmath/include\"";
 				INFOPLIST_FILE = SequencerGame/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
