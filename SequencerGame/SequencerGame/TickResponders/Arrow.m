@@ -1,13 +1,13 @@
 //
-//  Tone.m
+//  Arrow.m
 //  SequencerGame
 //
 //  Created by John Saba on 5/4/13.
 //
 //
 
-#import "Tone.h"
+#import "Arrow.h"
 
-@implementation Tone
+@implementation Arrow
 
 @end

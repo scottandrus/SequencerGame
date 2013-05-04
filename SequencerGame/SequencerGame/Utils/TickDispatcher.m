@@ -9,8 +9,7 @@
 #import "TickDispatcher.h"
 #import "GameConstants.h"
 #import "Tone.h"
-#import "Direction.h"
-#import "Dissolve.h"
+#import "Arrow.h"
 
 static NSInteger const kBPM = 120;
 
@@ -35,51 +34,78 @@ static NSInteger const kBPM = 120;
 
 - (void)tick
 {
-    // send tick to responders, collect events
-    NSMutableArray *filteredEvents = [NSMutableArray array];
+    // tick and collect responders 
+    NSMutableArray *filtered = [NSMutableArray array];
 
     for (id<TickResponder> responder in self.responders) {
         GridCoord cell = [responder responderCell];
         if ([GridUtils isCell:cell equalToCell:self.currentCell]) {
             
-            id event = [responder tick:kBPM];
-                        
-            if ([event isKindOfClass:[Tone class]]) {
-                NSUInteger duplicateTone;
-                duplicateTone = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-                    if ([obj isKindOfClass:[Tone class]]) {
-                        return ((Tone *)obj).midiValue == ((Tone *)event).midiValue;
-                    }
-                    return NO;
-                }];
-                if (duplicateTone != NSNotFound) {
-                    [filteredEvents addObject:event];
-                }
-            }
-            if ([event isKindOfClass:[Direction class]]) {
-                NSUInteger duplicateDirection;
-                duplicateDirection = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-                    if ([obj isKindOfClass:[Direction class]]) {
-                        return ((Direction *)obj).direction == ((Direction *)event).direction;
-                    }
-                    return NO;
-                }];
-                if (duplicateDirection != NSNotFound) {
-                    [filteredEvents addObject:event];
-                }
-            }
-            if ([event isKindOfClass:[Dissolve class]]) {
-                BOOL duplicateDissolve = NO;
-                for (id events in filteredEvents) {
-                    if ([event isKindOfClass:[Dissolve class]]) {
-                        duplicateDissolve = YES;
+            // tones
+            if ([responder isKindOfClass:[Tone class]]) {
+                BOOL duplicate = NO;
+                for (Tone *stored in filtered) {
+                    if (stored.midiValue == ((Tone *)responder).midiValue) {
+                        duplicate = YES;
                         break;
                     }
                 }
-                if (!duplicateDissolve) {
-                    [filteredEvents addObject:event];
+                if (!duplicate) {
+                    [filtered addObject:responder];
+                    [responder tick:kBPM];
                 }
-            }
+            } 
+            
+            // arrows
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+//            id event = [responder tick:kBPM];
+//                        
+//            if ([event isKindOfClass:[Tone class]]) {
+//                NSUInteger duplicateTone;
+//                duplicateTone = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+//                    if ([obj isKindOfClass:[Tone class]]) {
+//                        return ((Tone *)obj).midiValue == ((Tone *)event).midiValue;
+//                    }
+//                    return NO;
+//                }];
+//                if (duplicateTone != NSNotFound) {
+//                    [filteredEvents addObject:event];
+//                }
+//            }
+//            if ([event isKindOfClass:[Direction class]]) {
+//                NSUInteger duplicateDirection;
+//                duplicateDirection = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+//                    if ([obj isKindOfClass:[Direction class]]) {
+//                        return ((Direction *)obj).direction == ((Direction *)event).direction;
+//                    }
+//                    return NO;
+//                }];
+//                if (duplicateDirection != NSNotFound) {
+//                    [filteredEvents addObject:event];
+//                }
+//            }
+//            if ([event isKindOfClass:[Dissolve class]]) {
+//                BOOL duplicateDissolve = NO;
+//                for (id events in filteredEvents) {
+//                    if ([event isKindOfClass:[Dissolve class]]) {
+//                        duplicateDissolve = YES;
+//                        break;
+//                    }
+//                }
+//                if (!duplicateDissolve) {
+//                    [filteredEvents addObject:event];
+//                }
+//            }
         }
     }
     

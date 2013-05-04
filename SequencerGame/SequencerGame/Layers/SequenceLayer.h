@@ -11,11 +11,26 @@
 #import "GridUtils.h"
 #import "PdDispatcher.h"
 
+@class CellObjectLibrary;
+
 @interface SequenceLayer : CCLayer
 {
     PdDispatcher *_dispatcher;
     void *_patch;
 }
+
+
+@property (nonatomic, strong) CCTMXTiledMap *tileMap;
+@property (nonatomic, strong) CellObjectLibrary *cellObjectLibrary;
+
+@property (nonatomic, strong) NSMutableArray *tones;
+
+
+
+
+
+
+//////////
 
 @property (assign) int sequence;
 @property (assign) GridCoord gridSize;
