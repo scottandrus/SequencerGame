@@ -1,13 +1,13 @@
 //
-//  Dissolve.m
+//  Tone.h
 //  SequencerGame
 //
 //  Created by John Saba on 5/4/13.
 //
 //
 
-#import "Dissolve.h"
+#import "CellNode.h"
 
-@implementation Dissolve
+@interface Tone : CellNode
 
 @end
