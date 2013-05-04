@@ -7,3 +7,4 @@ Programming - John Saba
 Art - John Henderson
 Sounds - Troy Grooms
 
+Programming Assist - Lane Kelly
