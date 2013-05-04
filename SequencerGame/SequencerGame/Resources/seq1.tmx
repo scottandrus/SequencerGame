@@ -39,7 +39,7 @@
     <property name="midiValue" value="55"/>
    </properties>
   </object>
-  <object name="tone" x="914" y="340" width="66" height="64">
+  <object name="tone" x="884" y="296" width="66" height="64">
    <properties>
     <property name="midiValue" value="56"/>
    </properties>
@@ -85,7 +85,7 @@
   </object>
   <object name="sequence" x="82" y="-93" width="295" height="36">
    <properties>
-    <property name="events" value="48,n;49;50n;51"/>
+    <property name="events" value="48,n;49;50,n;51"/>
    </properties>
   </object>
   <object name="entry" x="17" y="34" width="125" height="121">

@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SequencerGame/Layers/SequenceLayer.m"
-         timestampString = "389399880.445634"
+         timestampString = "389400893.688195"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
          landmarkName = "-initWithSequence:"
          landmarkType = "5">
       </FileBreakpoint>

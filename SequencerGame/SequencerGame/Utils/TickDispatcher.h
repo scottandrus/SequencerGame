@@ -18,6 +18,9 @@
 
 @interface TickDispatcher : NSObject
 
+@property (assign) int sequenceLength;
+@property (nonatomic, strong) NSMutableDictionary *eventSequence;
+
 - (id)initWithEventSequence:(NSDictionary *)sequence;
 - (void)registerTickResponder:(id<TickResponder>)responder;
 

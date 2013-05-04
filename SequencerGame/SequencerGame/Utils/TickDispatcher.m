@@ -35,8 +35,18 @@ static NSInteger const kBPM = 120;
     if (self) {
         NSString *rawEventSeq = [sequence objectForKey:kTLDPropertyEvents];
         NSArray *groupByTick = [rawEventSeq componentsSeparatedByString:@";"];
+        self.sequenceLength = groupByTick.count;
         
-
+        int i = 0;
+        self.eventSequence = [NSMutableDictionary dictionary];
+        for (NSString *event in groupByTick) {
+            NSLog(@"event: %@", event);
+            NSArray *eventChain = [event componentsSeparatedByString:@","];
+            [self.eventSequence setObject:eventChain forKey:@(i)];
+            i++;
+        }
+        
+        NSLog(@"event seq: %@", self.eventSequence);
     }
     return self;
 }
