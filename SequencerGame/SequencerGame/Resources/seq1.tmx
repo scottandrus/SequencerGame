@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="5" height="2" tilewidth="200" tileheight="200">
  <tileset firstgid="1" name="pipeTilesetBase1" tilewidth="200" tileheight="200" spacing="1" margin="1">
-  <image source="pipeTilesetBase1.png" width="1609" height="805"/>
+  <image source="../pipeTilesetBase1.png" width="1609" height="805"/>
  </tileset>
  <layer name="Tile Layer 1" width="5" height="2">
   <data encoding="base64" compression="zlib">
@@ -69,25 +69,32 @@
     <property name="midiValue" value="59"/>
    </properties>
   </object>
-  <object name="direction" x="625" y="34" width="83" height="83">
+  <object name="arrow" x="625" y="34" width="83" height="83">
    <properties>
     <property name="direction" value="up"/>
    </properties>
    <ellipse/>
   </object>
-  <object name="direction" x="635" y="65" width="83" height="83">
+  <object name="arrow" x="635" y="65" width="83" height="83">
    <properties>
     <property name="direction" value="down"/>
    </properties>
    <ellipse/>
   </object>
-  <object name="direction" x="635" y="98" width="83" height="83">
+  <object name="arrow" x="635" y="98" width="83" height="83">
    <properties>
     <property name="direction" value="left"/>
    </properties>
    <ellipse/>
   </object>
-  <object name="direction" x="622" y="135" width="83" height="83">
+  <object name="arrow" x="622" y="135" width="83" height="83">
+   <properties>
+    <property name="direction" value="right"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="sequence" x="253" y="-115" width="295" height="36"/>
+  <object name="entry" x="120" y="189" width="125" height="121">
    <properties>
     <property name="direction" value="right"/>
    </properties>
