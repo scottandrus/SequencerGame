@@ -83,7 +83,10 @@ typedef enum
         for (NSMutableDictionary *tone in tones) {
             Tone *toneNode = [[Tone alloc] initWithTone:tone tiledMap:self.tileMap puzzleOrigin:self.position];
             [self.tones addObject:toneNode];
-//            [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
+            
+            NSLog(@"tone node: %@", toneNode);
+            
+            [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
         }
 
         
