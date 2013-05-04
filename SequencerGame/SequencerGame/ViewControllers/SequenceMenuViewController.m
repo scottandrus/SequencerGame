@@ -43,7 +43,7 @@
                                  self.view.frame.size.width);
     [SAViewManipulator setGradientBackgroundImageForView:self.view
                                             withTopColor:[UIColor colorWithHexString:@"F2F2F2"]
-                                          andBottomColor:[UIColor colorWithHexString:@"F2F2F2"]];
+                                          andBottomColor:[UIColor colorWithHexString:@"BFBFBF"]];
     NSLog(@"%@", self.view);
 }
 
@@ -56,7 +56,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 3;
+    return 5;
     // once we get tiled maps in, we'll use this instead:
 //    return [PathUtils tileMapNames].count;
 }

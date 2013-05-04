@@ -29,36 +29,25 @@
     return self;
 }
 
-//- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-//{
-//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-//    // Initialization code
-//
-//    if (self) {
-//        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//        self.goToButton.imageView.contentMode = UIViewContentModeCenter;
-//    }
-//    return self;
-//}
-
 - (void)configureWithIndexPath:(NSIndexPath *)indexPath
 {
+    
     self.backgroundColor = [UIColor lightGrayColor];
-//    [SAViewManipulator setGradientBackgroundImageForView:self.backgroundView
-//                                            withTopColor:[UIColor darkGrayColor]
-//                                          andBottomColor:[UIColor lightGrayColor]];
-//    self.backgroundColor = [UIColor clearColor];
+    [SAViewManipulator addBorderToView:self
+                             withWidth:2
+                                 color:[UIColor darkGrayColor]
+                             andRadius:6];
     
-//    self.sequenceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-//    self.sequenceLabel.textColor = [UIColor blackColor];
-//    self.sequenceLabel.backgroundColor = [UIColor clearColor];
-//    self.sequenceLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SequenceMenuCellLabel" owner:self options:nil];
-    self.sequenceLabel = [nib objectAtIndex:0];
+    if (!self.sequenceLabel) {
+        // Loading the sequence label object from a nib file to preserve graphical
+        // layout, and add it to the subview
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SequenceMenuCellLabel" owner:self options:nil];
+        self.sequenceLabel = [nib objectAtIndex:0];
+        [self addSubview:self.sequenceLabel];
+    }
 
+    // Set the text of the label based on its index in the collection view
     self.sequenceLabel.text = [NSString stringWithFormat:@"%i", indexPath.row + 1];
-    [self addSubview:self.sequenceLabel];
-    
     
     NSLog(@"self.display label: %@", self.sequenceLabel);
     NSLog(@"display label.text: %@", self.sequenceLabel.text);
