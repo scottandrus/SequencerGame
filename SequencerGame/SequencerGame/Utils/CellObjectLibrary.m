@@ -139,18 +139,6 @@ NSString *const kPGNotificationCellNodeLibraryChangedContents = @"CellNodeLibrar
     return results;
 }
 
-- (NSMutableArray *)nodesOfKind:(Class)class atCell:(GridCoord)cell layer:(int)layer
-{
-    NSMutableArray *nodes = [self nodesOfKind:class atCell:cell];
-    NSMutableArray *results = [NSMutableArray array];
-    for (CellNode *node in nodes) {
-        if (node.layer == layer) {
-            [results addObject:node];
-        }
-    }
-    return results;
-}
-
 - (id)firstNodeOfKind:(Class)class atCell:(GridCoord)cell
 {
     NSMutableArray *nodes = [self nodesForCell:cell];

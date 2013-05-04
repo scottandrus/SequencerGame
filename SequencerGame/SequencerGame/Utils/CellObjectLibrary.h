@@ -25,7 +25,6 @@ FOUNDATION_EXPORT NSString *const kPGNotificationCellNodeLibraryChangedContents;
 -(void) transferNode:(CellNode *)node toCell:(GridCoord)cell fromCell:(GridCoord)moveFrom;
 
 -(NSMutableArray *) nodesForCell:(GridCoord)cell;
--(NSMutableArray *) nodesForCell:(GridCoord)cell layer:(int)layer;
 
 -(BOOL) containsNode:(CellNode *)node cell:(GridCoord)cell;
 -(BOOL) containsNodeOfKind:(Class)class layer:(int)layer cell:(GridCoord)cell;

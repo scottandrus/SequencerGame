@@ -14,6 +14,7 @@
 #import "CCTMXTiledMap+Utils.h"
 #import "SGTiledUtils.h"
 #import "TextureUtils.h"
+#import "CellObjectLibrary.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -61,11 +62,24 @@ typedef enum
         
         [TextureUtils loadTextures];
         
-        CCTMXTiledMap *tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"seq1.tmx"];
-        NSMutableArray *tones = [tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
-        NSLog(@"tones: %@", tones);
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"seq1.tmx"];
+        self.gridSize = [GridUtils gridCoordFromSize:_tileMap.mapSize];
         
-        
+        // cell object library
+        self.cellObjectLibrary = [[CellObjectLibrary alloc] initWithGridSize:_gridSize];
+
+//        // tones
+//        
+//        self.tones = [NSMutableArray array];
+//        NSMutableArray *tones = [self.tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
+//        for (NSMutableDictionary *tone in tones) {
+//             = [[CoverPoint alloc] initWithCoverPoint:rat tiledMap:_tileMap puzzleOrigin:self.position];
+//            ratNode.delegate = self;
+//            [self.rats addObject:ratNode];
+//            [_tileMap addChild:ratNode];
+//            [self.cellObjectLibrary addNode:ratNode cell:ratNode.cell];
+//        }
+
         
         
         
@@ -82,12 +96,11 @@ typedef enum
         _gridSize = [DataUtils sequenceGridSize:sequence];
         _gridOrigin = [SequenceLayer sharedGridOrigin];
         
-        // sequencer screen background
-        _screenImage = [CCSprite spriteWithFile:@"screen.png"];
-        _screenImage.position = [GridUtils absolutePositionForGridCoord:GridCoordMake(5, 3) unitSize:kSizeGridUnit origin:_gridOrigin];
-        [self addChild:_screenImage];
-        
 
+        
+        
+        
+        
         // patterns
         _patternCount = 0;
         _finalPattern = [DataUtils sequencePattern:sequence];
