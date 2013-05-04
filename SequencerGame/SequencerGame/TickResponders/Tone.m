@@ -29,6 +29,8 @@
 //        self.layer = [[door valueForKey:kTLDPropertyLayer] intValue];
 //        
         self.cell = [tiledMap gridCoordForObject:tone];
+        
+        NSLog(@"cell: %i, %i", self.cell.x, self.cell.y);
 //        self.position = [GridUtils absolutePositionForGridCoord:self.cell unitSize:kSizeGridUnit origin:origin];
 //        
 //        self.isOpen = NO;

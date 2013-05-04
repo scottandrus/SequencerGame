@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/CCGLProgram.m \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/CCGLProgram.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/ccMacros.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/ccConfig.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Platforms/CCGL.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Platforms/iOS/CCGLView.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Platforms/iOS/CCESRenderer.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/ccGLStateCache.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Support/CCFileUtils.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Support/../ccTypes.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Support/uthash.h \
+  /Users/lane/Documents/Development/iOS/SequencerGame/SequencerGame/SequencerGame/libs/cocos2d/Support/OpenGL_Internal.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/matrix.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../mat4.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../utility.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../vec3.h \
+  SequencerGame/libs/kazmath/include/kazmath/kazmath.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../vec2.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../mat3.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../quaternion.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../plane.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../aabb.h \
+  SequencerGame/libs/kazmath/include/kazmath/GL/../ray2.h
