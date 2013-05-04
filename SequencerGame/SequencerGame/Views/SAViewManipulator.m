@@ -307,4 +307,16 @@
     capa.mask = maskLayer;
 }
 
++ (void)fadeHideView:(UIView *)view {
+    [UIView transitionWithView:view duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+        view.hidden = YES;
+    } completion:^(BOOL finished) {}];
+}
+
++ (void)fadeUnhideView:(UIView *)view {
+    [UIView transitionWithView:view duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+        view.hidden = NO;
+    } completion:^(BOOL finished) {}];
+}
+
 @end

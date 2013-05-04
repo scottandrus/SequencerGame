@@ -23,4 +23,8 @@
 
 + (void)roundNavigationBar:(UINavigationBar *)navigationBar;
 
++ (void)fadeHideView:(UIView *)view;
+
++ (void)fadeUnhideView:(UIView *)view;
+
 @end

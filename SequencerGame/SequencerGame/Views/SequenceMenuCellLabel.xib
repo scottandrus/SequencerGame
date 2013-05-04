@@ -64,11 +64,11 @@
 					<string key="name">HelveticaNeue-Bold</string>
 					<string key="family">Helvetica Neue</string>
 					<int key="traits">2</int>
-					<double key="pointSize">40</double>
+					<double key="pointSize">60</double>
 				</object>
 				<object class="NSFont" key="IBUIFont">
 					<string key="NSName">HelveticaNeue-Bold</string>
-					<double key="NSSize">40</double>
+					<double key="NSSize">60</double>
 					<int key="NSfFlags">16</int>
 				</object>
 				<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
