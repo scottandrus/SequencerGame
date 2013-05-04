@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "GridUtils.h"
 
+
 @protocol TickResponder <NSObject>
-- (id)tick:(NSInteger)bpm;
+- (void)tick:(NSInteger)bpm;
 - (GridCoord)responderCell;
 @end
 

@@ -10,27 +10,18 @@
 #import "cocos2d.h"
 #import "GameConstants.h"
 
-typedef enum
-{
-    kPipeLayerAny = 0,
-    kPipeLayer1,
-    kPipeLayer2,
-} kPipeLayer;
-
 // tiled object groups
-FOUNDATION_EXPORT NSString *const kTLDGroupMeta;
+FOUNDATION_EXPORT NSString *const kTLDGroupTickResponders;
 
 // tiled objects
+FOUNDATION_EXPORT NSString *const kTLDObjectSequence;
 FOUNDATION_EXPORT NSString *const kTLDObjectEntry;
-FOUNDATION_EXPORT NSString *const kTLDObjectConnection;
+FOUNDATION_EXPORT NSString *const kTLDObjectTone;
+FOUNDATION_EXPORT NSString *const kTLDObjectArrow;
 
 // tiled object properties
 FOUNDATION_EXPORT NSString *const kTLDPropertyLayer;
-
-// tiled tile layers
-FOUNDATION_EXPORT NSString *const kTLDLayerPipes1;
-FOUNDATION_EXPORT NSString *const kTLDLayerPipes2;
-
+FOUNDATION_EXPORT NSString *const kTLDPropertyDirection;
 
 @interface PGTiledUtils : NSObject
 

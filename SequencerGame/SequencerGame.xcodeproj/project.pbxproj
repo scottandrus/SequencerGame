@@ -197,12 +197,19 @@
 		169B8D7017355EAE0002FD60 /* previousButton-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D6417355EAE0002FD60 /* previousButton-ipadhd.png */; };
 		169B8D7117355EAE0002FD60 /* robotHeart-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D6517355EAE0002FD60 /* robotHeart-ipadhd.png */; };
 		169B8D7217355EAE0002FD60 /* standardHeart-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D6617355EAE0002FD60 /* standardHeart-ipadhd.png */; };
-		169B8D75173567C50002FD60 /* Tone.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D74173567C50002FD60 /* Tone.m */; };
-		169B8D791735691C0002FD60 /* Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D781735691C0002FD60 /* Direction.m */; };
-		169B8D7C173569340002FD60 /* Dissolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D7B173569340002FD60 /* Dissolve.m */; };
+		169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */; };
+		169B8D841735911F0002FD60 /* seq1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 169B8D831735911F0002FD60 /* seq1.tmx */; };
+		169B8D8A1735A4AF0002FD60 /* Tone.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D891735A4AF0002FD60 /* Tone.m */; };
+		169B8D8E1735A50B0002FD60 /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B8D8D1735A50B0002FD60 /* Arrow.m */; };
 		169FC6B9173475AE008EC4C4 /* CellObjectLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */; };
 		169FC6BD1734A2E2008EC4C4 /* CellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 169FC6BC1734A2E1008EC4C4 /* CellNode.m */; };
 		3D11F3661735A54D00172154 /* TickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D11F3651735A54D00172154 /* TickerView.m */; };
+		D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */; };
+		D258C842173582200056EE96 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C841173582200056EE96 /* SAViewManipulator.m */; };
+		D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84617358D100056EE96 /* UIColor+i7HexColor.m */; };
+		D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D258C84817358D100056EE96 /* UIView+Frame.m */; };
+		D258C84F17359B850056EE96 /* DropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84D17359B850056EE96 /* DropShadow.png */; };
+		D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84E17359B850056EE96 /* DropShadow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -569,18 +576,27 @@
 		169B8D6417355EAE0002FD60 /* previousButton-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "previousButton-ipadhd.png"; path = "Resources/previousButton-ipadhd.png"; sourceTree = "<group>"; };
 		169B8D6517355EAE0002FD60 /* robotHeart-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "robotHeart-ipadhd.png"; path = "Resources/robotHeart-ipadhd.png"; sourceTree = "<group>"; };
 		169B8D6617355EAE0002FD60 /* standardHeart-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "standardHeart-ipadhd.png"; path = "Resources/standardHeart-ipadhd.png"; sourceTree = "<group>"; };
-		169B8D73173567C40002FD60 /* Tone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tone.h; path = TickEvents/Tone.h; sourceTree = "<group>"; };
-		169B8D74173567C50002FD60 /* Tone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tone.m; path = TickEvents/Tone.m; sourceTree = "<group>"; };
-		169B8D771735691C0002FD60 /* Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction.h; path = TickEvents/Direction.h; sourceTree = "<group>"; };
-		169B8D781735691C0002FD60 /* Direction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Direction.m; path = TickEvents/Direction.m; sourceTree = "<group>"; };
-		169B8D7A173569340002FD60 /* Dissolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dissolve.h; sourceTree = "<group>"; };
-		169B8D7B173569340002FD60 /* Dissolve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dissolve.m; sourceTree = "<group>"; };
+		169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pipeTilesetBase1.png; path = Resources/pipeTilesetBase1.png; sourceTree = "<group>"; };
+		169B8D831735911F0002FD60 /* seq1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = seq1.tmx; path = Resources/seq1.tmx; sourceTree = "<group>"; };
+		169B8D881735A4AF0002FD60 /* Tone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tone.h; path = TickResponders/Tone.h; sourceTree = "<group>"; };
+		169B8D891735A4AF0002FD60 /* Tone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tone.m; path = TickResponders/Tone.m; sourceTree = "<group>"; };
+		169B8D8C1735A50B0002FD60 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Arrow.h; path = TickResponders/Arrow.h; sourceTree = "<group>"; };
+		169B8D8D1735A50B0002FD60 /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Arrow.m; path = TickResponders/Arrow.m; sourceTree = "<group>"; };
 		169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellObjectLibrary.h; sourceTree = "<group>"; };
 		169FC6B8173475AE008EC4C4 /* CellObjectLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellObjectLibrary.m; sourceTree = "<group>"; };
 		169FC6BB1734A2E1008EC4C4 /* CellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellNode.h; path = Nodes/CellNode.h; sourceTree = "<group>"; };
 		169FC6BC1734A2E1008EC4C4 /* CellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellNode.m; path = Nodes/CellNode.m; sourceTree = "<group>"; };
 		3D11F3641735A54D00172154 /* TickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerView.h; sourceTree = "<group>"; };
 		3D11F3651735A54D00172154 /* TickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerView.m; sourceTree = "<group>"; };
+		D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SequenceMenuCellLabel.xib; sourceTree = "<group>"; };
+		D258C840173582200056EE96 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAViewManipulator.h; path = ../Views/SAViewManipulator.h; sourceTree = "<group>"; };
+		D258C841173582200056EE96 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAViewManipulator.m; path = ../Views/SAViewManipulator.m; sourceTree = "<group>"; };
+		D258C84517358D100056EE96 /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		D258C84617358D100056EE96 /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
+		D258C84717358D100056EE96 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		D258C84817358D100056EE96 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		D258C84D17359B850056EE96 /* DropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropShadow.png; sourceTree = "<group>"; };
+		D258C84E17359B850056EE96 /* DropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropShadow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,7 +657,8 @@
 		160806CE16B437A700039339 /* SequencerGame */ = {
 			isa = PBXGroup;
 			children = (
-				169B8D76173568850002FD60 /* TickEvents */,
+				169B8D8B1735A4B60002FD60 /* TickResponders */,
+				D258C84417358CF90056EE96 /* Categories */,
 				165A41921734DEA8005BFC32 /* ViewControllers */,
 				165A41971734DEA8005BFC32 /* Views */,
 				165A418E1734DB6A005BFC32 /* CCViewController */,
@@ -650,6 +667,7 @@
 				1608086016B43CEF00039339 /* Utils */,
 				1608087E16B43FE500039339 /* AppDelegate.h */,
 				1608087F16B43FE500039339 /* AppDelegate.m */,
+				D258C83A173579880056EE96 /* Storyboard */,
 				160806CF16B437A700039339 /* Resources */,
 				160806E916B437A800039339 /* libs */,
 				1608084216B437AA00039339 /* Supporting Files */,
@@ -660,6 +678,10 @@
 		160806CF16B437A700039339 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D258C84D17359B850056EE96 /* DropShadow.png */,
+				D258C84E17359B850056EE96 /* DropShadow@2x.png */,
+				169B8D831735911F0002FD60 /* seq1.tmx */,
+				169B8D81173584FB0002FD60 /* pipeTilesetBase1.png */,
 				169B8D5B17355EAE0002FD60 /* arrow-ipadhd.png */,
 				169B8D5C17355EAE0002FD60 /* dynamicButtonComplete-ipadhd.png */,
 				169B8D5D17355EAE0002FD60 /* dynamicButtonComplete-ipadhd.png.zip */,
@@ -722,7 +744,6 @@
 				160806E416B437A700039339 /* Icon@2x.png */,
 				160806E616B437A800039339 /* Info.plist */,
 				160806E716B437A800039339 /* iTunesArtwork */,
-				165A418B1734D870005BFC32 /* Storyboard.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1082,6 +1103,8 @@
 		1608086016B43CEF00039339 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D258C840173582200056EE96 /* SAViewManipulator.h */,
+				D258C841173582200056EE96 /* SAViewManipulator.m */,
 				165A41A31734EA64005BFC32 /* SGTiledUtils.h */,
 				165A41A41734EA65005BFC32 /* SGTiledUtils.m */,
 				169FC6B7173475AE008EC4C4 /* CellObjectLibrary.h */,
@@ -1135,6 +1158,7 @@
 				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
 				3D11F3641735A54D00172154 /* TickerView.h */,
 				3D11F3651735A54D00172154 /* TickerView.m */,
+				D258C84B173591B80056EE96 /* SequenceMenuCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1148,17 +1172,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		169B8D76173568850002FD60 /* TickEvents */ = {
+		169B8D8B1735A4B60002FD60 /* TickResponders */ = {
 			isa = PBXGroup;
 			children = (
-				169B8D73173567C40002FD60 /* Tone.h */,
-				169B8D74173567C50002FD60 /* Tone.m */,
-				169B8D771735691C0002FD60 /* Direction.h */,
-				169B8D781735691C0002FD60 /* Direction.m */,
-				169B8D7A173569340002FD60 /* Dissolve.h */,
-				169B8D7B173569340002FD60 /* Dissolve.m */,
+				169B8D881735A4AF0002FD60 /* Tone.h */,
+				169B8D891735A4AF0002FD60 /* Tone.m */,
+				169B8D8C1735A50B0002FD60 /* Arrow.h */,
+				169B8D8D1735A50B0002FD60 /* Arrow.m */,
 			);
-			name = TickEvents;
+			name = TickResponders;
 			sourceTree = "<group>";
 		};
 		169FC6BE1734A2F2008EC4C4 /* Nodes */ = {
@@ -1168,6 +1190,35 @@
 				169FC6BC1734A2E1008EC4C4 /* CellNode.m */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		D258C83A173579880056EE96 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				165A418B1734D870005BFC32 /* Storyboard.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		D258C84417358CF90056EE96 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D258C84517358D100056EE96 /* UIColor+i7HexColor.h */,
+				D258C84617358D100056EE96 /* UIColor+i7HexColor.m */,
+				D258C84717358D100056EE96 /* UIView+Frame.h */,
+				D258C84817358D100056EE96 /* UIView+Frame.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D258C84B173591B80056EE96 /* SequenceMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				165A41A61734EC6A005BFC32 /* SequenceMenuCell.h */,
+				165A41A71734EC6A005BFC32 /* SequenceMenuCell.m */,
+				D258C83E1735817E0056EE96 /* SequenceMenuCellLabel.xib */,
+			);
+			name = SequenceMenuCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1307,6 +1358,11 @@
 				169B8D7017355EAE0002FD60 /* previousButton-ipadhd.png in Resources */,
 				169B8D7117355EAE0002FD60 /* robotHeart-ipadhd.png in Resources */,
 				169B8D7217355EAE0002FD60 /* standardHeart-ipadhd.png in Resources */,
+				D258C83F1735817E0056EE96 /* SequenceMenuCellLabel.xib in Resources */,
+				169B8D82173584FB0002FD60 /* pipeTilesetBase1.png in Resources */,
+				169B8D841735911F0002FD60 /* seq1.tmx in Resources */,
+				D258C84F17359B850056EE96 /* DropShadow.png in Resources */,
+				D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,10 +1492,12 @@
 				165A41A21734E7F8005BFC32 /* SequenceViewController.m in Sources */,
 				165A41A51734EA65005BFC32 /* SGTiledUtils.m in Sources */,
 				165A41A81734EC6A005BFC32 /* SequenceMenuCell.m in Sources */,
-				169B8D75173567C50002FD60 /* Tone.m in Sources */,
-				169B8D791735691C0002FD60 /* Direction.m in Sources */,
-				169B8D7C173569340002FD60 /* Dissolve.m in Sources */,
 				3D11F3661735A54D00172154 /* TickerView.m in Sources */,
+				D258C842173582200056EE96 /* SAViewManipulator.m in Sources */,
+				D258C84917358D100056EE96 /* UIColor+i7HexColor.m in Sources */,
+				D258C84A17358D100056EE96 /* UIView+Frame.m in Sources */,
+				169B8D8A1735A4AF0002FD60 /* Tone.m in Sources */,
+				169B8D8E1735A50B0002FD60 /* Arrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

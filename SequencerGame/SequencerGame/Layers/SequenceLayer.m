@@ -11,6 +11,10 @@
 #import "GameConstants.h"
 #import "SimpleAudioEngine.h"
 #import "SpriteUtils.h"
+#import "CCTMXTiledMap+Utils.h"
+#import "SGTiledUtils.h"
+#import "TextureUtils.h"
+#import "CellObjectLibrary.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -25,13 +29,6 @@ static NSString *const kSoundStandard = @"Heart 4.caf";
 static NSString *const kSoundRobot = @"Heart Robot 1.caf";
 static NSString *const kSoundMeaty = @"Heart Meaty 2.caf";
 static NSString *const kSoundAlien = @"Heart Alien New.caf";
-
-static NSString *const kImageDynamicButtonDefault = @"dynamicButtonDefault.png";
-static NSString *const kImageDynamicButtonSelected = @"dynamicButtonSelected.png";
-static NSString *const kImageDynamicButtonComplete = @"dynamicButtonComplete.png";
-
-static NSString *const kImageFinalButtonDefault = @"finalButtonDefault.png";
-static NSString *const kImageFinalButtonSelected = @"finalButtonSelected.png";
 
 static CGFloat const kPatternDelay = 0.5;
 
@@ -61,14 +58,37 @@ typedef enum
 {
     self = [super init];
     if (self) {
+        self.isTouchEnabled = YES;
         
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonDefault];
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonSelected];
-        [[CCTextureCache sharedTextureCache] addImage:kImageDynamicButtonComplete];
-        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonDefault];
-        [[CCTextureCache sharedTextureCache] addImage:kImageFinalButtonSelected];
+        [TextureUtils loadTextures];
         
-        [self setIsTouchEnabled:YES];
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"seq1.tmx"];
+        self.gridSize = [GridUtils gridCoordFromSize:_tileMap.mapSize];
+        
+        // cell object library
+        self.cellObjectLibrary = [[CellObjectLibrary alloc] initWithGridSize:_gridSize];
+
+        // tones
+        
+        self.tones = [NSMutableArray array];
+        NSMutableArray *tones = [self.tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
+//        for (NSMutableDictionary *tone in tones) {
+//             = [[CoverPoint alloc] initWithCoverPoint:rat tiledMap:_tileMap puzzleOrigin:self.position];
+//            ratNode.delegate = self;
+//            [self.rats addObject:ratNode];
+//            [_tileMap addChild:ratNode];
+//            [self.cellObjectLibrary addNode:ratNode cell:ratNode.cell];
+//        }
+
+        
+        
+        
+        
+        
+        
+        
+        
+    
         _sequence = sequence;
         _isAnySequencePlaying = NO;
         
@@ -76,12 +96,11 @@ typedef enum
         _gridSize = [DataUtils sequenceGridSize:sequence];
         _gridOrigin = [SequenceLayer sharedGridOrigin];
         
-        // sequencer screen background
-        _screenImage = [CCSprite spriteWithFile:@"screen.png"];
-        _screenImage.position = [GridUtils absolutePositionForGridCoord:GridCoordMake(5, 3) unitSize:kSizeGridUnit origin:_gridOrigin];
-        [self addChild:_screenImage];
-        
 
+        
+        
+        
+        
         // patterns
         _patternCount = 0;
         _finalPattern = [DataUtils sequencePattern:sequence];

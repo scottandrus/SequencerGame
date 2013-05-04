@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SequenceViewController.h"
 
-@interface SequenceMenuViewController : UICollectionViewController <SequenceViewControllerDelegate>
+@interface SequenceMenuViewController : UIViewController <SequenceViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIImageView *dropShadowImageView;
 
 @end
