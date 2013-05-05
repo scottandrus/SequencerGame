@@ -2,7 +2,6 @@
 //  UIView+Frame.h
 //
 //  Created by Scott Andrus on 8/9/12.
-//  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

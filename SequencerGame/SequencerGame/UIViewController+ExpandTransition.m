@@ -7,7 +7,32 @@
 //
 
 #import "UIViewController+ExpandTransition.h"
-#import "NSObject+BlockAfterDelay.h"
+
+@interface NSObject (BlockAfterDelay)
+
+- (void)performBlock:(void (^)(void))block
+          afterDelay:(NSTimeInterval)delay;
+- (void)fireBlockAfterDelay:(void (^)(void))block;
+
+@end
+
+@implementation NSObject (BlockAfterDelay)
+
+// http://stackoverflow.com/questions/4007023/blocks-instead-of-performselectorwithobjectafterdelay
+
+- (void)performBlock:(void (^)(void))block
+          afterDelay:(NSTimeInterval)delay {
+    block = [block copy];
+    [self performSelector:@selector(fireBlockAfterDelay:)
+               withObject:block
+               afterDelay:delay];
+}
+
+- (void)fireBlockAfterDelay:(void (^)(void))block {
+    block();
+}
+
+@end
 
 @implementation UIViewController (ExpandTransition)
 

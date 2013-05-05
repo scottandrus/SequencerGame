@@ -1,6 +1,5 @@
 //
 //  UIViewController+Overview.m
-//  FireflyPad
 //
 //  Created by Scott Andrus on 8/1/12.
 //
@@ -12,7 +11,7 @@
 
 @implementation UIViewController (Overview)
 
-- (void)presentOverviewController:(UIViewController *)oViewController withOpacity:(CGFloat)opacity animated:(BOOL)animated {
+- (void)presentOverviewController:(UIViewController *)oViewController withOpacity:(CGFloat)opacity animated:(BOOL)animated completion:(void (^)(void))completion {
     
     // Set modalTransitionStyles
     oViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
@@ -36,12 +35,18 @@
     if ([oViewController conformsToProtocol:@protocol(OverviewDelegate)] && [oViewController respondsToSelector:@selector(setModalDelegate:)]) {
         [(UIViewController<OverviewDelegate>*)oViewController setModalDelegate:self];
     }
+    
     // SEKRET SAUS
     [self createOverlayOnOverviewController:oViewController withBackgroundImage:viewImage andOpacity:opacity];
     
     // Present the modal view controller
-//    [self presentModalViewController:oViewController animated:animated];
-    [self presentViewController:oViewController animated:animated completion:nil];
+    //    [self presentModalViewController:oViewController animated:animated];
+    [self presentViewController:oViewController animated:animated completion:completion];
+}
+
+- (void)presentOverviewController:(UIViewController *)oViewController withOpacity:(CGFloat)opacity animated:(BOOL)animated {
+
+    [self presentOverviewController:oViewController withOpacity:opacity animated:animated completion:nil];
 }
 
 - (void)createOverlayOnOverviewController:(UIViewController *)oViewController withBackgroundImage:(UIImage *)bgImage andOpacity:(CGFloat)opacity {
@@ -104,9 +109,6 @@
         }
         
         backgroundImageView.layer.transform = CATransform3DMakeRotation(angle, 0, 0.0, 1.0);
-    }
-    else {
-        NSLog(@"Rotated Portrait");
     }
 }
 

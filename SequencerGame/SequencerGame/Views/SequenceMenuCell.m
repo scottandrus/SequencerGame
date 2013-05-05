@@ -32,7 +32,8 @@
 - (void)configureWithIndexPath:(NSIndexPath *)indexPath
 {
     
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor colorWithRed:7*(20-indexPath.row)/255.0 green:9*(20-indexPath.row)/255.0 blue:11*(20-indexPath.row)/255.0 alpha:1];
+    
     [SAViewManipulator addBorderToView:self
                              withWidth:2
                                  color:[UIColor darkGrayColor]

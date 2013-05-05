@@ -1,6 +1,5 @@
 //
 //  UIViewController+Overview.h
-//  FireflyPad
 //
 //  Created by Scott Andrus on 8/1/12.
 //
@@ -29,5 +28,7 @@
  animated: whether to present the view controller with an animation
  */
 - (void)presentOverviewController:(UIViewController *)oViewController withOpacity:(CGFloat)opacity animated:(BOOL)animated;
+
+- (void)presentOverviewController:(UIViewController *)oViewController withOpacity:(CGFloat)opacity animated:(BOOL)animated completion:(void (^)(void))completion;
 
 @end
