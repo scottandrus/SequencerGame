@@ -7,7 +7,13 @@
 //
 
 #import "CellNode.h"
+#import "GameConstants.h"
+#import "TickDispatcher.h"
 
-@interface Arrow : CellNode
+@interface Arrow : CellNode <TickResponder>
+
+@property (assign) kDirection facing;
+
+- (id)initWithArrow:(NSMutableDictionary *)arrow tiledMap:(CCTMXTiledMap *)tiledMap puzzleOrigin:(CGPoint)origin;
 
 @end

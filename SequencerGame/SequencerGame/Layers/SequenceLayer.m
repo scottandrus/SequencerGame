@@ -18,6 +18,7 @@
 #import "Tone.h"
 #import "TickDispatcher.h"
 #import "SGTiledUtils.h"
+#import "Arrow.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -86,6 +87,19 @@ typedef enum
             [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
             [self.tickDispatcher registerTickResponder:toneNode];
         }
+        
+        // arrows
+        self.arrows = [NSMutableArray array];
+        NSMutableArray *arrows = [self.tileMap objectsWithName:kTLDObjectArrow groupName:kTLDGroupTickResponders];
+        for (NSMutableDictionary *arrow in arrows) {
+            Arrow *arrowNode = [[Arrow alloc] initWithArrow:arrow tiledMap:self.tileMap puzzleOrigin:self.position];
+            [self.arrows addObject:arrowNode];
+            [self.cellObjectLibrary addNode:arrowNode cell:arrowNode.cell];
+            [self.tickDispatcher registerTickResponder:arrowNode];
+        }
+        
+        
+        
         
         
         

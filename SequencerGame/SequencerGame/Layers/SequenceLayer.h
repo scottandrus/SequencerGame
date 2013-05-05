@@ -25,6 +25,7 @@
 @property (nonatomic, strong) TickDispatcher *tickDispatcher;
 
 @property (nonatomic, strong) NSMutableArray *tones;
+@property (nonatomic, strong) NSMutableArray *arrows;
 
 @property (assign) GridCoord gridSize;
 

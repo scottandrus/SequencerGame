@@ -11,9 +11,18 @@
 
 
 @protocol TickResponder <NSObject>
-- (void)tick:(NSInteger)bpm;
+
+// responder will hand off info to PSSynth
+- (NSString *)tick:(NSInteger)bpm;
 - (GridCoord)responderCell;
 @end
+
+typedef enum
+{
+    kTickEventNote = 0,
+    kTickEventArrow,
+    kTickEventWarp
+}kTickEvent;
 
 
 @interface TickDispatcher : CCNode

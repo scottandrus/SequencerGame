@@ -59,27 +59,21 @@
     <property name="midiValue" value="59"/>
    </properties>
   </object>
-  <object name="arrow" x="74" y="244" width="83" height="83">
-   <properties>
-    <property name="direction" value="up"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object name="arrow" x="666" y="248" width="83" height="83">
-   <properties>
-    <property name="direction" value="down"/>
-   </properties>
-   <ellipse/>
-  </object>
-  <object name="arrow" x="456" y="259" width="83" height="83">
+  <object name="arrow" x="828" y="249" width="83" height="83">
    <properties>
     <property name="direction" value="left"/>
    </properties>
    <ellipse/>
   </object>
-  <object name="arrow" x="478" y="84" width="83" height="83">
+  <object name="arrow" x="63" y="268" width="83" height="83">
    <properties>
-    <property name="direction" value="right"/>
+    <property name="direction" value="up"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="arrow" x="851" y="56" width="83" height="83">
+   <properties>
+    <property name="direction" value="down"/>
    </properties>
    <ellipse/>
   </object>

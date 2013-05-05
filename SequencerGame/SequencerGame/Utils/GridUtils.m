@@ -220,6 +220,26 @@
     }
 }
 
++ (kDirection)directionForString:(NSString *)string
+{
+    if ([string isEqualToString:@"up"]) {
+        return kDirectionUp;
+    }
+    else if ([string isEqualToString:@"down"]) {
+        return kDirectionDown;
+    }
+    else if ([string isEqualToString:@"left"]) {
+        return kDirectionLeft;
+    }
+    else if ([string isEqualToString:@"right"]) {
+        return kDirectionRight;
+    }
+    else {
+        NSLog(@"warning: string '%@' not recognized as direction", string);
+        return nil;
+    }
+}
+
 
 #pragma mark - compare
 

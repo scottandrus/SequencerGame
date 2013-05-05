@@ -116,92 +116,46 @@ static CGFloat const kTickInterval = 0.5;
 // moves the ticker along the grid
 - (void)tick:(ccTime)dt
 {
+    NSLog(@"current cell: %i, %i", self.currentCell.x, self.currentCell.y);
+
     // stop if we are off the grid
     if (![GridUtils isCellInBounds:self.currentCell gridSize:self.gridSize]) {
         [self stop];
-        NSLog(@"out of bounds %i, %i, stopping tick", self.currentCell.x, self.currentCell.y);
+        NSLog(@"out of bounds stopping tick");
         return;
     }
     
-    // tick and collect responders
-    NSMutableArray *filtered = [NSMutableArray array];
-    
-    for (id<TickResponder> responder in self.responders) {
-        GridCoord cell = [responder responderCell];
-        if ([GridUtils isCell:cell equalToCell:self.currentCell]) {
-                        
-            // tones
-            if ([responder isKindOfClass:[Tone class]]) {
-                BOOL duplicate = NO;
-                for (Tone *stored in filtered) {
-                    if (stored.midiValue == ((Tone *)responder).midiValue) {
-                        duplicate = YES;
-                        break;
-                    }
-                }
-                if (!duplicate) {
-                    [filtered addObject:responder];
-                    [responder tick:kBPM];
-                }
-            } 
-            
-            // arrows
-            
+    // tick and collect events
+    NSMutableArray *events = [NSMutableArray array];
+    for (id<TickResponder>responder in self.responders) {
+        if ([GridUtils isCell:[responder responderCell] equalToCell:self.currentCell]) {
+            [events addObject:[responder tick:kBPM]];
         }
     }
     
-        
-    NSLog(@"\n\nfiltered****");
-    for (CellNode *n in filtered) {
-        NSLog(@"node: %i, %i", n.cell.x, n.cell.y);
-    }
     
     // handle events
+    for (NSString *event in events) {
+                
+        // change direction for arrows
+        if ([self isArrowEvent:event]) {
+            self.currentDirection = [GridUtils directionForString:event];
+        }
+    }
     
+    // send events to PDSynth
     
-    
-    // advance cell -- default case keep going in same direction
-    self.currentCell = [GridUtils stepInDirection:self.currentDirection fromCell:self.currentCell];
-    
-    
+    // advance cell 
+    self.currentCell = [GridUtils stepInDirection:self.currentDirection fromCell:self.currentCell];    
+}
+             
+- (BOOL)isArrowEvent:(NSString *)event
+{
+    if ([event isEqualToString:@"up"] || [event isEqualToString:@"down"] || [event isEqualToString:@"right"] || [event isEqualToString:@"left"]) {
+        return YES;
+    }
+    return NO;
 }
 
-//            id event = [responder tick:kBPM];
-//
-//            if ([event isKindOfClass:[Tone class]]) {
-//                NSUInteger duplicateTone;
-//                duplicateTone = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-//                    if ([obj isKindOfClass:[Tone class]]) {
-//                        return ((Tone *)obj).midiValue == ((Tone *)event).midiValue;
-//                    }
-//                    return NO;
-//                }];
-//                if (duplicateTone != NSNotFound) {
-//                    [filteredEvents addObject:event];
-//                }
-//            }
-//            if ([event isKindOfClass:[Direction class]]) {
-//                NSUInteger duplicateDirection;
-//                duplicateDirection = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-//                    if ([obj isKindOfClass:[Direction class]]) {
-//                        return ((Direction *)obj).direction == ((Direction *)event).direction;
-//                    }
-//                    return NO;
-//                }];
-//                if (duplicateDirection != NSNotFound) {
-//                    [filteredEvents addObject:event];
-//                }
-//            }
-//            if ([event isKindOfClass:[Dissolve class]]) {
-//                BOOL duplicateDissolve = NO;
-//                for (id events in filteredEvents) {
-//                    if ([event isKindOfClass:[Dissolve class]]) {
-//                        duplicateDissolve = YES;
-//                        break;
-//                    }
-//                }
-//                if (!duplicateDissolve) {
-//                    [filteredEvents addObject:event];
-//                }
-//            }
+
 @end

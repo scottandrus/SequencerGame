@@ -15,7 +15,8 @@
 {
     self = [super init];
     if (self) {
-        
+        self.cell = [tiledMap gridCoordForObject:tone];
+
         
         
 //        self.colorGroup = [door valueForKey:kTLDPropertyColorGroup];
@@ -28,9 +29,7 @@
 //        
 //        self.layer = [[door valueForKey:kTLDPropertyLayer] intValue];
 //        
-        self.cell = [tiledMap gridCoordForObject:tone];
         
-        NSLog(@"cell: %i, %i", self.cell.x, self.cell.y);
 //        self.position = [GridUtils absolutePositionForGridCoord:self.cell unitSize:kSizeGridUnit origin:origin];
 //        
 //        self.isOpen = NO;
@@ -42,9 +41,10 @@
 
 #pragma mark - Tick Responder
 
-- (void)tick:(NSInteger)bpm
+- (NSString *)tick:(NSInteger)bpm
 {
     NSLog(@"tone item handling tick");
+    return [NSString stringWithFormat:@"%i", self.midiValue];
 }
 
 - (GridCoord)responderCell

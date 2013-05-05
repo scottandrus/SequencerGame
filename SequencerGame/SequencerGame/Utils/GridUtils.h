@@ -81,6 +81,8 @@ GridCoordMake(const int x, const int y)
 
 + (NSString *)directionStringForDirection:(kDirection)direction;
 
++ (kDirection)directionForString:(NSString *)string;
+
 #pragma mark - compare
 
 // checks for gridcoords as same coordinate
