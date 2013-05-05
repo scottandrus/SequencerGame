@@ -24,7 +24,7 @@ FOUNDATION_EXPORT NSString *const kImageA_flat;
 FOUNDATION_EXPORT NSString *const kImageArrowDown;
 FOUNDATION_EXPORT NSString *const kImageArrowLeft;
 FOUNDATION_EXPORT NSString *const kImageArrowRight;
-FOUNDATION_EXPORT NSString *const kIMageArrowUp;
+FOUNDATION_EXPORT NSString *const kImageArrowUp;
 FOUNDATION_EXPORT NSString *const kImageB_on;
 FOUNDATION_EXPORT NSString *const kImageB;
 FOUNDATION_EXPORT NSString *const kImageB_flat_on;

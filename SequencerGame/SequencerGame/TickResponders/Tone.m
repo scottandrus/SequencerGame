@@ -46,6 +46,8 @@
     return self.cell;
 }
 
+#pragma mark
+
 - (NSString *)imageNameForMidiValue:(int)midi on:(BOOL)on
 {
     switch (midi) {

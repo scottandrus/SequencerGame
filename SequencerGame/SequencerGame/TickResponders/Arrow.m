@@ -9,6 +9,8 @@
 #import "Arrow.h"
 #import "CCTMXTiledMap+Utils.h"
 #import "SGTiledUtils.h"
+#import "TextureUtils.h"
+#import "SpriteUtils.h"
 
 @implementation Arrow
 
@@ -19,34 +21,36 @@
         self.cell = [tiledMap gridCoordForObject:arrow];
         NSString *facing = [CCTMXTiledMap objectPropertyNamed:kTLDPropertyDirection object:arrow];
         self.facing = [SGTiledUtils directionNamed:facing];
-        
-        
-        //        self.colorGroup = [door valueForKey:kTLDPropertyColorGroup];
-        //        self.edge = [PGTiledUtils directionNamed:[door valueForKey:kTLDPropertyEdge]];
-        //
-        //        NSString *imageName = [self imageNameForColorGroup:_colorGroup open:NO];
-        //        self.sprite = [SpriteUtils spriteWithTextureKey:imageName];
-        //        [self rotateAndPosition:self.sprite edge:self.edge];
-        //        [self addChild:self.sprite];
-        //
-        //        self.layer = [[door valueForKey:kTLDPropertyLayer] intValue];
-        //
-        
-        //        self.position = [GridUtils absolutePositionForGridCoord:self.cell unitSize:kSizeGridUnit origin:origin];
-        //
-        //        self.isOpen = NO;
-        //        
-        //        [self registerNotifications];
+        NSString *imageName = [self imageNameForFacing:self.facing on:NO];
+        self.sprite = [self createAndCenterSpriteNamed:imageName];
+        [self addChild:self.sprite];
+        self.position = [GridUtils absolutePositionForGridCoord:self.cell unitSize:kSizeGridUnit origin:origin];
     }
     return self;
+}
 
+- (NSString *)imageNameForFacing:(kDirection)facing on:(BOOL)on
+{
+    switch (facing) {
+        case kDirectionDown:
+            return kImageArrowDown;
+        case kDirectionUp:
+            return kImageArrowUp;
+        case kDirectionLeft:
+            return kImageArrowLeft;
+        case kDirectionRight:
+            return kImageArrowRight;
+        default:
+            NSLog(@"warning: invalid direction for arrow image");
+            return @"";
+            break;
+    }
 }
 
 #pragma mark - Tick Responder
 
 - (NSString *)tick:(NSInteger)bpm
 {
-    NSLog(@"arrow item handling tick");
     return [GridUtils directionStringForDirection:self.facing];
 }
 
