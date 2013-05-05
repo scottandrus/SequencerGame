@@ -100,7 +100,7 @@ typedef enum
             [self addChild:arrowNode];
         }
         
-        
+
         
         
         
@@ -108,7 +108,6 @@ typedef enum
         // testing tick dispatcher
         
         [self.tickDispatcher start];
-        
         
         
         /////////////////
@@ -239,14 +238,13 @@ typedef enum
     if (!_patch) {
         NSLog(@"Failed to open patch");
         // handle failure
-    }
+    }    
 }
 
 - (void)onEnterTransitionDidFinish
 {
     [super onEnterTransitionDidFinish];
-
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];    
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];
 }
 - (void)onExit
 {

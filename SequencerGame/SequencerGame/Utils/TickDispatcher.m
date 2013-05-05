@@ -12,6 +12,7 @@
 #import "Arrow.h"
 #import "SGTiledUtils.h"
 #import "CCTMXTiledMap+Utils.h"
+#import "MainSynth.h"
 
 static NSInteger const kBPM = 120;
 static CGFloat const kTickInterval = 0.5;
@@ -28,6 +29,7 @@ static CGFloat const kTickInterval = 0.5;
 @property (assign) kDirection currentDirection;
 @property (assign) int sequenceIndex;
 @property (assign) GridCoord gridSize;
+@property (strong, nonatomic) MainSynth *mainSynth;
 
 @end
 
@@ -57,7 +59,8 @@ static CGFloat const kTickInterval = 0.5;
         self.responders = [NSMutableArray array];
         self.gridSize = [GridUtils gridCoordFromSize:tiledMap.mapSize];
         self.lastTickedResponders = [NSMutableArray array];
-    
+        
+        self.mainSynth = [[MainSynth alloc] init];
     }
     return self;
 }
@@ -140,23 +143,23 @@ static CGFloat const kTickInterval = 0.5;
         }
     }
     
-    
     // handle events
     for (NSString *event in events) {
                 
         // change direction for arrows
-        if ([self isArrowEvent:event]) {
+        if ([TickDispatcher isArrowEvent:event]) {
             self.currentDirection = [GridUtils directionForString:event];
         }
     }
     
-    // send events to PDSynth
+    // send events to MainSynth which will talk to our PD patch
+    [self.mainSynth loadEvents:events];
     
     // advance cell 
     self.currentCell = [GridUtils stepInDirection:self.currentDirection fromCell:self.currentCell];    
 }
              
-- (BOOL)isArrowEvent:(NSString *)event
++ (BOOL)isArrowEvent:(NSString *)event
 {
     if ([event isEqualToString:@"up"] || [event isEqualToString:@"down"] || [event isEqualToString:@"right"] || [event isEqualToString:@"left"]) {
         return YES;

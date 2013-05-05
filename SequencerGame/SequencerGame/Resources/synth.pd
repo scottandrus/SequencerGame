@@ -1,4 +1,4 @@
-#N canvas 219 90 647 369 12;
+#N canvas 266 249 647 369 12;
 #X obj 382 1 r trigger;
 #X msg 361 143 1 10 \, 0 1000 10;
 #X obj 361 172 vline~;
@@ -21,16 +21,16 @@
 #X floatatom 257 28 0 0 0 0 - - -;
 #X obj 257 3 r clear;
 #X obj 147 117 spigot;
-#X floatatom 499 27 5 0 0 0 - - -;
-#X obj 499 2 r activateTone;
+#X obj 504 2 r activateTone;
 #X obj 80 2 r activateNoise;
-#X floatatom 80 29 5 0 0 0 - - -;
 #X obj 56 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 234 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 479 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 478 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X msg 72 32 1;
+#X msg 494 27 1;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -54,10 +54,10 @@
 #X connect 18 0 20 1;
 #X connect 19 0 18 0;
 #X connect 20 0 15 0;
-#X connect 21 0 17 1;
-#X connect 22 0 21 0;
-#X connect 23 0 24 0;
-#X connect 24 0 20 1;
-#X connect 25 0 24 0;
-#X connect 26 0 18 0;
-#X connect 27 0 21 0;
+#X connect 21 0 27 0;
+#X connect 22 0 26 0;
+#X connect 23 0 26 0;
+#X connect 24 0 18 0;
+#X connect 25 0 27 0;
+#X connect 26 0 20 1;
+#X connect 27 0 17 1;
