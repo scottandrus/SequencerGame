@@ -15,5 +15,6 @@
 @property (assign) kDirection facing;
 
 - (id)initWithArrow:(NSMutableDictionary *)arrow tiledMap:(CCTMXTiledMap *)tiledMap puzzleOrigin:(CGPoint)origin;
+- (void)rotateClockwise;
 
 @end

@@ -67,9 +67,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
     // once we get tiled maps in, we'll use this instead:
-//    return [PathUtils tileMapNames].count;
+    return [PathUtils tileMapNames].count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -87,15 +86,8 @@
 {
     SequenceViewController *sequenceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sequence"];
     sequenceViewController.sequence = indexPath.row;
-    sequenceViewController.sequence = MIN(4, sequenceViewController.sequence);
     sequenceViewController.delegate = self;
     [self presentViewController:sequenceViewController animated:YES completion:nil];
-//    [self presentViewController:sequenceViewController
-//               expandedFromView:[self.collectionView cellForItemAtIndexPath:indexPath]
-//                       animated:YES completion:nil];
-//    [self presentViewController:sequenceViewController foldStyle:MPFoldStyleUnfold completion:^(BOOL finished){
-//        // completion
-//    }];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
