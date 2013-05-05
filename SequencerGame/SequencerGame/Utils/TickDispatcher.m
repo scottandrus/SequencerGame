@@ -20,6 +20,7 @@ static CGFloat const kTickInterval = 0.5;
 @interface TickDispatcher ()
 
 @property (strong, nonatomic) NSMutableArray *responders;
+@property (strong, nonatomic) NSMutableArray *lastTickedResponders;
 @property (assign) GridCoord startingCell;
 @property (assign) GridCoord currentCell;
 @property (assign) GridCoord nextCell;
@@ -55,6 +56,7 @@ static CGFloat const kTickInterval = 0.5;
         self.sequenceIndex = 0;
         self.responders = [NSMutableArray array];
         self.gridSize = [GridUtils gridCoordFromSize:tiledMap.mapSize];
+        self.lastTickedResponders = [NSMutableArray array];
     
     }
     return self;
@@ -117,6 +119,10 @@ static CGFloat const kTickInterval = 0.5;
 - (void)tick:(ccTime)dt
 {
     NSLog(@"current cell: %i, %i", self.currentCell.x, self.currentCell.y);
+    
+    for (id<TickResponder> responder in self.lastTickedResponders) {
+        [responder afterTick:kBPM];
+    }
 
     // stop if we are off the grid
     if (![GridUtils isCellInBounds:self.currentCell gridSize:self.gridSize]) {
@@ -130,6 +136,7 @@ static CGFloat const kTickInterval = 0.5;
     for (id<TickResponder>responder in self.responders) {
         if ([GridUtils isCell:[responder responderCell] equalToCell:self.currentCell]) {
             [events addObject:[responder tick:kBPM]];
+            [self.lastTickedResponders addObject:responder];
         }
     }
     

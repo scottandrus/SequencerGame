@@ -36,6 +36,11 @@
     return [NSString stringWithFormat:@"%i", self.midiValue];
 }
 
+- (void)afterTick:(NSInteger)bpm
+{
+    [SpriteUtils switchImageForSprite:self.sprite textureKey:[self imageNameForMidiValue:self.midiValue on:NO]];
+}
+
 - (GridCoord)responderCell
 {
     return self.cell;

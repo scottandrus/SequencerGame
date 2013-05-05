@@ -50,6 +50,11 @@
     return [GridUtils directionStringForDirection:self.facing];
 }
 
+- (void)afterTick:(NSInteger)bpm
+{
+    
+}
+
 - (GridCoord)responderCell
 {
     return self.cell;

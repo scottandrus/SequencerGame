@@ -12,8 +12,8 @@
 
 @protocol TickResponder <NSObject>
 
-// responder will hand off info to PSSynth
 - (NSString *)tick:(NSInteger)bpm;
+- (void)afterTick:(NSInteger)bpm; // in the future this could also return a value that could trigger more events
 - (GridCoord)responderCell;
 @end
 
