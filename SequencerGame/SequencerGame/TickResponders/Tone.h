@@ -7,8 +7,9 @@
 //
 
 #import "CellNode.h"
+#import "TickDispatcher.h"
 
-@interface Tone : CellNode
+@interface Tone : CellNode <TickResponder>
 
 @property (assign) int midiValue;
 

@@ -75,6 +75,7 @@ typedef enum
         NSMutableDictionary *seq = [self.tileMap objectNamed:kTLDObjectSequence groupNamed:kTLDGroupTickResponders];
         NSMutableDictionary *entry = [self.tileMap objectNamed:kTLDObjectEntry groupNamed:kTLDGroupTickResponders];
         self.tickDispatcher = [[TickDispatcher alloc] initWithEventSequence:seq entry:entry tiledMap:self.tileMap];
+        [self addChild:self.tickDispatcher];
 
         // tones
         self.tones = [NSMutableArray array];
@@ -83,73 +84,75 @@ typedef enum
             Tone *toneNode = [[Tone alloc] initWithTone:tone tiledMap:self.tileMap puzzleOrigin:self.position];
             [self.tones addObject:toneNode];
             [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
-            [self.tickDispatcher registerTickResponder:(id<TickResponder>)toneNode];
+            [self.tickDispatcher registerTickResponder:toneNode];
         }
         
         
         
+        // testing tick dispatcher
         
+        [self.tickDispatcher start];
         
         
         
         /////////////////
         
     
-        _sequence = sequence;
-        _isAnySequencePlaying = NO;
-        
-        // setup grid
-        _gridSize = [DataUtils sequenceGridSize:sequence];
-        _gridOrigin = [SequenceLayer sharedGridOrigin];
-        
-
-        
-        
-        
-        
-        // patterns
-        _patternCount = 0;
-        _finalPattern = [DataUtils sequencePattern:sequence];
-        _dynamicPattern = [NSMutableArray array];
-        [_dynamicPattern addObjectsFromArray:[NSArray arrayWithObjects:
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound,
-                                              kKeyNoSound, nil]];
-        
-        // buttons
-        
-        CGFloat buttonSide = [[CCSprite spriteWithFile:@"previousButton.png"] boundingBox].size.height;
-        CGFloat buttonsY = self.gridOrigin.y + (self.gridSize.y * kSizeGridUnit) + buttonSide/2;
-        CGFloat gridWidth = self.gridSize.x * kSizeGridUnit;
-    
-        _previousButton = [CCSprite spriteWithFile:@"previousButton.png"];
-        _previousButton.position = CGPointMake(self.gridOrigin.x + gridWidth/4 - kSizeGridUnit, buttonsY);
-        [self addChild:_previousButton];
-                
-        _dynamicPatternButton = [CCSprite spriteWithFile:kImageDynamicButtonDefault];
-        _dynamicPatternButton.position = CGPointMake(self.gridOrigin.x + gridWidth/2 - kSizeGridUnit, buttonsY);
-        [self addChild:_dynamicPatternButton];
-        
-        _finalPatternButton = [CCSprite spriteWithFile:kImageFinalButtonDefault];
-        _finalPatternButton.position = CGPointMake(self.gridOrigin.x + 3*gridWidth/4 - kSizeGridUnit, buttonsY);
-        [self addChild:_finalPatternButton];
-
-        _nextButton = [CCSprite spriteWithFile:@"nextButton.png"];
-        _nextButton.position = CGPointMake(self.gridOrigin.x + gridWidth - kSizeGridUnit, buttonsY);
-        [self addChild:_nextButton];
-
-        // heart sprites appear in selected sequencer cells
-        _heartSprites = [NSMutableDictionary dictionary];
-        
-        // tick indicator shows what tick we are on
-        _tickIndicator = [CCSprite spriteWithFile:@"arrow.png"];
-        _tickIndicator.visible = NO;
-        [self addChild:_tickIndicator];
+//        _sequence = sequence;
+//        _isAnySequencePlaying = NO;
+//        
+//        // setup grid
+//        _gridSize = [DataUtils sequenceGridSize:sequence];
+//        _gridOrigin = [SequenceLayer sharedGridOrigin];
+//        
+//
+//        
+//        
+//        
+//        
+//        // patterns
+//        _patternCount = 0;
+//        _finalPattern = [DataUtils sequencePattern:sequence];
+//        _dynamicPattern = [NSMutableArray array];
+//        [_dynamicPattern addObjectsFromArray:[NSArray arrayWithObjects:
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound,
+//                                              kKeyNoSound, nil]];
+//        
+//        // buttons
+//        
+//        CGFloat buttonSide = [[CCSprite spriteWithFile:@"previousButton.png"] boundingBox].size.height;
+//        CGFloat buttonsY = self.gridOrigin.y + (self.gridSize.y * kSizeGridUnit) + buttonSide/2;
+//        CGFloat gridWidth = self.gridSize.x * kSizeGridUnit;
+//    
+//        _previousButton = [CCSprite spriteWithFile:@"previousButton.png"];
+//        _previousButton.position = CGPointMake(self.gridOrigin.x + gridWidth/4 - kSizeGridUnit, buttonsY);
+//        [self addChild:_previousButton];
+//                
+//        _dynamicPatternButton = [CCSprite spriteWithFile:kImageDynamicButtonDefault];
+//        _dynamicPatternButton.position = CGPointMake(self.gridOrigin.x + gridWidth/2 - kSizeGridUnit, buttonsY);
+//        [self addChild:_dynamicPatternButton];
+//        
+//        _finalPatternButton = [CCSprite spriteWithFile:kImageFinalButtonDefault];
+//        _finalPatternButton.position = CGPointMake(self.gridOrigin.x + 3*gridWidth/4 - kSizeGridUnit, buttonsY);
+//        [self addChild:_finalPatternButton];
+//
+//        _nextButton = [CCSprite spriteWithFile:@"nextButton.png"];
+//        _nextButton.position = CGPointMake(self.gridOrigin.x + gridWidth - kSizeGridUnit, buttonsY);
+//        [self addChild:_nextButton];
+//
+//        // heart sprites appear in selected sequencer cells
+//        _heartSprites = [NSMutableDictionary dictionary];
+//        
+//        // tick indicator shows what tick we are on
+//        _tickIndicator = [CCSprite spriteWithFile:@"arrow.png"];
+//        _tickIndicator.visible = NO;
+//        [self addChild:_tickIndicator];
         
         
         

@@ -26,6 +26,7 @@ static CGFloat const kTickInterval = 0.5;
 @property (assign) kDirection startingDirection;
 @property (assign) kDirection currentDirection;
 @property (assign) int sequenceIndex;
+@property (assign) GridCoord gridSize;
 
 @end
 
@@ -52,6 +53,8 @@ static CGFloat const kTickInterval = 0.5;
         self.startingCell = [tiledMap gridCoordForObject:entry];
         
         self.sequenceIndex = 0;
+        self.responders = [NSMutableArray array];
+        self.gridSize = [GridUtils gridCoordFromSize:tiledMap.mapSize];
     
     }
     return self;
@@ -60,20 +63,22 @@ static CGFloat const kTickInterval = 0.5;
 
 - (void)registerTickResponder:(id<TickResponder>)responder
 {
-    NSAssert(![responder conformsToProtocol:@protocol(TickResponder)], @"registered tick responders much conform to TickResponder protocol");
+    NSAssert([responder conformsToProtocol:@protocol(TickResponder)], @"registered tick responders much conform to TickResponder protocol");
     [self.responders addObject:responder];
 }
 
 // public method to kick off the sequence
 - (void)start
 {
-    [self schedule:@selector(tick) interval:kTickInterval repeat:kCCRepeatForever delay:0];
+    self.currentCell = self.startingCell;
+    self.currentDirection = self.startingDirection;
+    [self schedule:@selector(tick:) interval:kTickInterval];
 }
 
 // public method to stop the sequence
 - (void)stop
 {
-    [self unschedule:@selector(tick)];
+    [self unschedule:@selector(tick:)];
 }
 
 // play the sound from the stored sequence an index
@@ -85,6 +90,7 @@ static CGFloat const kTickInterval = 0.5;
     }
     
     // play sound in eventSequence
+    NSLog(@"playing %@", [self.eventSequence objectForKey:@(index)]);
 }
 
 // schedule the stored sequence we want to solve for from the top
@@ -108,18 +114,22 @@ static CGFloat const kTickInterval = 0.5;
 }
 
 // moves the ticker along the grid
-- (void)tick
+- (void)tick:(ccTime)dt
 {
+    // stop if we are off the grid
+    if (![GridUtils isCellInBounds:self.currentCell gridSize:self.gridSize]) {
+        [self stop];
+        NSLog(@"out of bounds %i, %i, stopping tick", self.currentCell.x, self.currentCell.y);
+        return;
+    }
     
-    
-    
-    // tick and collect responders 
+    // tick and collect responders
     NSMutableArray *filtered = [NSMutableArray array];
-
+    
     for (id<TickResponder> responder in self.responders) {
         GridCoord cell = [responder responderCell];
         if ([GridUtils isCell:cell equalToCell:self.currentCell]) {
-            
+                        
             // tones
             if ([responder isKindOfClass:[Tone class]]) {
                 BOOL duplicate = NO;
@@ -140,11 +150,18 @@ static CGFloat const kTickInterval = 0.5;
         }
     }
     
-    NSLog(@"filtered: %@", filtered);
+        
+    NSLog(@"\n\nfiltered****");
+    for (CellNode *n in filtered) {
+        NSLog(@"node: %i, %i", n.cell.x, n.cell.y);
+    }
     
     // handle events
     
     
+    
+    // advance cell -- default case keep going in same direction
+    self.currentCell = [GridUtils stepInDirection:self.currentDirection fromCell:self.currentCell];
     
     
 }

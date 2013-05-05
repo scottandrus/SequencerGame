@@ -40,4 +40,16 @@
     return self;
 }
 
+#pragma mark - Tick Responder
+
+- (void)tick:(NSInteger)bpm
+{
+    NSLog(@"tone item handling tick");
+}
+
+- (GridCoord)responderCell
+{
+    return self.cell;
+}
+
 @end

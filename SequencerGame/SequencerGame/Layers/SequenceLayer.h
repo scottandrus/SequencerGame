@@ -26,11 +26,12 @@
 
 @property (nonatomic, strong) NSMutableArray *tones;
 
+@property (assign) GridCoord gridSize;
+
 
 //////////
 
 @property (assign) int sequence;
-@property (assign) GridCoord gridSize;
 @property (assign) CGPoint gridOrigin;
 @property (assign) BOOL isAnySequencePlaying;
 
