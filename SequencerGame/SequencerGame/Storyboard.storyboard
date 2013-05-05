@@ -18,24 +18,28 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="contentInset" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="PLd-bx-czD">
-                                    <size key="itemSize" width="184" height="184"/>
+                                    <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="30" minY="14" maxX="30" maxY="14"/>
+                                    <inset key="sectionInset" minX="40" minY="14" maxX="40" maxY="14"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SequenceMenuCell" id="5tf-5r-1vt">
-                                        <rect key="frame" x="30" y="14" width="184" height="184"/>
+                                        <rect key="frame" x="40" y="14" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <size key="customSize" width="184" height="184"/>
+                                        <size key="customSize" width="160" height="160"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="DropShadow.png" id="C4b-gN-9bi">
+                                <rect key="frame" x="0.0" y="80" width="1024" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" id="UZy-0b-8ee">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,10 +70,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="DropShadow.png" id="C4b-gN-9bi">
-                                <rect key="frame" x="0.0" y="80" width="1024" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="collectionView" destination="GW8-gG-sHh" id="1Pk-hU-dpu"/>
                         <outlet property="dropShadowImageView" destination="C4b-gN-9bi" id="uvL-R8-rBC"/>
+                        <outlet property="topView" destination="UZy-0b-8ee" id="Qkw-Iw-eEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJ5-ts-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,6 +176,7 @@
             <relationships>
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="dropShadowImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="topView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="SequenceViewController" superclassName="CCViewController">

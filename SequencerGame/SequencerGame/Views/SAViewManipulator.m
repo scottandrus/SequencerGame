@@ -282,9 +282,12 @@
 }
 
 + (void)addBorderToView:(UIView *)view withWidth:(CGFloat)borderWidth color:(UIColor *)borderColor andRadius:(CGFloat)cornerRadius {
+    
+//    if (!view.clipsToBounds) view.clipsToBounds = YES;
     if (borderWidth) view.layer.borderWidth = borderWidth;
     if (borderColor) view.layer.borderColor = [borderColor CGColor];
     if (cornerRadius) view.layer.cornerRadius = cornerRadius;
+
 }
 
 + (void)roundNavigationBar:(UINavigationBar *)navigationBar {

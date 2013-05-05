@@ -212,6 +212,8 @@
 		D258C85017359B850056EE96 /* DropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D258C84E17359B850056EE96 /* DropShadow@2x.png */; };
 		D2B34DEB1735B34400199562 /* UIViewController+Overview.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DEA1735B34400199562 /* UIViewController+Overview.m */; };
 		D2B34DEE1735B52D00199562 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DED1735B52D00199562 /* InfoViewController.m */; };
+		D2B34DF11735C24500199562 /* UIViewController+ExpandTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DF01735C24500199562 /* UIViewController+ExpandTransition.m */; };
+		D2B34DF51735CFC700199562 /* NSObject+BlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B34DF41735CFC700199562 /* NSObject+BlockAfterDelay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -603,6 +605,10 @@
 		D2B34DEA1735B34400199562 /* UIViewController+Overview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Overview.m"; sourceTree = "<group>"; };
 		D2B34DEC1735B52D00199562 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		D2B34DED1735B52D00199562 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		D2B34DEF1735C24500199562 /* UIViewController+ExpandTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ExpandTransition.h"; sourceTree = "<group>"; };
+		D2B34DF01735C24500199562 /* UIViewController+ExpandTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ExpandTransition.m"; sourceTree = "<group>"; };
+		D2B34DF31735CFC700199562 /* NSObject+BlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockAfterDelay.h"; sourceTree = "<group>"; };
+		D2B34DF41735CFC700199562 /* NSObject+BlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockAfterDelay.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1217,6 +1223,10 @@
 				D258C84817358D100056EE96 /* UIView+Frame.m */,
 				D2B34DE91735B34400199562 /* UIViewController+Overview.h */,
 				D2B34DEA1735B34400199562 /* UIViewController+Overview.m */,
+				D2B34DEF1735C24500199562 /* UIViewController+ExpandTransition.h */,
+				D2B34DF01735C24500199562 /* UIViewController+ExpandTransition.m */,
+				D2B34DF31735CFC700199562 /* NSObject+BlockAfterDelay.h */,
+				D2B34DF41735CFC700199562 /* NSObject+BlockAfterDelay.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1510,6 +1520,8 @@
 				169B8D8E1735A50B0002FD60 /* Arrow.m in Sources */,
 				D2B34DEB1735B34400199562 /* UIViewController+Overview.m in Sources */,
 				D2B34DEE1735B52D00199562 /* InfoViewController.m in Sources */,
+				D2B34DF11735C24500199562 /* UIViewController+ExpandTransition.m in Sources */,
+				D2B34DF51735CFC700199562 /* NSObject+BlockAfterDelay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
