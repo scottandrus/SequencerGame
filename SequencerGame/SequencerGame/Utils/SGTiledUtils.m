@@ -24,7 +24,7 @@ NSString *const kTLDPropertyDirection = @"direction";
 NSString *const kTLDPropertyEvents = @"events";
 
 
-@implementation PGTiledUtils
+@implementation SGTiledUtils
 
 +(kDirection) directionNamed:(NSString *)direction
 {

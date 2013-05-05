@@ -17,6 +17,7 @@
 #import "CellObjectLibrary.h"
 #import "Tone.h"
 #import "TickDispatcher.h"
+#import "SGTiledUtils.h"
 
 static NSUInteger const kTotalPatternTicks = 8;
 static NSUInteger const kTotalHeartTypes = 4;
@@ -70,13 +71,11 @@ typedef enum
         // cell object library
         self.cellObjectLibrary = [[CellObjectLibrary alloc] initWithGridSize:_gridSize];
 
-        // sequence
+        // setup tick dispatcher with sequence and starting point
         NSMutableDictionary *seq = [self.tileMap objectNamed:kTLDObjectSequence groupNamed:kTLDGroupTickResponders];
-        self.tickDispatcher = [[TickDispatcher alloc] initWithEventSequence:seq];
+        NSMutableDictionary *entry = [self.tileMap objectNamed:kTLDObjectEntry groupNamed:kTLDGroupTickResponders];
+        self.tickDispatcher = [[TickDispatcher alloc] initWithEventSequence:seq entry:entry tiledMap:self.tileMap];
 
-        
-        
-        
         // tones
         self.tones = [NSMutableArray array];
         NSMutableArray *tones = [self.tileMap objectsWithName:kTLDObjectTone groupName:kTLDGroupTickResponders];
@@ -84,15 +83,16 @@ typedef enum
             Tone *toneNode = [[Tone alloc] initWithTone:tone tiledMap:self.tileMap puzzleOrigin:self.position];
             [self.tones addObject:toneNode];
             [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
+            [self.tickDispatcher registerTickResponder:(id<TickResponder>)toneNode];
         }
-
         
         
         
-    
         
         
         
+        
+        /////////////////
         
     
         _sequence = sequence;

@@ -24,7 +24,7 @@ FOUNDATION_EXPORT NSString *const kTLDPropertyLayer;
 FOUNDATION_EXPORT NSString *const kTLDPropertyDirection;
 FOUNDATION_EXPORT NSString *const kTLDPropertyEvents;
 
-@interface PGTiledUtils : NSObject
+@interface SGTiledUtils : NSObject
 
 +(kDirection) directionNamed:(NSString *)direction;
 

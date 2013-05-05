@@ -21,7 +21,9 @@
 @property (assign) int sequenceLength;
 @property (nonatomic, strong) NSMutableDictionary *eventSequence;
 
-- (id)initWithEventSequence:(NSDictionary *)sequence;
+- (id)initWithEventSequence:(NSMutableDictionary *)sequence entry:(NSMutableDictionary *)entry tiledMap:(CCTMXTiledMap *)tiledMap;
 - (void)registerTickResponder:(id<TickResponder>)responder;
+
+- (void)fireFrom:(int)index;
 
 @end

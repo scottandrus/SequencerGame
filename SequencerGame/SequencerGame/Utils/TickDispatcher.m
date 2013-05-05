@@ -11,6 +11,7 @@
 #import "Tone.h"
 #import "Arrow.h"
 #import "SGTiledUtils.h"
+#import "CCTMXTiledMap+Utils.h"
 
 static NSInteger const kBPM = 120;
 
@@ -23,13 +24,14 @@ static NSInteger const kBPM = 120;
 @property (assign) GridCoord currentCell;
 @property (assign) GridCoord nextCell;
 @property (assign) kDirection startingDirection;
+@property (assign) kDirection currentDirection;
 
 @end
 
 
 @implementation TickDispatcher
 
-- (id)initWithEventSequence:(NSDictionary *)sequence
+- (id)initWithEventSequence:(NSMutableDictionary *)sequence entry:(NSMutableDictionary *)entry tiledMap:(CCTMXTiledMap *)tiledMap
 {
     self = [super init];
     if (self) {
@@ -40,13 +42,14 @@ static NSInteger const kBPM = 120;
         int i = 0;
         self.eventSequence = [NSMutableDictionary dictionary];
         for (NSString *event in groupByTick) {
-            NSLog(@"event: %@", event);
             NSArray *eventChain = [event componentsSeparatedByString:@","];
             [self.eventSequence setObject:eventChain forKey:@(i)];
             i++;
         }
         
-        NSLog(@"event seq: %@", self.eventSequence);
+        self.startingDirection = [SGTiledUtils directionNamed:[entry objectForKey:kTLDPropertyDirection]];
+        self.startingCell = [tiledMap gridCoordForObject:entry];
+    
     }
     return self;
 }
@@ -57,6 +60,17 @@ static NSInteger const kBPM = 120;
     NSAssert(![responder conformsToProtocol:@protocol(TickResponder)], @"registered tick responders much conform to TickResponder protocol");
     [self.responders addObject:responder];
 }
+
+- (void)fireFrom:(int)index
+{
+    if (index >= self.sequenceLength) {
+        NSLog(@"warning: index out of TickDispatcher range");
+        return;
+    }
+    
+    
+}
+
 
 - (void)tick
 {
@@ -83,15 +97,17 @@ static NSInteger const kBPM = 120;
             } 
             
             // arrows
-            
-            
-            
-            
-            
-        
-            
+
+        }
+    }
+    
+    NSLog(@"filtered: %@", filtered);
+    
+    // handle events
+}
+
 //            id event = [responder tick:kBPM];
-//                        
+//
 //            if ([event isKindOfClass:[Tone class]]) {
 //                NSUInteger duplicateTone;
 //                duplicateTone = [filteredEvents indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -128,10 +144,4 @@ static NSInteger const kBPM = 120;
 //                    [filteredEvents addObject:event];
 //                }
 //            }
-        }
-    }
-    
-    // handle events
-}
-
 @end
