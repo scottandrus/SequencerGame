@@ -235,8 +235,8 @@
         return kDirectionRight;
     }
     else {
-        NSLog(@"warning: string '%@' not recognized as direction", string);
-        return nil;
+        NSLog(@"warning: string '%@' not recognized as direction, returning -1", string);
+        return -1;
     }
 }
 

@@ -86,6 +86,7 @@ typedef enum
             [self.tones addObject:toneNode];
             [self.cellObjectLibrary addNode:toneNode cell:toneNode.cell];
             [self.tickDispatcher registerTickResponder:toneNode];
+            [self addChild:toneNode];
         }
         
         // arrows
@@ -96,6 +97,7 @@ typedef enum
             [self.arrows addObject:arrowNode];
             [self.cellObjectLibrary addNode:arrowNode cell:arrowNode.cell];
             [self.tickDispatcher registerTickResponder:arrowNode];
+            [self addChild:arrowNode];
         }
         
         

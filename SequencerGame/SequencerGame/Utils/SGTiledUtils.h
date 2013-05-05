@@ -20,7 +20,7 @@ FOUNDATION_EXPORT NSString *const kTLDObjectTone;
 FOUNDATION_EXPORT NSString *const kTLDObjectArrow;
 
 // tiled object properties
-FOUNDATION_EXPORT NSString *const kTLDPropertyLayer;
+FOUNDATION_EXPORT NSString *const kTLDPropertyMidiValue;
 FOUNDATION_EXPORT NSString *const kTLDPropertyDirection;
 FOUNDATION_EXPORT NSString *const kTLDPropertyEvents;
 

@@ -8,7 +8,7 @@
 
 #import "GameConstants.h"
 
-CGFloat const kSizeGridUnit = 100;
+CGFloat const kSizeGridUnit = 200;
 
 @implementation GameConstants
 

@@ -19,7 +19,7 @@ NSString *const kTLDObjectTone = @"tone";
 NSString *const kTLDObjectArrow = @"arrow";
 
 // tiled object properties
-NSString *const kTLDPropertyLayer = @"midiValue";
+NSString *const kTLDPropertyMidiValue = @"midiValue";
 NSString *const kTLDPropertyDirection = @"direction";
 NSString *const kTLDPropertyEvents = @"events";
 
