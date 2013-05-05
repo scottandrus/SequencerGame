@@ -16,7 +16,7 @@
 @end
 
 
-@interface TickDispatcher : NSObject
+@interface TickDispatcher : CCNode
 
 @property (assign) int sequenceLength;
 @property (nonatomic, strong) NSMutableDictionary *eventSequence;
@@ -24,6 +24,8 @@
 - (id)initWithEventSequence:(NSMutableDictionary *)sequence entry:(NSMutableDictionary *)entry tiledMap:(CCTMXTiledMap *)tiledMap;
 - (void)registerTickResponder:(id<TickResponder>)responder;
 
-- (void)fireFrom:(int)index;
+- (void)start;
+- (void)stop;
+- (void)play:(int)index;
 
 @end

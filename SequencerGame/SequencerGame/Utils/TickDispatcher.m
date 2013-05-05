@@ -14,7 +14,7 @@
 #import "CCTMXTiledMap+Utils.h"
 
 static NSInteger const kBPM = 120;
-
+static CGFloat const kTickInterval = 0.5;
 
 
 @interface TickDispatcher ()
@@ -25,6 +25,7 @@ static NSInteger const kBPM = 120;
 @property (assign) GridCoord nextCell;
 @property (assign) kDirection startingDirection;
 @property (assign) kDirection currentDirection;
+@property (assign) int sequenceIndex;
 
 @end
 
@@ -49,6 +50,8 @@ static NSInteger const kBPM = 120;
         
         self.startingDirection = [SGTiledUtils directionNamed:[entry objectForKey:kTLDPropertyDirection]];
         self.startingCell = [tiledMap gridCoordForObject:entry];
+        
+        self.sequenceIndex = 0;
     
     }
     return self;
@@ -61,19 +64,55 @@ static NSInteger const kBPM = 120;
     [self.responders addObject:responder];
 }
 
-- (void)fireFrom:(int)index
+// public method to kick off the sequence
+- (void)start
 {
-    if (index >= self.sequenceLength) {
+    [self schedule:@selector(tick) interval:kTickInterval repeat:kCCRepeatForever delay:0];
+}
+
+// public method to stop the sequence
+- (void)stop
+{
+    [self unschedule:@selector(tick)];
+}
+
+// play the sound from the stored sequence an index
+- (void)play:(int)index
+{
+    if ((index >= self.sequenceLength) || (index < 0)) {
         NSLog(@"warning: index out of TickDispatcher range");
         return;
     }
     
+    // play sound in eventSequence
+}
+
+// schedule the stored sequence we want to solve for from the top
+- (void)scheduleSequence
+{
+    self.sequenceIndex = 0;
+    [self schedule:@selector(advanceSequence)];
     
 }
 
+// play an item from the stored sequence and progress
+- (void)advanceSequence
+{
+    if (self.sequenceIndex >= self.sequenceLength) {
+        NSLog(@"finished ticking");
+        [self unschedule:@selector(tick)];
+        return;
+    }
+    [self play:self.sequenceIndex];
+    self.sequenceIndex++;
+}
 
+// moves the ticker along the grid
 - (void)tick
 {
+    
+    
+    
     // tick and collect responders 
     NSMutableArray *filtered = [NSMutableArray array];
 
@@ -97,13 +136,17 @@ static NSInteger const kBPM = 120;
             } 
             
             // arrows
-
+            
         }
     }
     
     NSLog(@"filtered: %@", filtered);
     
     // handle events
+    
+    
+    
+    
 }
 
 //            id event = [responder tick:kBPM];
