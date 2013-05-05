@@ -9,11 +9,8 @@
 #import "CCViewController.h"
 
 @protocol SequenceViewControllerDelegate <NSObject>
-
 - (void)pressedBack;
-
 @end
-
 
 @interface SequenceViewController : CCViewController <CCStandardTouchDelegate>
 
@@ -21,5 +18,7 @@
 @property (weak, nonatomic) id <SequenceViewControllerDelegate> delegate;
 
 - (IBAction)pressedBack:(id)sender;
+- (IBAction)playSolution:(id)sender;
+- (IBAction)runPlayerSequence:(id)sender;
 
 @end

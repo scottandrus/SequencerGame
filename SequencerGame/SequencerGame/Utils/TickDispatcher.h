@@ -36,6 +36,7 @@ typedef enum
 - (void)start;
 - (void)stop;
 - (void)play:(int)index;
+- (void)scheduleSequence;
 
 + (BOOL)isArrowEvent:(NSString *)event;
 

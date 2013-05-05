@@ -96,13 +96,16 @@ static CGFloat const kTickInterval = 0.5;
     
     // play sound in eventSequence
     NSLog(@"playing %@", [self.eventSequence objectForKey:@(index)]);
+    NSArray *events = [self.eventSequence objectForKey:@(index)];
+    
+    [self.mainSynth loadEvents:events];
 }
 
 // schedule the stored sequence we want to solve for from the top
 - (void)scheduleSequence
 {
     self.sequenceIndex = 0;
-    [self schedule:@selector(advanceSequence)];
+    [self schedule:@selector(advanceSequence) interval:kTickInterval];
     
 }
 
@@ -111,7 +114,7 @@ static CGFloat const kTickInterval = 0.5;
 {
     if (self.sequenceIndex >= self.sequenceLength) {
         NSLog(@"finished ticking");
-        [self unschedule:@selector(tick)];
+        [self unschedule:@selector(advanceSequence)];
         return;
     }
     [self play:self.sequenceIndex];
@@ -161,7 +164,8 @@ static CGFloat const kTickInterval = 0.5;
              
 + (BOOL)isArrowEvent:(NSString *)event
 {
-    if ([event isEqualToString:@"up"] || [event isEqualToString:@"down"] || [event isEqualToString:@"right"] || [event isEqualToString:@"left"]) {
+    if ([event isEqualToString:@"up"] || [event isEqualToString:@"down"] || [event isEqualToString:@"right"] || [event isEqualToString:@"left"] || [event isEqualToString:@"n"])
+    {
         return YES;
     }
     return NO;

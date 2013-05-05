@@ -12,6 +12,8 @@
 
 @interface SequenceViewController ()
 
+@property (weak, nonatomic) CCScene *scene;
+
 @end
 
 @implementation SequenceViewController
@@ -46,19 +48,39 @@
     
     // run cocos2d scene
     CCDirector *director = [CCDirector sharedDirector];
+    self.scene = [SequenceLayer sceneWithSequence:self.sequence];
     if(director.runningScene) {
-        [director replaceScene:[SequenceLayer sceneWithSequence:self.sequence]];
+        [director replaceScene:self.scene];
     }
     else {
-        [director runWithScene:[SequenceLayer sceneWithSequence:self.sequence]];
+        [director runWithScene:self.scene];
     }
 }
 
 - (IBAction)pressedBack:(id)sender
 {
     [self.delegate pressedBack];
-//    [[self presentingViewController] dismissViewControllerWithFoldStyle:MPFoldStyleDefault completion:^(BOOL finished) {
-        // completion
-//    }];
+}
+
+- (IBAction)playSolution:(id)sender
+{
+    SequenceLayer *sequenceLayer = [self sequenceLayer];
+    [sequenceLayer playSolutionSequence];
+}
+
+- (IBAction)runPlayerSequence:(id)sender
+{
+    SequenceLayer *sequenceLayer = [self sequenceLayer];
+    [sequenceLayer playUserSequence];
+}
+
+- (SequenceLayer *)sequenceLayer
+{
+    for (CCNode *child in self.scene.children) {
+        if ([child isKindOfClass:[SequenceLayer class]]) {
+            return (SequenceLayer *)child;
+        }
+    }
+    return nil;
 }
 @end
