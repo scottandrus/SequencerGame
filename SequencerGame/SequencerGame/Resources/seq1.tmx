@@ -9,7 +9,7 @@
   </data>
  </layer>
  <objectgroup name="Tick Responders" width="5" height="2">
-  <object name="tone" x="71" y="106" width="66" height="64">
+  <object name="tone" x="88" y="98" width="66" height="64">
    <properties>
     <property name="midiValue" value="48"/>
    </properties>

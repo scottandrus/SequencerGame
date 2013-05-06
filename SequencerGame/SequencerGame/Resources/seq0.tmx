@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="2" height="2" tilewidth="200" tileheight="200">
+ <tileset firstgid="1" name="pipeTilesetBase1" tilewidth="200" tileheight="200" spacing="1" margin="1">
+  <image source="../pipeTilesetBase1.png" width="1609" height="805"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="2" height="2">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAFAAAQAAE=
+  </data>
+ </layer>
+ <objectgroup name="Tick Responders" width="2" height="2">
+  <object name="tone" x="88" y="98" width="66" height="64">
+   <properties>
+    <property name="midiValue" value="52"/>
+   </properties>
+  </object>
+  <object name="tone" x="49" y="255" width="66" height="64">
+   <properties>
+    <property name="midiValue" value="49"/>
+   </properties>
+  </object>
+  <object name="tone" x="259" y="47" width="66" height="64">
+   <properties>
+    <property name="midiValue" value="51"/>
+   </properties>
+  </object>
+  <object name="tone" x="299" y="247" width="66" height="64">
+   <properties>
+    <property name="midiValue" value="50"/>
+   </properties>
+  </object>
+  <object name="arrow" x="256" y="56" width="83" height="83">
+   <properties>
+    <property name="direction" value="down"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="entry" x="17" y="34" width="125" height="121">
+   <properties>
+    <property name="direction" value="right"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="arrow" x="246" y="263" width="83" height="83">
+   <properties>
+    <property name="direction" value="left"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="arrow" x="81" y="263" width="83" height="83">
+   <properties>
+    <property name="direction" value="up"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="arrow" x="36" y="94" width="83" height="83">
+   <properties>
+    <property name="direction" value="right"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

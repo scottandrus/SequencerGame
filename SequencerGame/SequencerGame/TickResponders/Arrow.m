@@ -47,6 +47,25 @@
     }
 }
 
+- (void)rotateClockwise
+{
+    if (self.facing == kDirectionUp) {
+        self.facing = kDirectionRight;
+    }
+    else if (self.facing == kDirectionRight) {
+        self.facing = kDirectionDown;
+    }
+    else if (self.facing == kDirectionDown) {
+        self.facing = kDirectionLeft;
+    }
+    else if (self.facing == kDirectionLeft) {
+        self.facing = kDirectionUp;
+    }
+    
+    NSString *imageName = [self imageNameForFacing:self.facing on:NO];
+    [SpriteUtils switchImageForSprite:self.sprite textureKey:imageName];
+}
+
 #pragma mark - Tick Responder
 
 - (NSString *)tick:(NSInteger)bpm

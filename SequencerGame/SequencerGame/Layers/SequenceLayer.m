@@ -66,7 +66,8 @@ typedef enum
         
         [TextureUtils loadTextures];
         
-        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"seq1.tmx"];
+        NSString *sequenceName = [NSString stringWithFormat:@"seq%i.tmx", sequence];
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:sequenceName];
         self.gridSize = [GridUtils gridCoordFromSize:self.tileMap.mapSize];
         
         // cell object library
@@ -221,7 +222,40 @@ typedef enum
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-//    
+//    CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
+//
+//    for (Arrow *arrow in self.arrows) {
+//        if (CGRectContainsPoint(arrow.boundingBox, touchPosition)) {
+//            self.draggingArrow = arrow;
+//        }
+//    }
+    return YES;
+}
+//
+//- (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+//{
+//    CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
+//
+//    if (self.draggingArrow != nil) {
+//        self.draggingArrow.position = touchPosition;
+//    }
+//}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
+
+    for (Arrow *arrow in self.arrows) {
+        if (CGRectContainsPoint(arrow.boundingBox, touchPosition)) {
+            [arrow rotateClockwise];
+        }
+    }
+    
+}
+
+//- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+//{
+//
 //    CGPoint touchPosition = [self convertTouchToNodeSpace:touch];
 //
 //    // touch final pattern button to play final pattern
@@ -279,7 +313,7 @@ typedef enum
 //    }
 //    
 //    return YES;
-}
+//}
 
 
 
